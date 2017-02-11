@@ -35,19 +35,31 @@ A noter, seulement les budgets de type _discretionnary_ sont représentées, et 
 Les bulles sont maintenant regroupées par département, et une bulle, répondant aux même encodage de taille, MAIS sans couleur, correspondant au profit fait par le département. La variation des recettes par rapport à l'année précédentes est maintenant représenté par une fine ligne autour du disque
 
 # Quel est le public visé?
+tldr: lecteur du journal, personne lambda  
+En se basant sur le postulat que les données exacts (les chiffres) ne sont disponibles qu'en naviguant mais que l'imprécision n'empêche pas d'extraire de l'information, il me semble que cette visualisation soit accessible à tout lecteur du _nytimes_.  
+La visualisation semble avoir aussi une certaine temporalité... je m'explique: Aucune information n'est faite à ce propos, mais l'année 2013 correspond à la première année complète du second mandat de Barack Obama, qui s'était fait ré-élire en portant comme projet de réformer complètement le régime de santé. J'imagine donc que la visualisation permet de voir où les moyens ont été mis. Humain de ce monde, en 2017, j'avoue manqué lourdement de contexte pour saisir complètement le but de cette visualisation.
+ 
 
 # Quels questions vient-on à se poser?
-* C'est bien beau de dépenser, mais combien d'argent vont être récupéré?  Premièrement la première visualisation représente la dette
+* C'est bien beau de dépenser, mais combien d'argent vont être récupéré? Info disponible dans la dernière visualisation, mais pas de chiffre cumulatif (info existante mais sous-jacente)
+* Faire varier les années? Impossible. Encore une fois, sans contexte, il est bien difficile de saisir le sens de la visualisation. Comparé deux mandats d'un même président? Pourquoi ne pas comparer avec les mandats d'un président républicain?
+* Quel est le budget associé à l'environnement? Oui, grâce à la dernière visualisation
+
 # Quels sont les canaux-marques-interactions?
+## Marques
+Les différentes marques sont des aires, des lignes.
+  
+## Canaux
+
 
 # Application des 10 principaux principes de design
 * __Répétition du design__ altérée par le choix d'encoder les recettes dans la dernière visualisation; en effet la fine bande de couleur remplace le disque de couleur. Ont-ils voulu le rajouter à la fin?
 * __Eviter les pie-charts__: eviter...
 * __Alignement__:
 * __Proximité des données similaire__
-* __Ratio Encre/Données__:
-* __Intégrité graphique__:
-* __Taux de mensonge__:
+* __Ratio Encre/Données__: Beaucoup d'encre (animations, mutliples visualisations de données qui utilisent toutes les MEMES données), chacune mettant en avant des attributs différents des données (département, variation du budget).
+* __Intégrité graphique__: 
+* __Taux de mensonge__: Le déficit représenté par une bulle qui n'est pas à l'échelle globale est trompeur. 
 # Erreurs faites en regardant la visualisation
 
 # Points positifs et négatifs
