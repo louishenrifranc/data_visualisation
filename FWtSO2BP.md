@@ -61,9 +61,11 @@ Deux types d'interactions ici:
 * La connection entre les différentes visualisations est ici principalement esthétique mais permet quand même de comprendre quels données sont présentées à chaque visualisation (exemple de la visu _Changes_ ou la moitié des données disparaissent). Cette connection est proposée à l'utilisateur lorsqu'il clique sur les différents boutons, reconfigurant la disposition des données.
 
 # Application des 10 principaux principes de design
-* __Répétition du design__ altérée par le choix d'encoder les recettes dans la dernière visualisation; en effet la fine bande de couleur remplace le disque de couleur. Ont-ils voulu le rajouter à la fin?
+* __Répétition du design__ 
+	* Altérée par le choix d'encoder les recettes dans la dernière visualisation; en effet la fine bande de couleur remplace le disque de couleur. Ont-ils voulu le rajouter à la fin?
+	* Mise à part cette altération, l'échelle des teintes et des aires reste la même entres les visualisations. Les items (bulles) ne s'adaptent pas aux différentes visualisations, mais c'est les visualisations qui contextualisent les items.
 * __Eviter les pie-charts__: eviter...
-* __Alignement__:
+* __Alignement__: 
 * __Proximité des données similaire__
 * __Ratio Encre/Données__: Beaucoup d'encre (animations, mutliples visualisations de données qui utilisent toutes les MEMES données), chacune mettant en avant des attributs différents des données (département, variation du budget).
 * __Intégrité graphique__: 
@@ -80,4 +82,4 @@ Deux types d'interactions ici:
 * 
 
 ## Points positifs
-* Information intéressantes, et même si les visualisations sont globalement redondantes entre elles, leur multiplicité permet d'afficher différentes informations compréhensibles par l'utilisateur de manière aisée, sans avoir à chercher.
+* Facilité d'exploitation: Information intéressantes, et même si les visualisations sont globalement redondantes entre elles, leur multiplicité permet d'afficher différentes informations compréhensibles par l'utilisateur de manière aisée, sans avoir à chercher.
