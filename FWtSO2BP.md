@@ -50,7 +50,15 @@ La visualisation semble avoir aussi une certaine temporalité... je m'explique: 
 Les différentes marques sont des aires, des lignes.
   
 ## Canaux
-Les aires sont stylisées par leur teinte, et par leur aire. Le choix des teintes est particulièrement bien choisi et cela discrimine bien les données entre elles. L'aire aussi est un bon choix, cela permet une bonne amplitude du budget, une ordonnabilité facilement perceptible, à défault d'avoir une précision militaire.
+Les aires sont stylisées par leur teinte, et par leur aire.  
+Le choix des teintes est particulièrement bien choisi et cela discrimine bien les données entre elles.  
+L'aire aussi est un bon choix, cela permet une bonne amplitude du budget, une ordonnabilité facilement perceptible, au d'une précision.  
+La position des bulles est aussi encodée dans la plupart des visualisations.
+
+## Interactions
+Deux types d'interactions ici:
+* La navigation (au sens de la visualisation de donnée) permet d'explorer les données et d'avoir des informations plus précis à propos des différents budgets
+* La connection entre les différentes visualisations est ici principalement esthétique mais permet quand même de comprendre quels données sont présentées à chaque visualisation (exemple de la visu _Changes_ ou la moitié des données disparaissent). Cette connection est proposée à l'utilisateur lorsqu'il clique sur les différents boutons, reconfigurant la disposition des données.
 
 # Application des 10 principaux principes de design
 * __Répétition du design__ altérée par le choix d'encoder les recettes dans la dernière visualisation; en effet la fine bande de couleur remplace le disque de couleur. Ont-ils voulu le rajouter à la fin?
@@ -60,10 +68,16 @@ Les aires sont stylisées par leur teinte, et par leur aire. Le choix des teinte
 * __Ratio Encre/Données__: Beaucoup d'encre (animations, mutliples visualisations de données qui utilisent toutes les MEMES données), chacune mettant en avant des attributs différents des données (département, variation du budget).
 * __Intégrité graphique__: 
 * __Taux de mensonge__: Le déficit représenté par une bulle qui n'est pas à l'échelle globale est trompeur. 
+
 # Erreurs faites en regardant la visualisation
 
+
 # Points positifs et négatifs
+## Points négatifs
 * Problème d'échelle sur la première visualisation entre le budget alloué et la dette actuel: rapidement on a l'impression que le montant de la dette est égale aux budget pour les centres de santé: FAUX!
 * Impossible de chercher par département
+* La légende est absente (que représente l'axe horizontale sur la troisième visualisation ?)
+* 
 
-# Proposition d'une nouvelle visualisation
+## Points positifs
+* Information intéressantes, et même si les visualisations sont globalement redondantes entre elles, leur multiplicité permet d'afficher différentes informations compréhensibles par l'utilisateur de manière aisée, sans avoir à chercher.
