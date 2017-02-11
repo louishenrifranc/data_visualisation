@@ -50,7 +50,7 @@ La visualisation semble avoir aussi une certaine temporalité... je m'explique: 
 Les différentes marques sont des aires, des lignes.
   
 ## Canaux
-
+Les aires sont stylisées par leur teinte, et par leur aire. Le choix des teintes est particulièrement bien choisi et cela discrimine bien les données entre elles. L'aire aussi est un bon choix, cela permet une bonne amplitude du budget, une ordonnabilité facilement perceptible, à défault d'avoir une précision militaire.
 
 # Application des 10 principaux principes de design
 * __Répétition du design__ altérée par le choix d'encoder les recettes dans la dernière visualisation; en effet la fine bande de couleur remplace le disque de couleur. Ont-ils voulu le rajouter à la fin?
