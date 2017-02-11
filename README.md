@@ -9,9 +9,15 @@ Un jeu de donnée est donc formée d'items qui ont des attributs (quantitatifs, 
 # Marques et données
 
 ## _Marque_: 
+Ce sont des primitives géométriques tels que des point, des aires, des lignes, des connections
 Quelle est la dimensionnalite de la manière dont on représente les données. 1D: points, lines, aires. 2D: conteneur, connection
-##_Cannal_:
-La manière de styliser cette marque. Combien d'attributs sont encodées avec ces marques. 
+
+## _Cannal_:
+### Lien avec la marque
+La manière de styliser une marque. Par exemple, styliser une marque comme une ligne, peut être fait en rajoutant de la couleur ) la ligne, des aires peuvent être de différentes taille.
+
+### Les différents canaux
+Combien d'attributs sont encodées avec ces marques. 
 Les canaux les plus utilisés sont:
 * la position
 * la forme
@@ -19,7 +25,8 @@ Les canaux les plus utilisés sont:
 * le volume
 * Mais aussi pour la couleur: le ton (hue), la saturation, ou la luminance
 [Explication des différences](https://upload.wikimedia.org/wikipedia/commons/thumb/c/cb/HSL_color_solid_cylinder_alpha_lowgamma.png/197px-HSL_color_solid_cylinder_alpha_lowgamma.png)  
-Le canal choisi doit exprimer toute, et uniquement l'attribut exprimé. 
+Le canal choisi doit exprimer toute, et uniquement l'attribut exprimé.  
+
 ### Bonne manière
 Des données catégorisables ne doivent pas être encodée avec des canaux catégorisables (encoder chaque pays par des ronds de différentes tailles pourrait laisser entendre que les gros ronds sont plus importants).  
 Le canal le plus efficace est le cannal spatial (mais celui ci est déja utilisé pour représenter les données en elle même).   
