@@ -64,11 +64,11 @@ Deux types d'interactions ici:
 * __Répétition du design__ 
 	* Altérée par le choix d'encoder les recettes dans la dernière visualisation; en effet la fine bande de couleur remplace le disque de couleur. Ont-ils voulu le rajouter à la fin?
 	* Mise à part cette altération, l'échelle des teintes et des aires reste la même entres les visualisations. Les items (bulles) ne s'adaptent pas aux différentes visualisations, mais c'est les visualisations qui contextualisent les items.
-* __Eviter les pie-charts__: eviter...
-* __Alignement__: 
-* __Proximité des données similaire__
+* __Eviter les pie-charts__: evité :)...
+* __Alignement__: Oui globalement pas de problème.
+* __Proximité des données similaire__: Dans la première visualisation, la disposition horizontale est discutable. 
 * __Ratio Encre/Données__: Beaucoup d'encre (animations, mutliples visualisations de données qui utilisent toutes les MEMES données), chacune mettant en avant des attributs différents des données (département, variation du budget).
-* __Intégrité graphique__: 
+* __Intégrité graphique__: La visualisation est assez neutre, rien n'est pointé du doigt implicitement; les données sont là, et l'interprétation est libre. Ici on cherche plus à proposer une exploration, qu'on ne veut passer un message.
 * __Taux de mensonge__: Le déficit représenté par une bulle qui n'est pas à l'échelle globale est trompeur. 
 
 # Erreurs faites en regardant la visualisation
@@ -82,4 +82,4 @@ Deux types d'interactions ici:
 * 
 
 ## Points positifs
-* Facilité d'exploitation: Information intéressantes, et même si les visualisations sont globalement redondantes entre elles, leur multiplicité permet d'afficher différentes informations compréhensibles par l'utilisateur de manière aisée, sans avoir à chercher.
+* Facilité d'exploitation: Information intéressantes, et même si les visualisations sont globalement redondantes entre elles, leur multiplicité permet d'afficher différentes informations compréhensibles par l'utilisateur de manière aisée, sans avoir à chercher. Autrement formulée, la dimensionnalité des attributs est faible, mais 
