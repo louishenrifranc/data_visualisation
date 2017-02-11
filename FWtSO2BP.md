@@ -83,8 +83,11 @@ Deux types d'interactions ici:
 * Impossible de chercher par département
 * La légende est absente (que représente l'axe horizontale sur la troisième visualisation ?)
 * La bulle blanche correspondant aux recettes est un vrai accroc: cela complique la compréhension, et altère le design globale
-* Critique facile, mais souvent absente des visualisations: pourquoi ne pas proposer une barre de recherche. Avec cela, va l'impossibilité de suivre un budget au cours des quatre visualisations.
+* Critique facile, mais souvent absente des visualisations: pourquoi ne pas proposer une barre de recherche. Avec cela, va l'impossibilité de suivre un budget au cours des quatre visualisations. 
 * Si l'on ne devait en garder qu'une, la dernière ferait l'affaire, les autres sont un plus, mais pas essentielle.
+* Manque de mise en context, et par desssus ca, mon intérêt à comprendre le système américain est proche du néant, résultat je ne vois pas vraiment l'intérêt d'avoir choisi ces données.
 
 ## Points positifs
-* Facilité d'exploitation: Information intéressantes, et même si les visualisations sont globalement redondantes entre elles, leur multiplicité permet d'afficher différentes informations compréhensibles par l'utilisateur de manière aisée, sans avoir à chercher. Autrement formulée, la dimensionnalité des attributs est faible, mais 
+* Facilité d'exploitation: Information intéressantes, et même si les visualisations sont globalement redondantes entre elles, leur multiplicité permet d'afficher différentes informations compréhensibles par l'utilisateur de manière aisée, sans avoir à chercher. 
+
+
