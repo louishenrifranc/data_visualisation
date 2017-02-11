@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title> Travail Pratique n°1 - Introduction </title>
+    <style>
+            html {
+            display: table;
+            margin: auto;
+			background-color: #E6E6FA;
+            }
+            svg {
+            border-style: solid;
+            border-color: black;
+			background-color: white;
+            }
+            button {
+            display: center;
+            }
+			.nav{
+			text-align:center;
+			margin-bottom: 20px;
+			}
+            .rayon{
+            font-weight: bold;
+            color: red;
+            }
+            .position{
+            font-weight: bold;
+            color: cyan;
+            }
+			.couleur{
+            font-weight: bold;
+            color: gold;
+            }
+            .d3-tip {
+            line-height: 1;
+            font-weight: bold;
+            padding: 12px;
+            background: rgba(0, 0, 0, 0.8);
+            color: #fff;
+            border-radius: 2px;
+            }
+
+
+
+
+    </style>
+</head>
+<body>
+<div class="nav">
+    <button onClick="randomCircle()"> createCircle</button>
+    <button onClick="resetCircles()"> reset</button>
+    <br>
+    <input id="inputNombreCercles" value=""></input>
+    <button onClick="randomCircles()"> createCircles</button>
+    <br>
+    <text> Nombre de cercles : <span id="textNombreCercles">0</span></text>
+</div>
+<script type="text/javascript" src="javascript/d3.v3.js"></script>
+<script type="text/javascript" src="javascript/d3-tip.js"></script>
+<script>
+			// Délimite l'épaisseur de la frontière des zones de couleur (L'épaisseur du trait noir)
+            var bord =20;
+			// Dimension du svg
+	    var width = 500; 
+	    var height = 500;
+			// Création d'un svg de taille 500*500 pour dessiner des cercles
+            var svg = d3.select("body")
+                .append("svg")
+                .attr("width", width)
+                .attr("height", height);
+			
+            // Variable qui stocke les différents cercles dessinés
+            // TODO : trouver la fonction dans d3 qui permet de trouver tous les cercles
+            var circles;					
+
+	
+            function update() {
+		circles = d3.selectAll("circle"); 
+            	d3.select("#textNombreCercles").text(circles.size());
+            }
+            
+
+            //TODO : trouver la fonction en d3 qui permet de trouver tous les cercles
+            function resetCircles() {
+		d3.selectAll("circle").remove();
+
+		update();
+            }
+			
+            // Création d'un cercle dans le svg avec une position et une taille aléatoire
+            function randomCircle() {
+				var cx = Math.random() * width;
+				var cy = Math.random() * height;
+
+                svg.append("circle")
+                    .attr("cx", function() {
+                        return cx;
+                    })
+                    .attr("cy", function() {	
+                        return cy;
+                    })
+                    .attr("r", function() {
+                        return Math.random() * 10 + 10;
+                    })
+					//.attr("opacity",0.5)
+					.attr("fill", function(){
+						if ((cx > cy + bord) &&(cx+cy<500 - bord)) return "orange";
+						else if ((cx > cy + bord) &&(cx+cy>500 + bord)) return "blue";
+						else if ((cx < cy - bord ) &&(cx+cy<500 - bord)) return "purple";
+						else if ((cx < cy - bord) &&(cx+cy>500 + bord)) return "green";
+						else return "black";})
+                    .on('mouseover', tip.show)
+                    .on('mouseout', tip.hide);
+
+		update();
+		}
+                        
+			/*TODO :
+			0) Lier la fonction au bouton createCircles			
+            1) Trouver comment accéder à la valeur de l'input
+            2) Vérifier que cette valeur est correcte
+            3) Si cette valeur est correcte, créer le nombre de cercle demandé avec une boucle for (réutiliser la fonction rand+++++++++++++++omCircle() )
+            4) Si cette valeur n'est pas correcte, créer une alerte informant l'utilisateur
+            */
+            function randomCircles() {
+		var nb_circles = document.getElementById("inputNombreCercles").value;
+		for(var i = 0;i < nb_circles; i++) {
+			randomCircle();
+		}
+                document.getElementById("inputNombreCercles").value = "";
+            }
+            
+			// Écris la tip-tool en fonction des informations du cercle désigné
+			/* TODO : mettre en forme les informations pertinentes du cercle pointé
+			   Vous pouvez utiliser la balise <br> pour faire revenir le texte à la ligne 
+			*/
+            function textTip(rayon, cx, cy) {
+				text = "Rayon: " + rayon + "<br>" + "Cx: " + cx + "<br>" + "Cy: " + cy;
+				return text;
+            }
+			// Affichage des informations du cercle 
+			/* TODO : Récupérer les informations pertinantes du cercle pointé. Ces éléments sont :
+				1) Le rayon du cercle
+				2) La position du cercle
+				3) La couleur du cercle
+			*/
+            var tip = d3.tip()
+                .attr('class', 'd3-tip')
+                .offset([-10, 0])
+                .html(function(d) {
+				var object = d3.select(this);
+				rayon = Math.round(object.attr('r'));
+				cx = Math.round(object.attr('cx'));
+				cy = Math.round(object.attr('cy'));
+				return textTip(rayon, cx, cy);
+				}); 
+			svg.call(tip);	
+
+
+
+
+</script>
+</body>
+</html>

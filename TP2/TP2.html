@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title> Travail Pratique n°2 - Scatter Plot </title>
+        <style>
+            html {
+            display: table;
+            margin: auto;
+            background-color: #E6E6FA;
+            }
+            svg {
+            border-style: solid;
+            border-color: black;
+            background-color: white;
+            }
+            .axis {
+            shape-rendering: crispEdges
+            }
+            .axis path,
+            .axis line {
+            fill: none;
+            stroke: black;
+            shape-rendering: crispEdges;
+            }
+            .y.axis path {
+            fill: none;
+            stroke: black;
+            shape-rendering: crispEdges;
+            }
+            .brush .extent {
+            stroke: white;
+            fill-opacity: .125;
+            shape-rendering: crispEdges;
+            }
+            .line {
+            fill: none;
+            }
+        </style>
+    </head>
+    <body>
+        <script type="text/javascript" src="javascript/d3.v3.js"></script>
+        <script type="text/javascript" src="javascript/1-preproc.js"></script>
+		<script type="text/javascript" src="javascript/2-lineGraph.js"></script>
+		<script type="text/javascript" src="javascript/3-brush.js"></script>
+		<script type="text/javascript" src="javascript/4-legend.js"></script>
+        <script>
+			// Marges
+			var margin = {
+			        top: 10,
+			        right: 10,
+			        bottom: 100,
+			        left: 60
+			    },
+			    margin2 = {
+			        top: 430,
+			        right: 10,
+			        bottom: 30,
+			        left: 60
+			    },
+			    width = 1200 - margin.left - margin.right,
+			    height = 500 - margin.top - margin.bottom,
+			    height2 = 500 - margin2.top - margin2.bottom;
+
+			// x et y : échelle de la fenêtre principale (focus)
+			// x2 et y2 : échelle de la fenêtre secondaire (context)
+			var x = d3.time.scale().range([0, width]),
+			    x2 = d3.time.scale().range([0, width]),
+			    y = d3.scale.linear().range([height, 0]),
+			    y2 = d3.scale.linear().range([height2, 0]);
+
+			// Définition des axes	
+			var xAxis = d3.svg.axis().scale(x).orient("bottom"),
+			    xAxis2 = d3.svg.axis().scale(x2).orient("bottom"),
+			    yAxis = d3.svg.axis().scale(y).orient("left");
+
+			// Permet de redessiner le line graph sur la fenêtre principale
+			var brush = d3.svg.brush()
+			    .x(x2)
+			    .on("brush", brush);
+
+			// SVG principal
+			var svg = d3.select("body").append("svg")
+			    .attr("width", width + margin.left + margin.right)
+			    .attr("height", height + margin.top + margin.bottom);
+
+			// Fenêtre principale affichant le graph à l'échelle du context
+			var focus = svg.append("g")
+			    .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+
+			// Fenêtre permettant de choisir l'échelle de visualisation
+			var context = svg.append("g")
+			    .attr("transform", "translate(" + margin2.left + "," + margin2.top + ")");
+				
+			// Règle pour clipper focus lors du zoom
+			svg.append("defs").append("clipPath")
+			    .attr("id", "clip")
+			    .append("rect")
+			    .attr("width", width)
+			    .attr("height", height);
+
+			// Fonctions pour dessiner les path
+			var line = createLine(x, y);
+			var line2 = createLine2(x2, y2);	
+				
+			d3.csv("2014.csv", function(error, data) {
+			    if (error) throw error;
+
+			    // ------------------------------------------------- PRÉ-TRAITEMENT -----------------------------------------	
+
+				// Parse la date et rajoute la moyenne quotidienne à data
+			    parseData(data);
+			    procMean(data);
+				
+				// le domain de color contient le nom de toutes les rues du fichier csv
+			    domainColor(color, data);
+
+			    // Tri les données par nom de rue puis par jour.
+			    var sources = createSources(color, data);
+
+			    // Précise les domaines de x, x2, y et y2	
+			    domainX(x, x2, data)
+			    domainY(y, y2, sources)
+
+			    // ------------------------------------------------- LINEGRAPH -----------------------------------------	
+
+				// Graph focus
+			    createFocusLineGraph(focus, sources, line);
+				
+				// Axes focus
+			    focus.append("g")
+			        .attr("class", "x axis")
+			        .attr("transform", "translate(0," + height + ")")
+			        .call(xAxis);
+
+			    focus.append("g")
+			        .attr("class", "y axis")
+			        .call(yAxis);
+
+			    // ------------------------------------------------- SOUS LINE-GRAPH -----------------------------------------	
+
+				// Graph context
+			    createContextLineGraph(context, sources, line2);
+
+				// Axes context
+			    context.append("g")
+			        .attr("class", "x axis")
+			        .attr("transform", "translate(0," + height2 + ")")
+			        .call(xAxis2);
+
+			    context.append("g")
+			        .attr("class", "x brush")
+			        .call(brush)
+			        .selectAll("rect")
+			        .attr("y", -6)
+			        .attr("height", height2 + 7);
+					
+			    // ------------------------------------------------- LEGENDE -----------------------------------------						
+			    
+				// Legende
+			    createLegend(sources);
+				
+			});
+        </script>
+    </body>
+</html>

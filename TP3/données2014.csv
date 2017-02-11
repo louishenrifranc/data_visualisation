@@ -1,0 +1,157 @@
+Country,Region,Income,LifeExpectancy,Population
+China,East Asia & Pacific,12599.18797,75.78226829,1364270000
+India,South Asia,5391.694148,68.01380488,1295291543
+United States,North America,51708.40315,78.94146341,318907401
+Indonesia,East Asia & Pacific,10031.32195,68.8884878,254454778
+Brazil,Latin America & Caribbean,15162.41778,74.40187805,206077898
+Russian Federation,Europe & Central Asia,24873.88501,70.36585366,143819569
+Pakistan,South Asia,4590.146529,66.18336585,185044286
+Bangladesh,South Asia,2979.16727,71.62590244,159077513
+Japan,East Asia & Pacific,35587.16602,83.58780488,127131800
+Nigeria,Sub-Saharan Africa,5639.447041,52.75426829,177475986
+Mexico,Latin America & Caribbean,16301.47008,76.72185366,125385833
+Germany,Europe & Central Asia,43552.28915,80.84390244,80982500
+Philippines,East Asia & Pacific,6648.550529,68.26563415,99138690
+Vietnam,East Asia & Pacific,5370.20998,75.62912195,90728900
+Egypt. Arab Rep.,Middle East & North Africa,10048.57243,71.12170732,89579670
+Ethiopia,Sub-Saharan Africa,1430.803443,64.03502439,96958732
+Iran. Islamic Rep.,Middle East & North Africa,16507.02425,75.38931707,78143644
+Turkey,Europe & Central Asia,18500.68769,75.1635122,77523788
+Thailand,East Asia & Pacific,14975.96022,74.42202439,67725979
+France,Europe & Central Asia,37052.66261,82.37317073,66495940
+United Kingdom,Europe & Central Asia,38084.87025,81.05609756,64613160
+Italy,Europe & Central Asia,33341.0388,82.6902439,60789140
+Congo. Dem. Rep.,Sub-Saharan Africa,711.0169497,58.65919512,74877030
+Korea. Rep.,East Asia & Pacific,33639.60763,82.15585366,50423955
+South Africa,Sub-Saharan Africa,12436.24249,57.18212195,54058647
+Colombia,Latin America & Caribbean,12715.14324,73.99314634,47791393
+Spain,Europe & Central Asia,31749.72172,83.07804878,46480882
+Tanzania,Sub-Saharan Africa,2421.20802,64.94390244,51822621
+Algeria,Middle East & North Africa,13553.90607,74.80809756,38934334
+Kenya,Sub-Saharan Africa,2818.525658,61.57636585,44863583
+Canada,North America,42801.176,81.95660976,35543658
+Morocco,Middle East & North Africa,7146.28334,74.01609756,33921203
+Sudan,Sub-Saharan Africa,3882.245273,63.45853659,39350274
+Peru,Latin America & Caribbean,11451.25263,74.52553659,30973148
+Uzbekistan,Europe & Central Asia,5316.872673,68.33902439,30757700
+Venezuela. RB,Latin America & Caribbean,16769.32678,74.23619512,30693827
+Uganda,Sub-Saharan Africa,1689.436629,58.46641463,37782971
+Nepal,South Asia,2265.053018,69.60468293,28174724
+Iraq,Middle East & North Africa,14177.11045,69.39968293,35273293
+Romania,Europe & Central Asia,19133.91113,75.06341463,19908979
+Saudi Arabia,Middle East & North Africa,49618.87471,74.33721951,30886545
+Australia,East Asia & Pacific,43267.60191,82.25121951,23464086
+Ghana,Sub-Saharan Africa,3894.004399,61.31163415,26786598
+Mozambique,Sub-Saharan Africa,1079.5696,55.02595122,27216276
+Cote d'Ivoire,Sub-Saharan Africa,3108.425908,51.55958537,22157107
+Cameroon,Sub-Saharan Africa,2835.566677,55.4927561,22773014
+Netherlands,Europe & Central Asia,45662.06538,81.30487805,16865008
+Madagascar,Sub-Saharan Africa,1370.664387,65.08560976,23571713
+Chile,Latin America & Caribbean,21923.38642,81.49619512,17762647
+Angola,Sub-Saharan Africa,6955.960047,52.26687805,24227524
+Kazakhstan,Europe & Central Asia,24418.86367,71.62,17289224
+Ecuador,Latin America & Caribbean,10848.81847,75.8724878,15902916
+Cambodia,East Asia & Pacific,3112.630513,68.21229268,15328136
+Guatemala,Latin America & Caribbean,7106.392331,71.72241463,16015494
+Burkina Faso,Sub-Saharan Africa,1545.84643,58.58846341,17589198
+Niger,Sub-Saharan Africa,901.7585957,61.4584878,19113728
+Malawi,Sub-Saharan Africa,1114.766049,62.72163415,16695253
+Mali,Sub-Saharan Africa,2187.519065,57.98626829,17086022
+Greece,Europe & Central Asia,24518.59519,81.28536585,10892413
+Zambia,Sub-Saharan Africa,3710.418583,60.04704878,15721343
+Portugal,Europe & Central Asia,26174.86187,80.72195122,10401062
+Czech Republic,Europe & Central Asia,28674.81336,78.27560976,10525347
+Belgium,Europe & Central Asia,40777.77759,80.58780488,11231213
+Hungary,Europe & Central Asia,23723.25066,75.87317073,9866468
+Belarus,Europe & Central Asia,17348.05508,72.97560976,9483000
+Senegal,Sub-Saharan Africa,2215.216141,66.37258537,14672557
+Tunisia,Middle East & North Africa,10748.61843,74.14390244,10996600
+Sweden,Europe & Central Asia,43976.28597,81.95609756,9696110
+Guinea,Sub-Saharan Africa,1165.12982,58.73343902,12275527
+Dominican Republic,Latin America & Caribbean,12652.5233,73.50002439,10405943
+Haiti,Latin America & Caribbean,1652.923125,62.74743902,10572029
+Bolivia,Latin America & Caribbean,6324.990141,68.344,10561887
+Bulgaria,Europe & Central Asia,16363.04609,75.40731707,7223938
+Azerbaijan,Europe & Central Asia,16715.10552,70.76321951,9535079
+Austria,Europe & Central Asia,43871.71684,81.33658537,8541575
+Switzerland,Europe & Central Asia,55270.9808,82.84878049,8188649
+Benin,Sub-Saharan Africa,1936.825582,59.51058537,10598482
+Burundi,Sub-Saharan Africa,734.4845955,56.69202439,10816860
+Hong Kong SAR. China,East Asia & Pacific,52609.61469,83.9804878,7241700
+Israel,Middle East & North Africa,31521.32169,82.15365854,8215700
+Honduras,Latin America & Caribbean,4682.99035,73.13570732,7961680
+Tajikistan,Europe & Central Asia,2567.037718,69.59797561,8295840
+El Salvador,Latin America & Caribbean,7925.991783,72.75456098,6107706
+Slovak Republic,Europe & Central Asia,26469.90377,76.71463415,5418649
+Papua New Guinea,East Asia & Pacific,2723.493095,62.60692683,7463577
+Lao PDR,East Asia & Pacific,5076.222378,66.11736585,6689300
+Denmark,Europe & Central Asia,43156.83407,80.54878049,5643475
+Libya,Middle East & North Africa,14879.98843,71.71612195,6258984
+Paraguay,Latin America & Caribbean,8501.629171,72.92170732,6552518
+Finland,Europe & Central Asia,38577.21382,81.12926829,5461512
+Nicaragua,Latin America & Caribbean,4707.445227,74.81014634,6013913
+Kyrgyz Republic,Europe & Central Asia,3181.642167,70.40243902,5835500
+Togo,Sub-Saharan Africa,1337.199075,59.65580488,7115163
+Jordan,Middle East & North Africa,10242.04049,74.05214634,7416083
+Norway,Europe & Central Asia,64161.49272,81.75121951,5137232
+Croatia,Europe & Central Asia,20033.11459,77.32926829,4238389
+Georgia,Europe & Central Asia,8749.156145,74.66863415,3727000
+Sierra Leone,Sub-Saharan Africa,1919.162045,50.87878049,6315627
+Singapore,East Asia & Pacific,79550.90077,82.64634146,5469724
+Costa Rica,Latin America & Caribbean,14232.17543,79.40270732,4757606
+Ireland,Europe & Central Asia,48383.66132,81.15365854,4617225
+Bosnia and Herzegovina,Europe & Central Asia,9698.578276,76.4332439,3817554
+Central African Republic,Sub-Saharan Africa,543.5975604,50.65778049,4804316
+Moldova,Europe & Central Asia,4762.641836,71.45587805,3556397
+Lithuania,Europe & Central Asia,25786.3379,73.96585366,2932367
+Uruguay,Latin America & Caribbean,19827.73894,76.98614634,3419516
+Lebanon,Middle East & North Africa,13471.81321,79.37309756,5612096
+Congo. Rep.,Sub-Saharan Africa,5988.158823,62.31114634,4504962
+Albania,Europe & Central Asia,10122.04075,77.83046341,2893654
+Armenia,Europe & Central Asia,7698.694581,74.67570732,3006154
+United Arab Emirates,Middle East & North Africa,64562.62007,77.36817073,9086139
+Panama,Latin America & Caribbean,20059.12749,77.59514634,3867535
+Liberia,Sub-Saharan Africa,803.6551766,60.83441463,4396554
+Mauritania,Sub-Saharan Africa,3693.542041,63.01658537,3969625
+Jamaica,Latin America & Caribbean,8469.558472,75.6535122,2720554
+Mongolia,East Asia & Pacific,11403.34551,69.46390244,2909871
+Latvia,Europe & Central Asia,22038.46663,74.18780488,1993782
+Macedonia. FYR,Europe & Central Asia,12291.49467,75.34239024,2075625
+Slovenia,Europe & Central Asia,28156.29706,80.5195122,2061980
+Namibia,Sub-Saharan Africa,9491.501398,64.68019512,2402858
+Botswana,Sub-Saharan Africa,15200.17601,64.4292439,2219937
+Kosovo,Europe & Central Asia,8744.408085,71.09756098,1812771
+Estonia,Europe & Central Asia,26593.51012,77.23902439,1314545
+Guinea-Bissau,Sub-Saharan Africa,1336.462323,55.16004878,1800513
+Trinidad and Tobago,Latin America & Caribbean,30497.22445,70.44056098,1354483
+Gabon,Sub-Saharan Africa,18536.76837,64.38339024,1687673
+Gambia. The,Sub-Saharan Africa,1555.529347,60.22843902,1928201
+Mauritius,Sub-Saharan Africa,17736.92173,74.19439024,1260934
+Swaziland,Sub-Saharan Africa,7910.835052,48.93473171,1269112
+Cyprus,Europe & Central Asia,29452.8898,80.13156098,1153658
+Fiji,East Asia & Pacific,8388.223464,70.08912195,886450
+Guyana,Latin America & Caribbean,6886.960282,66.40641463,763893
+Djibouti,Middle East & North Africa,3120.044328,62.0155122,876174
+Bahrain,Middle East & North Africa,43408.23705,76.68326829,1361930
+Montenegro,Europe & Central Asia,14533.96119,76.18070732,621810
+Qatar,Middle East & North Africa,134447.7601,78.59680488,2172065
+Bhutan,South Asia,7456.315988,69.4712439,765008
+Comoros,Sub-Saharan Africa,1363.563075,63.25685366,769991
+Equatorial Guinea,Sub-Saharan Africa,33146.19571,57.64704878,820885
+Suriname,Latin America & Caribbean,15872.61477,71.15143902,538248
+Cabo Verde,Sub-Saharan Africa,6219.777782,73.147,513906
+Luxembourg,Europe & Central Asia,91368.11265,82.20731707,556319
+Macao SAR. China,East Asia & Pacific,133675.785,80.55309756,577914
+Solomon Islands,East Asia & Pacific,2032.485807,67.93080488,572171
+Brunei Darussalam,East Asia & Pacific,67911.87891,78.80958537,417394
+Bahamas. The,Latin America & Caribbean,22411.05684,75.23365854,383054
+Iceland,Europe & Central Asia,41262.04245,82.06097561,327386
+Barbados,Latin America & Caribbean,15319.51155,75.49641463,283380
+Belize,Latin America & Caribbean,8043.505822,70.07743902,351706
+Samoa,East Asia & Pacific,5523.946701,73.51182927,191845
+Sao Tome and Principe,Sub-Saharan Africa,3030.217162,66.38460976,186342
+St. Vincent and the Grenadines,Latin America & Caribbean,10240.09075,72.93685366,109360
+Micronesia. Fed. Sts.,East Asia & Pacific,3177.392579,69.10107317,104044
+Grenada,Latin America & Caribbean,11853.71662,73.36631707,106349
+Kiribati,East Asia & Pacific,1725.85646,65.95168293,110470
+Antigua and Barbuda,Latin America & Caribbean,21061.86762,75.93763415,90900
