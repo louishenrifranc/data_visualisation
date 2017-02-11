@@ -1,14 +1,14 @@
 # Commentaires sur la visualisation [Four Ways to Slice Obama’s 2013 Budget Proposal](http://www.nytimes.com/interactive/2012/02/13/us/politics/2013-budget-proposal-graphic.html)
 
-- [Explication des différents encodages](#explication-des-differents-encodages)
-- [Public visé](#quel-est-le-public-visé?)
-- [Questions](#quels-questions-vient-on-à-se-poser?)
+- [Explication des différents encodages](#1.-explication-des-différents-encodages)
+- [Public visé](#2.-quel-est-le-public-visé?)
+- [Questions](#quels-questions-vient-on-à-se-poser-?)
 - [Marques, canaux, et interactions](#quels-sont-les-canaux-marques-interactions?)
 - [10 principes et leur mise en application](#application-des-10-principaux-principes-de-design)
 - [Erreurs de compréhension](#erreurs-faites-en-regardant-la-visualisation)
 - [Pros & cons](#points-positifs-et-négatifs)
 
-## Explication des différents encodages
+# 1. Explication des différents encodages
 La visualisation permet d'analyser le budget proposé par le président 0bama en 2013 pour l'année. Le budget est dépensé suivant un ligne de conduite à l'année (_discretionnary_), mais aussi en respect avec les lois en vigueur (_mandatory_).
 Plusieurs visualisations sont disponibles, et chacune est annotée pour guider l'utilisateur dans la compréhension des données. Deux types d'annotations:
 * des informations contextuels supplémentaires,
@@ -34,7 +34,7 @@ A noter, seulement les budgets de type _discretionnary_ sont représentées, et 
 #### Encodage pour __Department totals__
 Les bulles sont maintenant regroupées par département, et une bulle, répondant aux même encodage de taille, MAIS sans couleur, correspondant au profit fait par le département. La variation des recettes par rapport à l'année précédentes est maintenant représenté par une fine ligne autour du disque
 
-# Quel est le public visé?
+# 2. Quel est le public visé
 tldr: lecteur du journal, personne lambda  
 En se basant sur le postulat que les données exacts (les chiffres) ne sont disponibles qu'en naviguant mais que l'imprécision n'empêche pas d'extraire de l'information, il me semble que cette visualisation soit accessible à tout lecteur du _nytimes_.  
 La visualisation semble avoir aussi une certaine temporalité... je m'explique: Aucune information n'est faite à ce propos, mais l'année 2013 correspond à la première année complète du second mandat de Barack Obama, qui s'était fait ré-élire en portant comme projet de réformer complètement le régime de santé. J'imagine donc que la visualisation permet de voir où les moyens ont été mis. Humain de ce monde, en 2017, j'avoue manqué lourdement de contexte pour saisir complètement le but de cette visualisation.
