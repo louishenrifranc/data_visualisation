@@ -1,15 +1,15 @@
 # Commentaires sur la visualisation [Four Ways to Slice Obama’s 2013 Budget Proposal](http://www.nytimes.com/interactive/2012/02/13/us/politics/2013-budget-proposal-graphic.html)
 
-- [Explication des différents encodages](#part1)
+- [Explication des différents encodages](#1.-explication-des-différents-encodages)
 - [Public visé](#2.-quel-est-le-public-visé?)
 - [Questions](#quels-questions-vient-on-à-se-poser-?)
 - [Marques, canaux, et interactions](#quels-sont-les-canaux-marques-interactions?)
 - [10 principes et leur mise en application](#application-des-10-principaux-principes-de-design)
-- [Erreurs de compréhension](#erreurs-faites-en-regardant-la-visualisation)
-- [Pros & cons](#points-positifs-et-négatifs)
-- [Conclusion](#conclusion)
+- [Erreurs de compréhension](#5.-erreurs-faites-en-regardant-la-visualisation)
+- [Pros & cons](#6.-points-positifs-et-négatifs)
+- [Conclusion](#7.-conclusion)
 
-# <a name="part1"></a>1. Explication des différents encodages
+# 1. Explication des différents encodages
 La visualisation permet d'analyser le budget proposé par le président 0bama en 2013 pour l'année. Le budget est dépensé suivant un ligne de conduite à l'année (_discretionnary_), mais aussi en respect avec les lois en vigueur (_mandatory_).
 Plusieurs visualisations sont disponibles, et chacune est annotée pour guider l'utilisateur dans la compréhension des données. Deux types d'annotations:
 * des informations contextuels supplémentaires,
@@ -41,13 +41,13 @@ En se basant sur le postulat que les données exacts (les chiffres) ne sont disp
 La visualisation semble avoir aussi une certaine temporalité... je m'explique: Aucune information n'est faite à ce propos, mais l'année 2013 correspond à la première année complète du second mandat de Barack Obama, qui s'était fait ré-élire en portant comme projet de réformer complètement le régime de santé. J'imagine donc que la visualisation permet de voir où les moyens ont été mis. Humain de ce monde, en 2017, j'avoue manqué lourdement de contexte pour saisir complètement le but de cette visualisation.
  
 
-# Quels questions vient-on à se poser?
+# 3. Quels questions vient-on à se poser?
 * C'est bien beau de dépenser, mais combien d'argent vont être récupéré? Info disponible dans la dernière visualisation, mais pas de chiffre cumulatif (info existante mais sous-jacente)
 * Faire varier les années? Impossible. Encore une fois, sans contexte, il est bien difficile de saisir le sens de la visualisation. Comparé deux mandats d'un même président? Pourquoi ne pas comparer avec les mandats d'un président républicain?
 * Quel est le budget associé à l'environnement? Oui, grâce à la dernière visualisation
 * Comparer des budgets? Répondu en partie grâce à ... wait for it.. la dernière visualisation.
 
-# Quels sont les canaux-marques-interactions?
+# 4. Quels sont les canaux-marques-interactions?
 ## Marques
 Les différentes marques sont des __aires__, des __lignes__.
   
@@ -62,7 +62,7 @@ Deux types d'interactions ici:
 * La __navigation__ (au sens de la visualisation de donnée) permet d'explorer les données et d'avoir des informations plus précis à propos des différents budgets
 * La __connection__ entre les différentes visualisations est ici principalement esthétique mais permet quand même de comprendre quels données sont présentées à chaque visualisation (exemple de la visu _Changes_ ou la moitié des données disparaissent). Cette connection est proposée à l'utilisateur lorsqu'il clique sur les différents boutons, __reconfigurant__ la disposition des données.
 
-# Application des principaux principes de design
+# 5. Application des principaux principes de design
 * __Répétition du design__ 
 	* Altérée par le choix d'encoder les recettes dans la dernière visualisation; en effet la fine bande de couleur remplace le disque de couleur. Ont-ils voulu le rajouter à la fin?
 	* Mise à part cette altération, l'échelle des teintes et des aires reste la même entres les visualisations. Les items (bulles) ne s'adaptent pas aux différentes visualisations, mais c'est les visualisations qui contextualisent les items.
@@ -75,7 +75,7 @@ Deux types d'interactions ici:
 	* La teinte rouge m'évoque un manque, un danger, un drame... mais cela est hautement discutable.
 * __Taux de mensonge__: Le déficit représenté par une bulle qui n'est pas à l'échelle globale est trompeur. 
 
-# Erreurs faites en regardant la visualisation
+# 6. Erreurs faites en regardant la visualisation
 Comme mentionné précédemment, la taille du déficit laisse penser que le déficit est équivalent au budget, ou dans l'autre sens, que le budget est aussi important que le déficit (ce qui serait dément).
 
 # Points positifs et négatifs
@@ -91,5 +91,5 @@ Comme mentionné précédemment, la taille du déficit laisse penser que le déf
 ## Points positifs
 * Facilité d'exploitation: Information intéressantes, et même si les visualisations sont globalement redondantes entre elles, leur multiplicité permet d'afficher différentes informations compréhensibles par l'utilisateur de manière aisée, sans avoir à chercher. 
 
-## Conclusion
+# 7. Conclusion
 La visualisation est intéressante, et la diversité des représentations des données donne à l'utilisateur plusieurs manières d'extraire l'information sous-jacente aux données.
