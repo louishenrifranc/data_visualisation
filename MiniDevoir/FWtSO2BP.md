@@ -3,7 +3,7 @@
 - [Explication des différents encodages](#explication-des-differents-encodages)
 - [Public visé](#quel-est-le-public-vise)
 - [Questions](#quels-questions-vient-on-à-se-poser)
-- [Marques, canaux, et interactions](#quels-sont-les-canaux-marques-interactions?)
+- [Marques, canaux, et interactions](#quels-sont-les-canaux-marques-interactions) 
 - [10 principes et leur mise en application](#application-des-10-principaux-principes-de-design)
 - [Erreurs de compréhension](#erreurs-faites-en-regardant-la-visualisation)
 - [Pros & cons](#points-positifs-et-négatifs)
