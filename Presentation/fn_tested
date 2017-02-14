@@ -1,0 +1,1 @@
+d3.select(".stage").selectAll(".cut").select(".bar").attr("y", function(d) {return 3.0;})

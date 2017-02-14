@@ -1,24 +1,28 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset="utf-8">
     <title> Travail Pratique n°3 - Scatter Plot </title>
     <link rel="stylesheet" href="http://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
     <link rel="stylesheet" href="css/style.css">
     <style>
-        circle.click{
-		fill:black;
-		}
-        circle.hide1 {
-                fill-opacity="0.1"
-	}
+        circle.click {
+            fill: black;
+        }
+        
+        circle.hide {
+            opacity: 0.1;
+            pointer-events: none;
+        }
     </style>
 </head>
+
 <body>
     <div class="nav">
         <div class="slider">
             <label> 2000 </label>
-            <input id="slider" type="range"  min="2000" max="2014" value="2000" step="14" autocomplete="off"/>
+            <input id="slider" type="range" min="2000" max="2014" value="2000" step="14" autocomplete="off" />
             <label> 2014 </label>
         </div>
         <div class="annee">
@@ -29,12 +33,12 @@
             <select id="region" size="1"></select>
         </div>
         <div class="choixPays">
-            <span> Pays à suivre : </span> 
+            <span> Pays à suivre : </span>
             <input id="pays" placeholder="Indiquez un pays" autocomplete="off">
             <button id="suivre"> Suivre ce pays </button> <br>
             <span id="error"> &nbsp </span>
         </div>
-        <div class="Affichage">     
+        <div class="Affichage">
             <button id="display"> Afficher les pays marqués </button>
             <button id="reset"> Reset </button>
         </div>
@@ -43,7 +47,7 @@
     <script type="text/javascript" src="https://code.jquery.com/ui/1.12.0/jquery-ui.js"></script>
     <script type="text/javascript" src="javascript/d3.v3.js"></script>
     <script type="text/javascript" src="javascript/d3-tip.js"></script>
-    <script> 
+    <script>
         // Marges + format du svg
         var margin = {
                 top: 50,
@@ -53,13 +57,12 @@
             },
             width = 1000 - margin.left - margin.right,
             height = 600 - margin.top - margin.bottom;
-        
-    </script> 
-    <script type = "text/javascript" src = "javascript/1-preproc.js"></script>
+    </script>
+    <script type="text/javascript" src="javascript/1-preproc.js"></script>
     <script type="text/javascript" src="javascript/3-transition.js"></script>
-    <script type = "text/javascript" src = "javascript/4-toolTip.js" ></script>    
+    <script type="text/javascript" src="javascript/4-toolTip.js"></script>
     <script type="text/javascript" src="javascript/5-userInterface.js"></script>
-    <script> 
+    <script>
         var countries;
         var countriesRegion;
         // ---------------------------------------------------------- SVG ------------------------------------------------
@@ -69,30 +72,30 @@
             .attr("class", "scatterPlot")
             .append("g")
             .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
-            
+
         d3.csv("données2000.csv", function(error, data) {
             if (error) throw error;
             // ------------------------------------------------- PRÉ-TRAITEMENT -----------------------------------------   
-            
+
             // On calcule les différentes zones contenues dans le fichier puis on définit l'ensemble des échelles
             var allRegions = getRegions(data);
             setDomains(data, allRegions);
-        
+
             var allRegionSorted = manualSort(allRegions); // Tri manuel des régions pour avoir une liste "par continent"
-            
+
             // Liste d'objet contenant le nom du pays ainsi que son revenu par habitant; son espérance de vie et sa population
             countries = countriesArray(data);
-            
+
             // Tri des pays en fonction de leur population dans l'ordre décroissant
             countries = sortPays(countries);
-            
-			
+
+
             // Auto-compléteur pour que l'utilisateur n'ait pas à écrire le nom entier du pays + choix d'une région
             countriesRegion = autoFillerCountries(countries);
             addListRegions(allRegionSorted);
-            
+
             // Rajout des domaines pour les échelles des cercles
-            
+
             // ------------------------------------------------- scatterGraph -----------------------------------------
             // Axes
             axes(scatterGraph, x, y);
@@ -101,17 +104,18 @@
             // Légende
             legend(scatterGraph, allRegionSorted)
         });
-        
+
         // ------------------------------------------------- TRANSITION : VOIR LE FICHIER TRANSITION.JS -----------------------------------------
-        
+
         // -------------------------------------------------- Tool-tip -------------------------------------------------
-        
+
         var tip = toolTip(scatterGraph);
         scatterGraph.call(tip);
-        
-        // ------------------------------------------------- AFFICHAGE DES PAYS : VOIR LE FICHIER USERINTERFACE.JS  -----------------------------------------  
+
+        // ------------------------------------------------- AFFICHAGE DES PAYS : VOIR LE FICHIER USERINTERFACE.JS  -----------------------------------------
     </script>
     <!-- Sujet de la question à la fin de l'énoncé -->
     <script type="text/javascript" src="javascript/2-scatterplot.js"></script>
 </body>
+
 </html>

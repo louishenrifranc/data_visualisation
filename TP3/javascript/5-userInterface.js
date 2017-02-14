@@ -7,13 +7,12 @@
         balise <button #reset> reset : click => reset
 
 */
-
 d3.select("#reset").on("click", reset)
 d3.select("#suivre").on("click", targetPays)
-d3.select("#pays").on("keydown", function(){
-	if(d3.event.keyCode == 13){
-		targetPays();
-	}
+d3.select("#pays").on("keydown", function() {
+    if (d3.event.keyCode == 13) {
+        targetPays();
+    }
 })
 d3.select("#region").on("change", showWorldArea)
 d3.select("#display").on("click", displayTarget)
@@ -24,7 +23,7 @@ d3.select("#display").on("click", displayTarget)
 */
 function addListRegions(regions) {
     var locRegions = regions.slice();
-	locRegions.unshift("World")
+    locRegions.unshift("World")
     var select_tag = document.getElementById("region")
     locRegions.map(function(e) {
         var new_option = document.createElement("option");
@@ -32,28 +31,29 @@ function addListRegions(regions) {
         new_option.value = e
         select_tag.appendChild(new_option)
     })
-	
+
     countriesInRegion(countries, locRegions[0])
 }
 
 /*  Auto-compléteur pour que l'utilisateur n'ait pas à écrire le nom entier du pays
     countries : données transformées du CSV
 */
+
 function autoFillerCountries(countries) {
-    
+
     countries.map(function(d) {
         return normalizeName(d);
     });
     $('#pays').autocomplete({
-        source: function (request, response) {
-        var results = $.ui.autocomplete.filter(countries, request.term);
-        if (!results.length ) {
-            d3.select("#error").html("<b>error no match</b>")
-        } else {
-	   d3.select("#error").html("</br>")	
-	} 
-        response(results);
-    }
+        source: function(request, response) {
+            var results = $.ui.autocomplete.filter(countries, request.term);
+            if (!results.length) {
+                d3.select("#error").html("<b>error no match</b>")
+            } else {
+                d3.select("#error").html("&nbsp;")
+            }
+            response(results);
+        }
     });
     return countries
 }
@@ -65,18 +65,19 @@ function autoFillerCountries(countries) {
 function countriesInRegion(countries, region) {
     var allcountries = []
     countries.forEach(function(d) {
-        if(d.values.Region == region || region == "World") {
-              allcountries.push(d.name)
-     }
+        if (d.values.Region == region || region == "World") {
+            allcountries.push(d.name)
+        }
     });
-    
-    return autoFillerCountries(allcountries);
+    autoFillerCountries(allcountries)
+    return allcountries;
 }
 
 
 // --------------------------------------------------------------------- FONCTIONS ASSOCIÉES AUX EVENTLISTENERS ---------------------------------------------------------
 
 // Indique si on affiche les pays sélectionnés uniquement (true) ou tous les pays (false)
+// LOL, don't need it...
 var hide = true;
 
 // Affiche les pays associées à une région géographique
@@ -87,15 +88,27 @@ function showWorldArea() {
                 Désactiver la tooltip
                 mettre une opacité de 0.1    
     */
-    var region = d3.select(this).property("value");
-    countriesRegion = countriesInRegion(countries, region);
-    scatterGraph.selectAll("circle").classed("click", "true");
-    scatterGraph.selectAll("circle").classed("hide1", "true");
 
-    countriesRegion.forEach(function(name) {
-	     name = normalizeName(name)
-	     scatterGraph.select("#"+name).classed("hide1", "false")
-	})
+    var region = d3.select(this).property("value");
+
+    countriesRegion = countriesInRegion(countries, region);
+    scatterGraph.selectAll("circle").classed("click", false);
+
+    var countriesR = [];
+
+    countriesRegion.forEach(function(country) {
+        countriesR.push(normalizeName(country))
+    });
+
+
+
+    //scatterGraph.selectAll("#"+normalizeName(country)).classed("hide",true);
+    //d3.selectAll("circle").filter(function() { return countriesRegion.indexOf(d3.select(this).attr("id")) == -1;}).classed("hide", true);
+    //d3.selectAll("circle").filter(function() { return countriesRegion.indexOf(d3.select(this).attr("id")) !== -1;}).classed("hide", false);
+    //console.log(scatterGraph.select("#"+normalizeName(country)));
+    d3.selectAll("circle").classed("hide", function() {
+        return (countriesR.indexOf(d3.select(this).attr("id")) == -1)
+    });
 
 };
 
@@ -113,9 +126,17 @@ function targetPays() {
         
         Si on a affiché les pays marqués, la fonction ne fait rien
     */
-	var pays = normalizeName(d3.select("#pays").property("value"));
-	scatterGraph.select("#"+pays).classed("click", !d3.select("#"+pays).classed("click"))
-	
+
+    var pays = normalizeName(d3.select("#pays").property("value"));
+
+    scatterGraph.select("#" + pays).classed("click", function() {
+        if (d3.select(this).classed("hide")) {
+            return false
+        } else {
+            return !d3.select("#" + pays).classed("click")
+        }
+    })
+
 };
 
 // La fonction targetClick réalise la même chose que la fonction target lorsque l'on clique sur le cercle
@@ -125,7 +146,7 @@ function targetClick() {
         Si on a affiché les pays marqués, la fonction ne fait rien
     */
 
-	d3.select(this).classed("click", !d3.select(this).classed("click"))
+    d3.select(this).classed("click", !d3.select(this).classed("click"))
 };
 
 // Affiche les pays ciblés uniquement (hide==true) ou tous les pays (hide==false)
@@ -138,7 +159,10 @@ function displayTarget() {
             
             Mettre à jour hide
     */
-
+    d3.selectAll("circle").filter(function() {
+        return d3.select(this).classed("click") == false;
+    }).classed("hide", true)
+    d3.selectAll(".click").classed("click", false)
 };
 
 // La fonction reset réinitialise les sélections et l'affichage à zéro
@@ -149,9 +173,11 @@ function reset() {
         Réinitialiser countriesRegion
         Réinitialiser hide
     */
-	scatterGraph.selectAll("circle").classed("click", false);
-	scatterGraph.selectAll("circle").classed("hide", false);
-        countriesRegion = countries
-        d3.select("#error").text("")	
-        d3.select("#pays").node().value = ""
+    scatterGraph.selectAll("circle").classed("click", false);
+    scatterGraph.selectAll("circle").classed("hide", false);
+    countriesRegion = countries
+    d3.select("#error").html("&nbsp;")
+    d3.select("#pays").node().value = ""
+    d3.select("#region").property("value", "World")
+    countriesRegion = countriesInRegion(countries, "World");
 };
