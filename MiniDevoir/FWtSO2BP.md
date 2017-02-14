@@ -7,6 +7,7 @@
 - [10 principes et leur mise en application](#application-des-10-principaux-principes-de-design)
 - [Erreurs de compréhension](#erreurs-faites-en-regardant-la-visualisation)
 - [Pros & cons](#points-positifs-et-négatifs)
+- [Conclusion](#conclusion)
 
 # 1. Explication des différents encodages
 La visualisation permet d'analyser le budget proposé par le président 0bama en 2013 pour l'année. Le budget est dépensé suivant un ligne de conduite à l'année (_discretionnary_), mais aussi en respect avec les lois en vigueur (_mandatory_).
@@ -90,4 +91,5 @@ Comme mentionné précédemment, la taille du déficit laisse penser que le déf
 ## Points positifs
 * Facilité d'exploitation: Information intéressantes, et même si les visualisations sont globalement redondantes entre elles, leur multiplicité permet d'afficher différentes informations compréhensibles par l'utilisateur de manière aisée, sans avoir à chercher. 
 
-
+## Conclusion
+La visualisation est intéressante, et la diversité des représentations des données donne à l'utilisateur plusieurs manières d'extraire l'information sous-jacente aux données.
