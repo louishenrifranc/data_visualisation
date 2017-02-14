@@ -1,15 +1,15 @@
 # Commentaires sur la visualisation [Four Ways to Slice Obama’s 2013 Budget Proposal](http://www.nytimes.com/interactive/2012/02/13/us/politics/2013-budget-proposal-graphic.html)
 
-- [Explication des différents encodages](#1.-explication-des-différents-encodages)
-- [Public visé](#2.-quel-est-le-public-visé?)
-- [Questions](#quels-questions-vient-on-à-se-poser-?)
+- [Explication des différents encodages](#explication-des-differents-encodages)
+- [Public visé](#quel-est-le-public-visé?)
+- [Questions](#quels-questions-vient-on-à-se-poser?)
 - [Marques, canaux, et interactions](#quels-sont-les-canaux-marques-interactions?)
 - [10 principes et leur mise en application](#application-des-10-principaux-principes-de-design)
-- [Erreurs de compréhension](#5.-erreurs-faites-en-regardant-la-visualisation)
-- [Pros & cons](#6.-points-positifs-et-négatifs)
-- [Conclusion](#7.-conclusion)
+- [Erreurs de compréhension](#erreurs-faites-en-regardant-la-visualisation)
+- [Pros & cons](#points-positifs-et-négatifs)
+- [Conclusion](#conclusion)
 
-# Explication des différents encodages
+# Explication des differents encodages
 La visualisation permet d'analyser le budget proposé par le président 0bama en 2013 pour l'année. Le budget est dépensé suivant un ligne de conduite à l'année (_discretionnary_), mais aussi en respect avec les lois en vigueur (_mandatory_).
 Plusieurs visualisations sont disponibles, et chacune est annotée pour guider l'utilisateur dans la compréhension des données. Deux types d'annotations:
 * des informations contextuels supplémentaires,
