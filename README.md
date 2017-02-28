@@ -28,11 +28,12 @@ Les canaux les plus utilisés sont:
 Le canal choisi doit exprimer toute, et uniquement l'attribut exprimé.  
 
 ### Bonne manière
-Des données catégorisables ne doivent pas être encodée avec des canaux catégorisables (encoder chaque pays par des ronds de différentes tailles pourrait laisser entendre que les gros ronds sont plus importants).  
-Le canal le plus efficace est le cannal spatial (mais celui ci est déja utilisé pour représenter les données en elle même).   
-Les canaux longueur et taille sont bonnes à utiliser pour les données 1D, moins bien pour les données 2D, et à éviter pour les données 3D.  
-Ne pas encoder plus de valeurs que le canal ne peut en supporter, sinon il est recommandable de changer de canal.  
-Les humains sont très sensibles aux mouvements, ajouter le mouvement dans un canal est bien (par exemple la force des vents).
+* Des données catégorisables ne doivent pas être encodée avec des canaux catégorisables (encoder chaque pays par des ronds de différentes tailles pourrait laisser entendre que les gros ronds sont plus importants).  
+* Le canal le plus efficace est le cannal spatial (mais celui ci est déja utilisé pour représenter les données en elle même).   
+* Les canaux longueur et taille sont bonnes à utiliser pour les données 1D, moins bien pour les données 2D, et à éviter pour les données 3D.  
+* Ne pas encoder plus de valeurs que le canal ne peut en supporter, sinon il est recommandable de changer de canal.  
+* Les humains sont très sensibles aux mouvements, ajouter le mouvement dans un canal est bien (par exemple la force des vents).
+* LineChar ou Barchart: Les lignes sous entendent une connexion entre les points. A éviter avec des données catégoriques, ou ordinales
 ### Définir la bonne utilisation d'un canal
 Chaque canal possible remplit certains critères:
 * Discriminabilité: peut on faire la différence entre deux canaux
@@ -66,3 +67,8 @@ Les différents buts de l'interaction sont pour sélectionner, trier, encoder, f
 
 ## Storyboard
 Une sorte de manuel d'utilisateur pour répresenter notre interaction
+
+## Donnée multidimensionnelles
+Les coordonnées parallèles (techniques qui consistent à représenter chaque dimensions sur un axe vertical, puis pour chaque item, relier les points sur les axes avec des lignes: convient bien avec des données multidensionnelles, mais moins avec un très grand nombre d'item.
+
+## Cartographie

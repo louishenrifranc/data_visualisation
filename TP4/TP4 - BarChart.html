@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title> Travail Pratique n°4 - Bar Chart </title>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <style>
+        rect:hover {
+            fill: red;
+        }
+    </style>
+</head>
+<body>
+<script type="text/javascript" src="javascript/d3.v3.js"></script>
+<script type="text/javascript" src="javascript/barChartPreproc.js"></script>
+<script type="text/javascript" src="javascript/barChart.js"></script>
+<script>
+    // Marges + format du svg
+    var margin = {
+            top: 50,
+            right: 100,
+            bottom: 200,
+            left: 40
+        },
+        width = 600 - margin.left - margin.right,
+        height = 500 - margin.top - margin.bottom;
+
+    // ------------------------------------------------- PRÉ-TRAITEMENT -----------------------------------------
+    d3.csv("./data.csv", function(data) {
+
+        // Noms des stations
+        var names = getNames(data);
+
+        // Fonctions scales avec range
+        [x, y, color] = setScalesRangesFunctions(width, height, names);
+
+        // Détail des trajets par station de départ
+        var dataPerStreet = sortPerStreetData(data, names);
+
+        // Pour chacune des stations de départ, on va créer un bar chart
+        dataPerStreet.forEach(function (activeData, i) {
+
+            // Création de l'histogramme pour la station choisie
+            var histogram = createHistogram(activeData, names);
+
+            // Conversion de l'histogramme
+            setHistogram(histogram, names);
+
+            // Domain de x et y
+            setDomains(histogram, x, y);
+
+            // Nombre total de trajet de la station de départ
+            var nbTotal = getTotal(activeData);
+
+            // -------------------------------------- HISTOGRAM ------------------------------------------------
+            console.log(i)
+            // Nombre de trajets totaux entre deux stations dans un sens
+            var nbTotalPerTerminus = getTotalPerTerminus(activeData,names);
+
+            // Création d'un bar chart
+            var activeSVG = createBarChart(width,height,margin,histogram,nbTotal,nbTotalPerTerminus,names,i,x,y,color);
+
+            // Rajout des axes et titre
+            createLegend(activeSVG, y, names,nbTotalPerTerminus)
+
+        });
+    })
+
+</script>
+</body>
+</html>

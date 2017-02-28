@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title> Travail Pratique n°4 - Chord Diagram </title>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <style>
+
+        .group path {
+            fill-opacity: 0.8;
+        }
+        path.chord {
+            stroke: #000;
+            stroke-width: 0.25;
+        }
+        
+        #circle:hover path.fade {
+            display: none;
+        }
+
+    </style>
+</head>
+<body>
+<script type="text/javascript" src="javascript/d3.v3.js"></script>
+<script type="text/javascript" src="javascript/chordDiagramPreproc.js"></script>
+<script type="text/javascript" src="javascript/chordDiagram.js"></script>
+<script>
+    // Format du svg + rayon interne et externe
+    var width = 720,
+        height = 720,
+        outerRadius = Math.min(width, height) / 2 - 10,
+        innerRadius = outerRadius - 24;
+
+    // Création du svg
+    var svg = d3.select("body").append("svg")
+        .attr("width", width)
+        .attr("height", height)
+        .append("g")
+        .attr("id", "circle")
+        .attr("transform", "translate(" + width / 2 + "," + height / 2 + ")");
+    svg.append("circle")
+        .attr("r", outerRadius);
+
+    d3.csv("./data.csv", function(data){
+        // ------------------------------------------------- PRÉ-TRAITEMENT -----------------------------------------
+
+        // Création des layout arc et chord
+        [arc,fChord] = createArcChord(innerRadius,outerRadius);
+
+        // Noms des stations
+        var names = getNames(data);
+        // Fonction scale color usuelle
+        var color = setScaleColor(names);
+
+        // Données triées par station d'origine
+        var dataSet = setData(data,names);
+        // Total des trajets
+        var nbTotal = getTotal(dataSet);
+
+        // matrix : Matrice de liaison où chaque colonne possède les voyages d'une station vers toutes les autres
+
+        var matrix = createMatrix(dataSet,names);
+
+        // Création du layout des chords
+        var layout = createLayout(matrix);
+
+        // ------------------------------------------------- CHORD DIAGRAM -----------------------------------------
+
+        // 1 group par station
+        var group = createGroup(layout);
+        // Titre des stations
+        addTitleGroup(group,names, nbTotal);
+        // Création de la bordure extérieure du chord diagram
+        var groupPath = createPathPerGroup(group, arc, color, dataSet);
+        // Nom des stations sur la bordure extérieure du chord diagram
+        addStationName(group, groupPath, dataSet);
+        // Création des cordes/chord/noeuds du chord diagram
+        var chordDiagram = createChordDiagram(svg, dataSet, layout, fChord, color);
+        // Titres des noeuds
+        addChordTitle(chordDiagram,dataSet, nbTotal);
+        console.log(chordDiagram)
+    });
+
+</script>
+</body>
+</html>

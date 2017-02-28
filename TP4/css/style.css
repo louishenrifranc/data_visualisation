@@ -1,0 +1,23 @@
+html {
+    display: table;
+    margin: auto;
+    background-color: #E6E6FA;
+}
+svg {
+    border: solid black;
+    background-color: white;
+}
+.axis {
+    shape-rendering: crispEdges
+}
+.axis path,
+.axis line {
+    fill: none;
+    stroke: black;
+    shape-rendering: crispEdges;
+}
+
+#circle circle {
+    fill: none;
+    pointer-events: all;
+}
