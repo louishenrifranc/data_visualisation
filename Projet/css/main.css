@@ -1,0 +1,28 @@
+        /* jumbotron css */
+        .jumbotron {
+        	background: url("../img/jumbotron_bg2.gif") no-repeat center center; 
+        	-webkit-background-size: 100% 100%;
+        	-moz-background-size: 100% 100%;
+        	-o-background-size: 100% 100%;
+        	background-size: 100% 100%;
+        }
+        .jumbotron h1 span { color:  white; background: #ff4a4a; font-size: 75px; line-height: 74px; font-weight: 700; margin: 0 0 0px; font-family: 'Helvetica Neue', serif; }
+
+        .jumbotron h2 span{ color: white;  background: #ff4a4a; font-size: 40px; line-height: 40px; font-weight: 500; margin: 0 0 0px; font-family: 'Libre Baskerville', serif; text-align: left }
+        .jumbotron p span {color: white;  background: #ff4a4a; font-size: 28px; line-height: 27px; font-weight: 300; text-align: center; font-family: 'Libre Baskerville', serif; }
+
+        /* question1 css */
+        #question1 { font: 12px Arial;}
+
+        #question1 path { 
+        	stroke: steelblue;
+        	stroke-width: 2;
+        	fill: none;
+        }
+
+        #question1 .axis path,
+        #question1 .axis line {
+        	fill: none;
+        	stroke: grey;
+        	stroke-width: 1;
+        	shape-rendering: crispEdges;

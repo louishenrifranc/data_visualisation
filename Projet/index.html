@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/scrolling-nav.css" rel="stylesheet">
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="Raphael Graille Louis-Henri Franc" content="">
+
+    <title>Speed Dating</title>
+    <link rel="stylesheet" href="css/main.css">
+
+</head>
+
+<!-- The #page-top ID is part of the scrolling feature - the data-spy and data-target are part of the built-in Bootstrap scrollspy function -->
+
+<body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+        <div class="container">
+            <div class="navbar-header page-scroll">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand page-scroll" href="#page-top">INF8808 Project</a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse navbar-ex1-collapse">
+                <ul class="nav navbar-nav">
+                    <!-- Hidden li included to remove active class from about link when scrolled up past about section -->
+                    <li class="hidden">
+                        <a class="page-scroll" href="#page-top"></a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#question1">Est ce que les personnes similaires se matchent entre elles?</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#question2">Attentes vs Réalités</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#question3">Connaissons nous l'autre</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#question4">Profil du Serial Matcheur</a>
+                    </li>
+
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+
+    <!-- Intro Section -->
+    <section id="intro" class="intro-section jumbotron ">
+        <h1><span>Attractivité. </span></h1>
+        <h2><span>\a.tʁak.ti.vi.te\. Capacité que possède un objet ou une personne à séduire</span></h2>
+        <div class="col-lg-6" style=" margin-top: 250px; color:white;">
+            <p> 
+                <span>
+                    <a href='https://www.kaggle.com/annavictoria/speed-dating-experiment' class='remove-box'>
+                        Kaggle
+                    </a>. 
+                    blablabla...
+                </span>
+            </p>
+        </div>
+        <div class="col-lg-6" style=" margin-top: 250px; color:white;">
+            <p> 
+                <span>
+                    blablabla...
+                </span>
+            </p>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="question1" class="about-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4" id="heatmap1">Heatmap1</div>
+                <div class="col-md-4" id="heatmap2">Heatmap2</div>
+                <div class="col-md-4" id="heatmap3">Heatmap3</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="question2" class="services-section">
+        <div class="container">
+            <div class="row">
+                <h1> Question 2</h1>
+            </div>
+            <div class="row">
+                <div class="col-md-4 col-md-pull-2" id="q2_radar_chart1"></div>
+                <div class="col-md-4 col-md-push-2" id="q2_radar_chart2"></div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Contact Section -->
+<section id="question3" class="contact-section">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <h1>Contact Section</h1>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="question4" class="contact-section">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <h1>Contact Section</h1>
+            </div>
+        </div>
+    </div>
+</section>
+<script type="text/javascript" src="js/utils/d3.v3.js"></script>
+<script type="text/javascript" src="js/utils/d3-tip.js"></script>
+<script type="text/javascript" src="js/utils/topojson.v1.js"></script>
+<script type="text/javascript" src="js/utils/queue.v1.js"></script>
+<script src="js/utils/jquery.js"></script>
+<script src="js/utils/bootstrap.min.js"></script>
+<script src="js/utils/jquery.easing.min.js"></script>
+<script src="js/utils/scrolling-nav.js"></script>
+
+<script src="js/question2.js"></script>
+
+
+<script type="text/javascript">
+    var q = queue();
+    q.defer(d3.json,"data/female_expectation.json")
+    q.defer(d3.json,"data/female_experience.json")
+    q.await(function(error,female_expectation,female_experience){
+        if(error) throw error;
+        display_radar_char("#q2_radar_chart1", female_expectation, female_experience);
+    })
+
+    var q1 = queue();
+    q1.defer(d3.json,"data/male_expectation.json")
+    q1.defer(d3.json,"data/male_experience.json")
+    q1.await(function(error,male_expectation,male_experience){
+        if(error) throw error;
+        display_radar_char("#q2_radar_chart2", male_expectation, male_experience);
+    })
+</script>
+<!-- Scrolling Nav JavaScript -->
+
+
+
+</body>
+
+</html>

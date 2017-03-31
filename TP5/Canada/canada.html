@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title> Travail Pratique n°5 : Carte du Canada </title>
+    <link rel="stylesheet" href="css/leaflet.css"/>
+    <link rel="stylesheet" href="css/style.css"/>
+</head>
+<body>
+
+<script type="text/javascript" src="javascript/util/d3.v3.js"></script>
+<script type="text/javascript" src="javascript/util/d3-tip.js"></script>
+<script type="text/javascript" src="javascript/util/topojson.v1.js"></script>
+<script type="text/javascript" src="javascript/util/leaflet.js"></script>
+<script type="text/javascript" src="javascript/canada.js"></script>
+
+
+<script type="text/javascript" src="javascript/util/queue.v1.js"></script>
+
+<script type="text/javascript" src="javascript/leafletLayout.js"></script>
+<script type="text/javascript" src="javascript/legendAndTip.js"></script>
+<script>
+
+    // ----------------------------------------------------- ASSOCIATION LEAFLET D3 --------------------------
+
+    createDiv();
+    var map = linkDivToLeaflet("http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png");
+
+    var svg, g;
+    [svg, g] = linkD3toLeaflet(map);
+
+    // Chargement de la carte des circonscriptions et des résultats par circonscription
+    chargement();
+
+    function ready(error, json, dataElection) {
+        if (error) throw error;
+		
+        // --------------------------------------------------- PRÉ-TRAITEMENT ----------------------------------------
+
+        // Tri des candidats par numéro de circonscription
+        var electionParDistrict = sortedByCircumscribing(dataElection);
+
+        // On associe le candidat élu à sa circonscription
+        var gagnantParCirconscription = winnerCircumscribing(electionParDistrict);
+
+
+        // --------------------------------------------------- CIRCONSCRIPTIONS DU CANADA -------------------------------
+
+        // Conversion de la carte des circonscriptions du Canada
+        var Canada = conversionTopoJSON(json);
+        var path = createPath();
+
+        // Création des éléments svg sur Leaflet
+        var circons = circonscriptions(Canada, g, path, gagnantParCirconscription);
+
+        // Reset permet de redessiner les circonscriptions à chaque fois que c'est nécessaire (ici : quand on zoom)
+        map.on("viewreset", update);
+        update();
+
+        // Actualisation des éléments svg
+        function update() {
+            // Redimensionnement et repositionnement du SVG
+            positionSVG(svg, g, path, Canada);
+
+            // Mise à jour des paths
+            circonsPath(circons, path);
+        }
+
+        // ------------------------------------------ TOOL TIP -------------------------------------
+        tip(svg, circons);
+    }
+
+    // ------------------------------------------ LÉGENDE ----------------------------------------
+    legende(partis, color);
+</script>
+</body>
+</html>
+

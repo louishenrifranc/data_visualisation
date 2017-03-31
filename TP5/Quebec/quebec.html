@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title> Travail Pratique n°5 : Carte du Quebec </title>
+    <link rel="stylesheet" href="css/leaflet.css"/>
+    <link rel="stylesheet" href="css/style.css"/>
+</head>
+<body>
+<script type="text/javascript" src="javascript/util/d3.v3.js"></script>
+<script type="text/javascript" src="javascript/util/d3-tip.js"></script>
+<script type="text/javascript" src="javascript/util/topojson.v1.js"></script>
+<script type="text/javascript" src="javascript/util/leaflet.js"></script>
+<script type="text/javascript" src="javascript/util/queue.v1.js"></script>
+<script type="text/javascript" src="javascript/leafletLayout.js"></script>
+<script type="text/javascript" src="javascript/quebec.js"></script>
+<script type="text/javascript" src="javascript/legendAndTip.js"></script>
+<script>
+
+    // ----------------------------------------------------- ASSOCIATION LEAFLET D3 --------------------------
+
+    createDiv();
+    var map = linkDivToLeaflet("http://{s}.tile.openstreetmap.se/hydda/base/{z}/{x}/{y}.png");
+
+    var svg, g;
+    [svg, g] = linkD3toLeaflet(map);
+
+    // Chargement des fichiers externes
+    chargement();
+
+    function ready(error, quebec, routes, aerobases) {
+        if (error) throw error;
+
+		// ------------------------------------------------- CARTE ----------------------------
+		
+        var path = createPath();
+
+        // Création des éléments svg sur Leaflet pour chaque donnée
+        var d3_quebec,d3_roads,d3_aerobases;
+        [d3_quebec,d3_roads,d3_aerobases] = d3Features(quebec, routes, aerobases);
+
+        // update permet de redessiner la carte du Québec à chaque fois que c'est nécessaire (ici : quand on zoom)
+        map.on("viewreset", update);
+        update();
+
+        // Mise à jour de la carte du Québec
+        function update() {
+            // Redimensionnement et repositionnement du SVG
+            positionSVG(svg,g,path,quebec);
+
+            // Mise à jour élements SVG
+            featuresUpdate(d3_quebec,d3_roads,d3_aerobases, path);
+
+        }
+        // ------------------------------------------ TOOL TIP -------------------------------------
+        tip(svg, d3_aerobases);
+    }
+
+    // ------------------------------------------ LÉGENDE ----------------------------------------
+    legende();
+
+</script>
+</body>
+</html>
