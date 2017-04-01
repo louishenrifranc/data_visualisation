@@ -64,7 +64,7 @@
     <!-- Intro Section -->
     <section id="intro" class="intro-section jumbotron ">
         <h1><span>Attractivité. </span></h1>
-        <h2><span>\a.tʁak.ti.vi.te\. Capacité que possède un objet ou une personne à séduire</span></h2>
+        <h2><span>\a.tʁak.ti.vi.te\. <mark>Capacité</mark> que possède un objet ou une personne à <mark>séduire</mark></span></h2>
         <div class="col-lg-6" style=" margin-top: 250px; color:white;">
             <p> 
                 <span>
@@ -82,10 +82,11 @@
                 </span>
             </p>
         </div>
+
     </section>
 
     <!-- About Section -->
-    <section id="question1" class="about-section">
+    <section id="question1" class="question1-section">
         <div class="container">
             <div class="row">
                 <div class="col-md-4" id="heatmap1">Heatmap1</div>
@@ -96,53 +97,60 @@
     </section>
 
     <!-- Services Section -->
-    <section id="question2" class="services-section">
+    <section id="question2" class="question2-section">
         <div class="container">
             <div class="row">
                 <h1>Attentes vs Réalités</h1>
             </div>
+            <br/>
             <div class="row">
-                <div class="col-md-6 col-md-pull-1" id="q2_radar_chart1"></div>
-                <div class="col-md-6 col-md-push-1" id="q2_radar_chart2"></div>
+                <div class="col-md-4 col-md-pull-2 " id="q2_radar_chart1"></div>
+                <div class="col-md-4 col-md-push-2 " id="q2_radar_chart2"></div>
             </div>
         </div>
     </section>
 
     <!-- Contact Section -->
-    <section id="question3" class="contact-section">
+    <section id="question3" class="question3-section">
         <div class="container">
             <div class="row">
-                <h1>Savons nous ce qu'attend l'autre</h1>
+                <h1>L'autre sexe, cet inconnu?</h1>
             </div>
-            <div class="row">
-                <div class="col-md-4 col-md-pull-2" id="q3_radar_chart1"></div>
-                <div class="col-md-4 col-md-push-2" id="q3_radar_chart2"></div>
+            <div class='row'>
+               <!-- <blockquote class=" col-md-8 oval-thought-border"> /!-->
+               <p>Mettez vous à la place de l'autre sexe, et devinez ses attentes? Dans cette situation, les étudiants ont du trouver les attributs qui intéressaient le sexe opposé. A ce petit jeu les <mark>femmes</mark> se sont mieux débrouillés. Celles-ci sont nottament très lucides, sur leur pouvoir attractif, et pensent que c'est ce que les hommes regardent en priorité</p>
+               <!-- </blockquote> /!-->
+           </div>
+           <br/>
+           <div class="row">
+            <div class="col-md-4 col-md-pull-2" id="q3_radar_chart1"></div>
+            <div class="col-md-4 col-md-push-2" id="q3_radar_chart2"></div>
+        </div>
+    </div>
+</section>
+
+<section id="question4" class="question4-section">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <h1>Question 4</h1>
             </div>
         </div>
-    </section>
+    </div>
+</section>
+<script type="text/javascript" src="js/utils/d3.v3.js"></script>
+<script type="text/javascript" src="js/utils/d3-tip.js"></script>
+<script type="text/javascript" src="js/utils/topojson.v1.js"></script>
+<script type="text/javascript" src="js/utils/queue.v1.js"></script>
+<script src="js/utils/jquery.js"></script>
+<script src="js/utils/bootstrap.min.js"></script>
+<script src="js/utils/jquery.easing.min.js"></script>
+<script src="js/utils/scrolling-nav.js"></script>
 
-    <section id="question4" class="contact-section">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
-                    <h1>Contact Section</h1>
-                </div>
-            </div>
-        </div>
-    </section>
-    <script type="text/javascript" src="js/utils/d3.v3.js"></script>
-    <script type="text/javascript" src="js/utils/d3-tip.js"></script>
-    <script type="text/javascript" src="js/utils/topojson.v1.js"></script>
-    <script type="text/javascript" src="js/utils/queue.v1.js"></script>
-    <script src="js/utils/jquery.js"></script>
-    <script src="js/utils/bootstrap.min.js"></script>
-    <script src="js/utils/jquery.easing.min.js"></script>
-    <script src="js/utils/scrolling-nav.js"></script>
-
-    <script src="js/question2.js"></script>
+<script src="js/question2.js"></script>
 
 
-    <script type="text/javascript">
+<script type="text/javascript">
         // Question 1 loading
 
         // Question 2 loading
@@ -152,7 +160,7 @@
         q.defer(d3.json,"data/female_experience.json")
         q.await(function(error,data1,data2){
             if(error) throw error;
-            display_radar_char("#q2_radar_chart1", data1, data2);
+            display_radar_char("#q2_radar_chart1", data1, data2, "Désir des Femmes Versus Choix", "Critères de Désir des femmes", "Critères de Séléction des  Femmes");
         })
 
         var q1 = queue();
@@ -160,7 +168,7 @@
         q1.defer(d3.json,"data/male_experience.json")
         q1.await(function(error,data1,data2){
             if(error) throw error;
-            display_radar_char("#q2_radar_chart2", data1, data2);
+            display_radar_char("#q2_radar_chart2", data1, data2,"Désir des Hommes Versus Choix", "Critères de Désir des Hommes", "Critères de Séléction des  Hommes");
         })
 
         // Question 3 loading 
@@ -169,7 +177,7 @@
         q2.defer(d3.json,"data/female_expectation.json")
         q2.await(function(error,data1,data2){
             if(error) throw error;
-            display_radar_char("#q3_radar_chart1", data1, data2);
+            display_radar_char("#q3_radar_chart1", data1, data2, "Hommes, qu'est ce qui intéresse les Femmes", "Réponse des Hommes", "Réalité");
         })
 
         var q3 = queue();
@@ -177,7 +185,7 @@
         q3.defer(d3.json,"data/male_expectation.json")
         q3.await(function(error,data1,data2){
             if(error) throw error;
-            display_radar_char("#q3_radar_chart2", data1, data2);
+            display_radar_char("#q3_radar_chart2", data1, data2, "Femmes, qu'est ce qui intéresse les Hommes", "Réponse des Femmes", "Réalité");
         })
 
         // Question 4 loading

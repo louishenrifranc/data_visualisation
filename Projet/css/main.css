@@ -1,3 +1,17 @@
+        /* navigation bar css */
+        .page-scroll {
+                font-size: 13px;
+                font-weight: 30px
+                font-family: 'Helvetica Neue', serif;
+                color:  #ff4a4a;
+        }
+
+        .page-scroll a {
+                font-size: 25px;
+                font-family: 'Helvetica Neue', serif;
+                color:  #ff4a4a;
+        }
+
         /* jumbotron css */
         .jumbotron {
         	background: url("../img/jumbotron_bg2.gif") no-repeat center center; 
@@ -13,7 +27,6 @@
 
         /* question1 css */
         #question1 { font: 12px Arial;}
-
         #question1 path { 
         	stroke: steelblue;
         	stroke-width: 2;
@@ -26,3 +39,72 @@
         	stroke: grey;
         	stroke-width: 1;
         	shape-rendering: crispEdges;
+        }
+
+        /* question 3 css */
+        #question3 p {
+                font-family: 'Helvetica Neue', serif; 
+                color: black;
+                font-size: 25px;
+                text-align: center;
+        }
+
+        #question3 h1 {
+                color: black;  font-size: 40px; line-height: 40px; font-weight: 500; font-family: 'Libre Baskerville', serif; text-align: left
+        }
+
+
+
+        .oval-thought-border {
+              position:relative;
+              padding:50px 30px;
+              margin:1em auto 80px;
+              border:10px solid #c81e2b;
+              text-align:center;
+              color:#333;
+              background:#fff;
+              -webkit-border-top-left-radius:240px 140px;
+              -webkit-border-top-right-radius:240px 140px;
+              -webkit-border-bottom-right-radius:240px 140px;
+              -webkit-border-bottom-left-radius:240px 140px;
+              -moz-border-radius:240px / 140px;
+              border-radius:240px / 140px;
+      }
+
+      /* creates the larger circle */
+      .oval-thought-border:before {
+              content:"";
+              position:absolute;
+              z-index:10;
+              bottom:-40px;
+              right:100px;
+              width:50px;
+              height:50px;
+              border:10px solid #c81e2b;
+              background:#fff;
+              /* css3 */
+              -webkit-border-radius:50px;
+              -moz-border-radius:50px;
+              border-radius:50px;
+              /* reduce the damage in FF3.0 */
+              display:block;
+      }
+
+      /* creates the smaller circle */
+      .oval-thought-border:after {
+              content:"";
+              position:absolute;
+              z-index:10;
+              bottom:-60px;
+              right:50px;
+              width:25px;
+              height:25px;
+              border:10px solid #c81e2b;
+              background:#fff;
+              /* css3 */
+              -webkit-border-radius:25px;
+              -moz-border-radius:25px;
+              border-radius:25px;
+              /* reduce the damage in FF3.0 */
+              display:block;
+      }

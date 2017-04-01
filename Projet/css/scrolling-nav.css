@@ -38,23 +38,30 @@ of those sections to manage the look and feel of the site. */
     background: black;
 }
 
-.about-section {
+.question1-section {
     height: 100%;
     padding-top: 150px;
     text-align: center;
     background: white;
 }
 
-.services-section {
+.question2-section {
     height: 140%;
     padding-top: 150px;
     text-align: center;
     background: black;
 }
 
-.contact-section {
-    height: 100%;
-    padding-top: 150px;
+.question3-section {
+    height: 200%;
+    padding-top: 20px;
     text-align: center;
     background: white;
+}
+
+.question4-section {
+    height: 100%;
+    padding-top: 50px;
+    text-align: center;
+    background: black;
 }

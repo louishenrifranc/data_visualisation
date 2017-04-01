@@ -29,7 +29,6 @@ var RadarChart = {
 		var allAxis = (d[0].map(function(i, j){return i.axis}));
 		var total = allAxis.length;
 		var radius = cfg.factor*Math.min(cfg.w/2, cfg.h/2);
-		var Format = d3.format('%');
 		d3.select(id).select("svg").remove();
 
 		var g = d3.select(id)
@@ -43,7 +42,7 @@ var RadarChart = {
 		var tooltip;
 
 	//Circular segments
-	for(var j=0; j<cfg.levels-1; j++){
+	for(var j=0; j<=cfg.levels-1; j++){
 		var levelFactor = cfg.factor*radius*((j+1)/cfg.levels);
 		g.selectAll(".levels")
 		.data(allAxis)
@@ -61,7 +60,7 @@ var RadarChart = {
 	}
 
 	//Text indicating at what % each level is
-	for(var j=0; j<cfg.levels; j++){
+	for(var j=0; j<=cfg.levels; j++){
 		var levelFactor = cfg.factor*radius*((j+1)/cfg.levels);
 		g.selectAll(".levels")
 	   .data([1]) //dummy data
@@ -74,7 +73,7 @@ var RadarChart = {
 	   .style("font-size", "10px")
 	   .attr("transform", "translate(" + (cfg.w/2-levelFactor + cfg.ToRight) + ", " + (cfg.h/2-levelFactor) + ")")
 	   .attr("fill", "#737373")
-	   .text(Format((j+1)*cfg.maxValue/cfg.levels));
+	   .text(Math.ceil((j+1)*cfg.maxValue/cfg.levels));
 	}
 	
 	series = 0;
@@ -210,11 +209,11 @@ var RadarChart = {
 }
 };
 
-function display_radar_char(id_, expectation, reality){
+function display_radar_char(id_, expectation, reality, legend, name_x, name_y){
 	var w = 500,
 	h = 500;
-	LegendOptions = ["Expectation", "Reality"]
-
+	LegendOptions = [name_x, name_y]
+	var colorscale = d3.scale.category10();
 	d = [[], []]
 	max_value = []
 	
@@ -237,12 +236,12 @@ function display_radar_char(id_, expectation, reality){
 		w: w,
 		h: h,
 		maxValue: d3.max(max_value),
-		levels: 6,
+		levels: 8,
 		ExtraWidthX: 300
 	}
 	RadarChart.draw(id_, d, mycfg);
 
-	var svg = d3.select('#body')
+	var svg = d3.select(id_)
 	.selectAll('svg')
 	.append('svg')
 	.attr("width", w+300)
@@ -252,19 +251,18 @@ function display_radar_char(id_, expectation, reality){
 var text = svg.append("text")
 .attr("class", "title")
 .attr('transform', 'translate(90,0)') 
-.attr("x", w - 70)
+.attr("x", w - 130)
 .attr("y", 10)
 .attr("font-size", "12px")
 .attr("fill", "#404040")
-.text("What % of owners use a specific service in a week");
+.text(legend);
 
 //Initiate Legend	
 var legend = svg.append("g")
 .attr("class", "legend")
 .attr("height", 100)
 .attr("width", 200)
-.attr('transform', 'translate(90,20)') 
-;
+.attr('transform', 'translate(90,20)');
 	//Create colour squares
 	legend.selectAll('rect')
 	.data(LegendOptions)
@@ -288,57 +286,3 @@ var legend = svg.append("g")
 	.text(function(d) { return d; })
 	;
 }
-/* 
-//Call function to draw the Radar chart
-//Will expect that data is in %'s
-RadarChart.draw("#chart", d, mycfg);
-
-////////////////////////////////////////////
-/////////// Initiate legend ////////////////
-////////////////////////////////////////////
-
-var svg = d3.select('#body')
-.selectAll('svg')
-.append('svg')
-.attr("width", w+300)
-.attr("height", h)
-
-//Create the title for the legend
-var text = svg.append("text")
-.attr("class", "title")
-.attr('transform', 'translate(90,0)') 
-.attr("x", w - 70)
-.attr("y", 10)
-.attr("font-size", "12px")
-.attr("fill", "#404040")
-.text("What % of owners use a specific service in a week");
-
-//Initiate Legend	
-var legend = svg.append("g")
-.attr("class", "legend")
-.attr("height", 100)
-.attr("width", 200)
-.attr('transform', 'translate(90,20)') 
-;
-	//Create colour squares
-	legend.selectAll('rect')
-	.data(LegendOptions)
-	.enter()
-	.append("rect")
-	.attr("x", w - 65)
-	.attr("y", function(d, i){ return i * 20;})
-	.attr("width", 10)
-	.attr("height", 10)
-	.style("fill", function(d, i){ return colorscale(i);})
-	;
-	//Create text next to squares
-	legend.selectAll('text')
-	.data(LegendOptions)
-	.enter()
-	.append("text")
-	.attr("x", w - 52)
-	.attr("y", function(d, i){ return i * 20 + 9;})
-	.attr("font-size", "11px")
-	.attr("fill", "#737373")
-	.text(function(d) { return d; })
-	; */
