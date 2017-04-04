@@ -39,7 +39,7 @@ of those sections to manage the look and feel of the site. */
 }
 
 .question1-section {
-    height: 110%;
+    height: 150%;
     padding-top: 150px;
     text-align: center;
     background: white;
@@ -54,14 +54,14 @@ of those sections to manage the look and feel of the site. */
 
 .question3-section {
     height: 200%;
-    padding-top: 20px;
+    padding-top: 150px;
     text-align: center;
     background: white;
 }
 
 .question4-section {
     height: 100%;
-    padding-top: 50px;
+    padding-top: 150px;
     text-align: center;
     background: black;
 }

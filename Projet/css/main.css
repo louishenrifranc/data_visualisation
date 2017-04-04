@@ -33,6 +33,13 @@
         	fill: none;
         }
 
+        #question1 p {
+                font-family: 'Helvetica Neue', serif; 
+                color: black;
+                font-size: 20px;
+                text-align: center;
+        }
+
         #question1 .axis path,
         #question1 .axis line {
         	fill: none;
