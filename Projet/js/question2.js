@@ -217,9 +217,7 @@ function display_radar_char(id_, expectation, reality, legend, name_x, name_y){
 	var colorscale = d3.scale.category10();
 	d = [[], []]
 	max_value = []
-	
-	console.log(expectation)
-	console.log(reality)
+
 	
 	for (var property in expectation) {
 		if (expectation.hasOwnProperty(property)) {
@@ -286,4 +284,31 @@ var legend = svg.append("g")
 	.attr("fill", "#737373")
 	.text(function(d) { return d; })
 	;
+
+	const type = d3.annotationLabel
+
+	if(id_ == "#q2_radar_chart1"){
+		var annotations = [
+		{
+			"cx": 625,
+			"cy": 111,
+			"r": 0,
+			"text": "The longer Old Faithful lays dormant, the longer the eruption last",
+			"textWidth": 140,
+			"textOffset": [
+			121,
+			186
+			]
+		}
+		];
+		svg.append("g")
+		.attr("class", "annotations")
+		.call(ringNote, annotations);
+	} else if(id_ == "#q2_radar_chart2"){
+
+	} else if(id_ == "#q3_radar_chart1"){
+
+	} else if(id_ == "##q3_radar_chart2"){
+
+	}
 }
