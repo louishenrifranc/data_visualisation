@@ -1,5 +1,5 @@
 var RadarChart = {
-	draw: function(id, d, options){
+	draw: function(id, d, options, legend_color){
 		var cfg = {
 			radius: 5,
 			w: 600,
@@ -98,6 +98,7 @@ var RadarChart = {
 	.text(function(d){return d})
 	.style("font-family", "sans-serif")
 	.style("font-size", "11px")
+	.style("fill", "#757575")
 	.attr("text-anchor", "middle")
 	.attr("dy", "1.5em")
 	.attr("transform", function(d, i){return "translate(0, -10)"})

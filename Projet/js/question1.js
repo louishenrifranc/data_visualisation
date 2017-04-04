@@ -1,7 +1,7 @@
 
 function heatmapChart (id,csvFile,attribute) {
 
-        var margin = { top: 5, right: 0, bottom: 200, left: 150 },
+        var margin = { top: 5, right: 150, bottom: 300, left: 150 },
           width = 1200 - margin.left - margin.right,
           height = 600 - margin.top - margin.bottom,
           gridSize = Math.floor(width / 24),
@@ -101,8 +101,8 @@ function heatmapChart (id,csvFile,attribute) {
 function lineChart(id,csvFile){
 
   var margin = { top: 0, right: 0, bottom: 20, left: 150 },
-          width = 600 - margin.left - margin.right,
-          height = 300 - margin.top - margin.bottom;
+          width = 500 - margin.left - margin.right,
+          height = 200 - margin.top - margin.bottom;
 
   // Parse the date / time
   //var parseDate = d3.time.format("%d-%b-%y").parse;

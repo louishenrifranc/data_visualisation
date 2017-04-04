@@ -111,12 +111,12 @@
     <section id="question1" class="question1-section">
         <div class="container">
             <div class="row">
-                <div class="col-md-4" id="linechart">Linechart</div>
+                <div class="col-md-4" id="linechart"></div>
             </div>
             <div class="row">
                 <div class="col-md-4" id="heatmap1"></div>
-                <div class="col-md-4" id="heatmap2">Heatmap2</div>
-                <div class="col-md-4" id="heatmap3">Heatmap3</div>
+                <div class="col-md-4" id="heatmap2"></div>
+                <div class="col-md-4" id="heatmap3"></div>
             </div>
         </div>
     </section>
@@ -180,23 +180,23 @@
         // Question 1 loading
         lineChart("#linechart","data/corr_vs_matches.csv");
         heatmapChart("#heatmap1", "data/corr_race_race_matches.csv", ["African American", "Caucasian American", "Hispanic", "Asian", "Other"]);
-        heatmapChart("#heatmap2", "data/corr_age_age_matches.csv", ["African American", "Caucasian American", "Hispanic", "Asian", "Other"]);
-        heatmapChart("#heatmap3", "data/corr_field_cd_field_cd_matches.csv", ["African American", "Caucasian American", "Hispanic", "Asian", "Other"]);
+        heatmapChart("#heatmap2", "data/corr_age_age_matches.csv", ["- de 22", "22-23", "24-27", "28-31", "32-36", "+ de 36"]);
+        heatmapChart("#heatmap3", "data/corr_field_cd_field_cd_matches.csv", ["Science", "Science sociales", "Littérature", "Art", "Commerce","Education","Autre"]);
         
 
         // Question 2 loading
         // TODO: Je suis pas sur d'avoir pick les bons fichiers, je pouvais pas ouvrir le .doc (thanks Windows)
         var q = queue();
-        q.defer(d3.json,"data/female_expectation.json")
         q.defer(d3.json,"data/female_experience.json")
+        q.defer(d3.json,"data/female_expectation.json")
         q.await(function(error,data1,data2){
             if(error) throw error;
             display_radar_char("#q2_radar_chart1", data1, data2, "Désir des Femmes Versus Choix", "Critères de Désir des femmes", "Critères de Séléction des  Femmes");
         })
 
         var q1 = queue();
-        q1.defer(d3.json,"data/male_expectation.json")
         q1.defer(d3.json,"data/male_experience.json")
+        q1.defer(d3.json,"data/male_expectation.json")
         q1.await(function(error,data1,data2){
             if(error) throw error;
             display_radar_char("#q2_radar_chart2", data1, data2,"Désir des Hommes Versus Choix", "Critères de Désir des Hommes", "Critères de Séléction des  Hommes");
