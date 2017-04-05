@@ -29,12 +29,12 @@ text.mono {
     fill: #aaa;
 }
 
-text.axis-workweek {
-    fill: #000;
+text.women-label {
+    fill: #FF0000;
 }
 
-text.axis-worktime {
-    fill: #000;
+text.men-label {
+    fill: #0000FF;
 }
 
 </style>
@@ -117,17 +117,35 @@ text.axis-worktime {
          </div>
          <br/>
          <div class="row">
-            <div class="col-xs-12" id="linechart"></div>
+            <div class="col-xs-6" id="linechart"></div>
+            <div class="col-xs-6" id="linechartTxt">
+                <p>Blabla</p>
+            </div>
+
         </div>
         <div class="row">
-            <div class="col-xs-4" id="heatmap1"></div>
-            <div class="col-xs-4" id="heatmap2"></div>
-            <div class="col-xs-4" id="heatmap3"></div>
+            <div class="col-xs-6" id="heatmap1"></div>
+            <div class="col-xs-6" id="linechartTxt">
+                <p>Blabla</p>
+            </div>
+        </div>
+        <div class="row">
+        <div class="col-xs-6" id="linechartTxt">
+                <p>Blabla</p>
+            </div>
+            <div class="col-xs-6" id="heatmap2"></div>
+        </div>
+        <div class="row">
+            <div class="col-xs-6" id="heatmap3"></div>
+            <div class="col-xs-6" id="linechartTxt">
+                <p>Blabla</p>
+            </div>
         </div>
     </div>
 </section>
 
 <!-- Services Section -->
+<hr class="style16"/>
 <section id="question2" class="question2-section">
     <div class="container">
         <div class="row">
@@ -135,13 +153,14 @@ text.axis-worktime {
         </div>
         <br/>
         <div class="row">
-            <div class="col-xs-4 col-xs-pull-1 " id="q2_radar_chart1"></div>
-            <div class="col-xs-4 col-xs-push-1 " id="q2_radar_chart2"></div>
+            <div class="col-xs-6" id="q2_radar_chart1"></div>
+            <div class="col-xs-4" id="q2_radar_chart2"></div>
         </div>
     </div>
 </section>
 
 <!-- Contact Section -->
+<hr class="style16"/>
 <section id="question3" class="question3-section">
     <div class="container">
         <div class="row">
@@ -160,6 +179,7 @@ text.axis-worktime {
 </div>
 </section>
 
+<hr class="style16"/>
 <section id="question4" class="question4-section">
     <div class="container">
         <div class="row">
@@ -179,6 +199,7 @@ text.axis-worktime {
 <script src="js/utils/bootstrap.min.js"></script>
 <script src="js/utils/jquery.easing.min.js"></script>
 <script src="js/utils/scrolling-nav.js"></script>
+<script src="js/utils/colorbrewer.min.js"></script>
 
 <script src="js/question1.js"></script>
 <script src="js/question2.js"></script>
@@ -192,7 +213,7 @@ text.axis-worktime {
         heatmapChart("#heatmap3", "data/corr_field_cd_field_cd_matches.csv", ["Science", "Science sociales", "Littérature", "Art", "Commerce","Education","Autre"]);
         
         var ringNote = d3.ringNote()
-        .draggable(true);
+        .draggable(false);
 
         // Question 2 loading
         // TODO: Je suis pas sur d'avoir pick les bons fichiers, je pouvais pas ouvrir le .doc (thanks Windows)
@@ -201,7 +222,8 @@ text.axis-worktime {
         q.defer(d3.json,"data/female_expectation.json")
         q.await(function(error,data1,data2){
             if(error) throw error;
-            display_radar_char("#q2_radar_chart1", data1, data2, "Désir des Femmes Versus Choix", "Critères de Désir des femmes", "Critères de Séléction des  Femmes");
+            svg = display_radar_char("#q2_radar_chart1", data1, data2, "Désir des Femmes Versus Choix", "Critères de Désir des femmes", "Critères de Séléction des  Femmes");
+            annotations(svg,"attractive",0,"",-200,-300)
         })
 
         var q1 = queue();
