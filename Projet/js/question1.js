@@ -1,13 +1,14 @@
 
 function heatmapChart (id,csvFile,attribute) {
 
-        var margin = { top: 5, right: 150, bottom: 300, left: 150 },
-          width = 1200 - margin.left - margin.right,
-          height = 600 - margin.top - margin.bottom,
-          gridSize = Math.floor(width / 24),
-          legendElementWidth = gridSize,
+        var margin = { top: 100, right: 150, bottom: 0, left: 125 },
+          width = 800 - margin.left - margin.right,
+          height = 420 - margin.top - margin.bottom,
+          gridSize = Math.floor(width / 15),
+          legendElementWidth = gridSize/2,
           buckets = 20,
-          colors = ["#ffffd9","#edf8b1","#c7e9b4","#7fcdbb","#41b6c4","#1d91c0","#225ea8","#253494","#081d58"] // alternatively colorbrewer.YlGnBu[9]
+          //colors = ["#ffffd9","#edf8b1","#c7e9b4","#7fcdbb","#41b6c4","#1d91c0","#225ea8","#253494","#081d58"] // alternatively colorbrewer.YlGnBu[9]
+          colors = colorbrewer.YlGnBu[4]
           //attribute = ["African American", "Caucasian American", "Hispanic", "Asian", "Other"],
 
       var svg = d3.select(id).append("svg")
@@ -16,7 +17,7 @@ function heatmapChart (id,csvFile,attribute) {
           .append("g")
           .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
-      var dayLabels = svg.selectAll(".dayLabel")
+      var womenLabels = svg.selectAll(".womenLabel")
           .data(attribute)
           .enter().append("text")
             .text(function (d) { return d; })
@@ -24,9 +25,9 @@ function heatmapChart (id,csvFile,attribute) {
             .attr("y", function (d, i) { return i * gridSize; })
             .style("text-anchor", "end")
             .attr("transform", "translate(-6," + gridSize / 1.5 + ")")
-            .attr("class", function (d, i) { return ((i >= 0 && i <= 4) ? "mono axis axis-workweek" : "dayLabel mono axis"); });
+            .attr("class", function (d, i) { return "mono axis women-label"  });
 
-      var timeLabels = svg.selectAll(".timeLabel")
+      var menLabels = svg.selectAll(".menLabel")
           .data(attribute)
           .enter()
             .append("g")
@@ -37,7 +38,7 @@ function heatmapChart (id,csvFile,attribute) {
               .style("text-anchor", "end")
               .text(function(d) { return d; })
             
-            .attr("class", function(d, i) { return ((i >= 7 && i <= 16) ? "mono axis axis-worktime" : "timeLabel mono axis"); });
+            .attr("class", function(d, i) { return"mono axis men-label" });
 
         d3.csv(csvFile,
         function(d) {
@@ -52,17 +53,21 @@ function heatmapChart (id,csvFile,attribute) {
               .domain([0, buckets - 1, d3.max(data, function (d) { return d.value; })])
               .range(colors);
 
-          var cards = svg.selectAll(".hour")
+          /*var colorScale = d3.scale.quantize()
+              .domain([0,100])
+              .range(colors)*/
+
+          var cards = svg.selectAll(".attr")
               .data(data, function(d) {return d.women+':'+d.men;});
 
           cards.append("title");
 
           cards.enter().append("rect")
-              .attr("x", function(d) { return (d.men - 1) * gridSize; })
+              .attr("x", function(d) { return (d.men - 1) * gridSize ; })
               .attr("y", function(d) { return (d.women - 1) * gridSize; })
               .attr("rx", 4)
               .attr("ry", 4)
-              .attr("class", "hour bordered")
+              .attr("class", "attr bordered")
               .attr("width", gridSize)
               .attr("height", gridSize)
               .style("fill", colors[0]);
@@ -76,22 +81,42 @@ function heatmapChart (id,csvFile,attribute) {
 
           var legend = svg.selectAll(".legend")
               .data([0].concat(colorScale.quantiles()), function(d) { return d; });
-
+              //.data(colors)
           legend.enter().append("g")
               .attr("class", "legend");
 
           legend.append("rect")
-            .attr("x", function(d, i) { return legendElementWidth * i; })
-            .attr("y", height)
+            //.attr("x", function(d, i) { return legendElementWidth * i; })
+            //.attr("y", attribute.length * gridSize +25)
+            .attr("x", attribute.length * gridSize + 25)
+            .attr("y", function(d, i) { return (legendElementWidth +5)* i; })
             .attr("width", legendElementWidth)
-            .attr("height", gridSize / 2)
+            .attr("height", legendElementWidth)
+            .attr("class", "attr bordered")
             .style("fill", function(d, i) { return colors[i]; });
 
           legend.append("text")
             .attr("class", "mono")
-            .text(function(d) { return "≥ " + Math.round(d); })
-            .attr("x", function(d, i) { return legendElementWidth * i; })
-            .attr("y", height + gridSize);
+            .text(function(d) { console.log(colorScale.quantiles())
+                switch(d){
+                    case 0:
+                        return "Très peu de chance de match";
+                        break;
+                    case colorScale.quantiles()[0]:
+                        return "Peu de chance de match";
+                        break;
+                    case colorScale.quantiles()[1]:
+                        return "Bonnes de chances de match";
+                        break;
+                    case colorScale.quantiles()[2]:
+                        return "Très bonnes chances de match";
+                        break;
+                } 
+            })
+            //.attr("x", function(d, i) { return legendElementWidth * i; })
+            //.attr("y", attribute.length * gridSize + 25 + gridSize);
+            .attr("x", attribute.length * gridSize + 40 + legendElementWidth)
+            .attr("y", function(d, i) { return (legendElementWidth +5)* i + 12 ; })
 
           legend.exit().remove();
 
