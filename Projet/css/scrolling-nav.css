@@ -35,33 +35,32 @@ of those sections to manage the look and feel of the site. */
     height: 100%;
     padding-top: 150px;
     text-align: center;
-    background: black;
+
+    background: white;
 }
 
 .question1-section {
     height: 250%;
     padding-top: 150px;
-    text-align: center;
     background: white;
 }
 
 .question2-section {
     height: 140%;
-    padding-top: 150px;
     text-align: center;
-    background: black;
+    padding-top: 50px;
+    background: white;
 }
 
 .question3-section {
     height: 200%;
     padding-top: 150px;
-    text-align: center;
     background: white;
 }
 
 .question4-section {
     height: 100%;
-    padding-top: 150px;
     text-align: center;
-    background: black;
+    padding-top: 150px;
+    background: white;
 }
