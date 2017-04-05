@@ -97,7 +97,7 @@ function heatmapChart (id,csvFile,attribute) {
 
           legend.append("text")
             .attr("class", "mono")
-            .text(function(d) { console.log(colorScale.quantiles())
+            .text(function(d) {
                 switch(d){
                     case 0:
                         return "Très peu de chance de match";
