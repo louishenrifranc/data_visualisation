@@ -2,25 +2,25 @@ var RadarChart = {
 	draw: function(id, d, options, legend_color){
 		var cfg = {
 			radius: 5,
-			w: 600,
-			h: 600,
+			w: 300,
+			h: 300,
 			factor: 1,
 			factorLegend: .85,
 			levels: 3,
-			maxValue: 0,
+			maxValue: 37,
 			radians: 2 * Math.PI,
 			opacityArea: 0.5,
 			ToRight: 5,
 			TranslateX: 80,
-			TranslateY: 30,
-			ExtraWidthX: 100,
-			ExtraWidthY: 100,
+			TranslateY: 80,
+			ExtraWidthX: 120,
+			ExtraWidthY: 120,
 			color: d3.scale.category10()
 		};
 
 		if('undefined' !== typeof options){
 			for(var i in options){
-				if('undefined' !== typeof options[i]){
+				if('undefined' !== typeof options[i] && i != "maxValue"){
 					cfg[i] = options[i];
 				}
 			}
@@ -60,7 +60,7 @@ var RadarChart = {
 	}
 
 	//Text indicating at what % each level is
-	for(var j=0; j<=cfg.levels; j++){
+	for(var j=0; j<cfg.levels; j++){
 		var levelFactor = cfg.factor*radius*((j+1)/cfg.levels);
 		g.selectAll(".levels")
 	   .data([1]) //dummy data
@@ -148,6 +148,7 @@ var RadarChart = {
 		});
 		series++;
 	});
+
 	series=0;
 
 
@@ -202,11 +203,15 @@ var RadarChart = {
 
 		series++;
 	});
+
+
+
 	//Tooltip
 	tooltip = g.append('text')
 	.style('opacity', 0)
 	.style('font-family', 'sans-serif')
 	.style('font-size', '13px');
+	return axis;	
 }
 };
 
@@ -238,21 +243,23 @@ function display_radar_char(id_, expectation, reality, legend, name_x, name_y){
 		levels: 8,
 		ExtraWidthX: 300
 	}
-	RadarChart.draw(id_, d, mycfg);
-
+	axis = RadarChart.draw(id_, d, mycfg);
 	var svg = d3.select(id_)
 	.selectAll('svg')
 	.append('svg')
 	.attr("width", w+300)
 	.attr("height", h);
 
+
 //Create the title for the legend
 var text = svg.append("text")
 .attr("class", "title")
 .attr('transform', 'translate(90,0)') 
-.attr("x", w - 130)
-.attr("y", 10)
-.attr("font-size", "12px")
+.attr("x", w - 405)
+.attr("y", 20)
+.attr("font-size", "20px")
+.attr("font-weight", "20px")
+
 .attr("fill", "#404040")
 .text(legend);
 
@@ -267,10 +274,10 @@ var legend = svg.append("g")
 	.data(LegendOptions)
 	.enter()
 	.append("rect")
-	.attr("x", w - 65)
-	.attr("y", function(d, i){ return i * 20;})
-	.attr("width", 10)
-	.attr("height", 10)
+	.attr("x", w - 150)
+	.attr("y", function(d, i){ return i * 35 + 30;})
+	.attr("width", 25)
+	.attr("height", 25)
 	.style("fill", function(d, i){ return colorscale(i);})
 	;
 	//Create text next to squares
@@ -278,37 +285,32 @@ var legend = svg.append("g")
 	.data(LegendOptions)
 	.enter()
 	.append("text")
-	.attr("x", w - 52)
-	.attr("y", function(d, i){ return i * 20 + 9;})
-	.attr("font-size", "11px")
+	.attr("x", w - 120)
+	.attr("y", function(d, i){ return i * 35 + 45;})
+	.attr("font-size", "15px")
 	.attr("fill", "#737373")
-	.text(function(d) { return d; })
-	;
+	.text(function(d) { return d; });
 
-	const type = d3.annotationLabel
+	return axis;
+}
 
-	if(id_ == "#q2_radar_chart1"){
-		var annotations = [
-		{
-			"cx": 625,
-			"cy": 111,
-			"r": 0,
-			"text": "The longer Old Faithful lays dormant, the longer the eruption last",
-			"textWidth": 140,
-			"textOffset": [
-			121,
-			186
-			]
-		}
-		];
-		svg.append("g")
-		.attr("class", "annotations")
-		.call(ringNote, annotations);
-	} else if(id_ == "#q2_radar_chart2"){
+function annotations(svg, attribute, first_or_second, message, text_offset_x, text_offset_y){
+	circles = d3.selectAll('circle')
+	.filter(function(d) {
+		return d.axis == attribute;
+	})[0][first_or_second];
 
-	} else if(id_ == "#q3_radar_chart1"){
+	
+	var annotations = [{
+		"cx": circles.cx.baseVal.value, 
+		"cy": circles.cy.baseVal.value, 
+		"r": 0,
+		"text": message,
+		"textWidth": message.length,
+		"textOffset": [text_offset_x, text_offset_y]
+	}];
 
-	} else if(id_ == "##q3_radar_chart2"){
-
-	}
+	svg.append("g")
+	.attr("class", "annotations")
+	.call(ringNote, annotations)
 }
