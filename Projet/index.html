@@ -148,12 +148,12 @@ path.foreground_woman{
     <section id="question1" class="question1-section">
         <div class="container">
             <div class='row'>
-             <!-- <blockquote class=" col-xs-8 oval-thought-border"> /!-->
-             <p>Mettez vous à la place de l'autre sexe, et devinez ses attentes? Dans cette situation, les étudiants ont du trouver les attributs qui intéressaient le sexe opposé. A ce petit jeu les <mark>femmes</mark> se sont mieux débrouillés. Celles-ci sont nottament très lucides, sur leur pouvoir attractif, et pensent que c'est ce que les hommes regardent en priorité</p>
-             <!-- </blockquote> /!-->
-         </div>
-         <br/>
-         <div class="row">
+               <!-- <blockquote class=" col-xs-8 oval-thought-border"> /!-->
+               <p>Mettez vous à la place de l'autre sexe, et devinez ses attentes? Dans cette situation, les étudiants ont du trouver les attributs qui intéressaient le sexe opposé. A ce petit jeu les <mark>femmes</mark> se sont mieux débrouillés. Celles-ci sont nottament très lucides, sur leur pouvoir attractif, et pensent que c'est ce que les hommes regardent en priorité</p>
+               <!-- </blockquote> /!-->
+           </div>
+           <br/>
+           <div class="row">
             <div class="col-xs-6" id="linechart"></div>
             <div class="col-xs-6" id="linechartTxt">
                 <p>Blabla</p>
@@ -203,12 +203,12 @@ path.foreground_woman{
             <h1>L'autre sexe, cet inconnu?</h1>
         </div>
         <div class='row'>
-         <!-- <blockquote class=" col-xs-8 oval-thought-border"> /!-->
-         <p>Mettez vous à la place de l'autre sexe, et devinez ses attentes? Dans cette situation, les étudiants ont du trouver les attributs qui intéressaient le sexe opposé. A ce petit jeu les <mark>femmes</mark> se sont mieux débrouillés. Celles-ci sont nottament très lucides, sur leur pouvoir attractif, et pensent que c'est ce que les hommes regardent en priorité</p>
-         <!-- </blockquote> /!-->
-     </div>
-     <br/>
-     <div class="row">
+           <!-- <blockquote class=" col-xs-8 oval-thought-border"> /!-->
+           <p>Mettez vous à la place de l'autre sexe, et devinez ses attentes? Dans cette situation, les étudiants ont du trouver les attributs qui intéressaient le sexe opposé. A ce petit jeu les <mark>femmes</mark> se sont mieux débrouillés. Celles-ci sont nottament très lucides, sur leur pouvoir attractif, et pensent que c'est ce que les hommes regardent en priorité</p>
+           <!-- </blockquote> /!-->
+       </div>
+       <br/>
+       <div class="row">
         <div class="col-xs-4 col-xs-pull-2" id="q3_radar_chart1"></div>
         <div class="col-xs-4 col-xs-push-2" id="q3_radar_chart2"></div>
     </div>
@@ -260,7 +260,7 @@ path.foreground_woman{
         q1.await(function(error,data1,data2){
             if(error) throw error;
             svg1 = display_radar_char("#q2_radar_chart2", data1, data2,"Désir des Hommes Versus Choix", "Critères de Désir des Hommes", "Critères de Séléction des  Hommes");
-            annotations(svg1,"attractive", 1,"A l'inverse les hommes portent plus d'attention à l'apparence qu'ils ne le pensent",100,100)
+            annotations(svg1,"attractive", 1,"A l'inverse les hommes portent plus d'attention à l'apparence qu'ils ne le pensent",50,0)
 
         })
 
@@ -271,7 +271,7 @@ path.foreground_woman{
         q.await(function(error,data1,data2){
             if(error) throw error;
             svg = display_radar_char("#q2_radar_chart1", data1, data2, "Désir des Femmes Versus Choix", "Critères de Désir des femmes", "Critères de Séléction des  Femmes");
-            annotations(svg,"attractive",0,"Les femmes ont une forte tendance à être désireuse d\'hommes attractifs",500,-120)
+            annotations(svg,"attractive",0,"Les femmes ont une forte tendance à être désireuse d\'hommes attractifs",80,-20)
         })
 
         var q3 = queue();
@@ -280,7 +280,7 @@ path.foreground_woman{
         q3.await(function(error,data1,data2){
             if(error) throw error;
             svg = display_radar_char("#q3_radar_chart2", data1, data2, "Femmes, qu'est ce qui intéresse les Hommes", "Réponse des Femmes", "Réalité");
-            annotations(svg,"same_interests",0,"Les femmes sont globalement plus lucides que les hommes",100,80)
+            annotations(svg,"fun",0,"Les femmes sont globalement plus lucides que les hommes",-40,-120)
 
         })
 
