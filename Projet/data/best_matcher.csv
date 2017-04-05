@@ -1,441 +1,537 @@
-iid,nombre de matches, domaine d'études, âge, origine éthnique, fréquence de date, fréquence de sortie, carrière envisagée
-4,0,2,4,2,2.0,5.0,1.0,1.0
-5,0,2,4,1,2.0,4.0,1.0,1.0
-6,0,2,4,2,4.0,3.0,1.0,1.0
-7,0,2,4,2,4.0,5.0,1.0,1.0
-8,0,8,5,3,2.0,5.0,1.0,6.0
-9,0,7,5,3,6.0,4.0,1.0,9.0
-10,0,2,5,3,2.0,6.0,1.0,9.0
-12,1,2,4,2,2.0,1.0,1.0,1.0
-13,1,4,4,2,4.0,7.0,1.0,1.0
-14,1,8,4,2,2.0,4.0,1.0,1.0
-15,1,3,4,3,3.0,4.0,1.0,1.0
-16,1,2,5,3,2.0,5.0,1.0,7.0
-17,1,1,5,4,2.0,3.0,2.0,2.0
-18,1,1,5,3,2.0,6.0,1.0,7.0
-19,1,9,5,4,2.0,1.0,1.0,7.0
-20,1,1,5,3,2.0,1.0,1.0,7.0
-22,0,2,6,3,1.0,6.0,2.0,5.0
-23,0,3,2,1,4.0,1.0,1.0,3.0
-27,0,2,2,2,3.0,6.0,2.0,9.0
-29,0,2,2,2,2.0,6.0,1.0,9.0
-30,0,2,4,2,2.0,7.0,2.0,1.0
-31,0,4,4,3,2.0,4.0,3.0,1.0
-34,0,2,5,1,4.0,6.0,2.0,7.0
-35,0,5,1,3,2.0,6.0,3.0,7.0
-36,0,2,1,3,2.0,5.0,2.0,4.0
-37,0,2,2,3,2.0,6.0,2.0,7.0
-38,0,3,4,2,1.0,4.0,3.0,1.0
-39,0,1,4,3,3.0,6.0,4.0,1.0
-43,1,1,5,3,2.0,6.0,3.0,2.0
-44,1,4,2,3,2.0,3.0,1.0,2.0
-45,1,4,5,4,2.0,6.0,3.0,7.0
-46,1,4,5,3,2.0,6.0,2.0,7.0
-47,1,1,5,4,2.0,6.0,1.0,2.0
-48,1,1,7,2,2.0,5.0,2.0,6.0
-49,1,6,5,3,4.0,3.0,2.0,7.0
-50,1,4,4,3,1.0,6.0,2.0,1.0
-51,1,1,4,2,2.0,5.0,3.0,1.0
-52,1,1,4,1,2.0,4.0,1.0,1.0
-53,1,1,1,4,2.0,6.0,2.0,4.0
-55,1,3,4,2,1.0,4.0,2.0,1.0
-56,0,2,2,2,2.0,3.0,1.0,9.0
-57,0,1,2,2,2.0,5.0,2.0,9.0
-60,0,1,2,4,6.0,6.0,2.0,6.0
-61,0,2,3,4,2.0,5.0,2.0,2.0
-62,0,3,4,3,3.0,7.0,2.0,1.0
-63,0,1,4,3,4.0,6.0,1.0,10.0
-64,0,1,2,3,4.0,6.0,5.0,9.0
-66,1,1,5,4,3.0,6.0,4.0,7.0
-67,1,2,4,2,6.0,5.0,2.0,1.0
-69,1,2,5,4,2.0,6.0,1.0,7.0
-70,1,1,5,3,2.0,2.0,1.0,7.0
-71,1,3,4,1,2.0,6.0,2.0,14.0
-74,1,2,1,3,2.0,7.0,2.0,5.0
-75,1,2,4,3,6.0,5.0,3.0,1.0
-76,0,5,3,5,2.0,7.0,2.0,2.0
-77,0,6,2,2,2.0,4.0,2.0,11.0
-78,0,3,2,2,3.0,7.0,3.0,11.0
-79,0,3,1,3,4.0,7.0,1.0,5.0
-80,0,3,1,3,4.0,5.0,4.0,2.0
-81,0,3,3,4,2.0,5.0,2.0,6.0
-82,0,5,6,3,6.0,3.0,2.0,2.0
-83,0,2,5,5,3.0,6.0,1.0,7.0
-84,0,2,1,5,3.0,4.0,1.0,4.0
-85,0,1,2,4,2.0,6.0,4.0,9.0
-86,0,8,2,2,2.0,7.0,1.0,2.0
-87,0,2,2,2,2.0,3.0,2.0,9.0
-89,0,2,5,3,2.0,7.0,3.0,2.0
-90,0,1,1,2,4.0,7.0,7.0,10.0
-91,0,8,4,3,6.0,3.0,2.0,1.0
-92,0,7,6,4,2.0,6.0,1.0,7.0
-93,0,4,1,4,2.0,5.0,1.0,2.0
-94,1,3,5,4,4.0,6.0,3.0,7.0
-95,1,1,5,3,2.0,5.0,2.0,7.0
-97,1,5,1,4,2.0,5.0,2.0,2.0
-98,1,2,2,6,2.0,4.0,2.0,2.0
-99,1,8,4,4,2.0,3.0,2.0,1.0
-100,1,2,5,4,6.0,3.0,2.0,2.0
-102,1,1,1,5,2.0,4.0,4.0,2.0
-103,1,1,5,3,2.0,4.0,1.0,7.0
-104,1,5,1,3,2.0,5.0,3.0,2.0
-105,1,8,4,3,1.0,7.0,1.0,1.0
-106,1,2,4,2,3.0,7.0,3.0,1.0
-107,1,11,3,1,2.0,4.0,1.0,2.0
-108,1,4,1,3,2.0,6.0,3.0,5.0
-109,1,8,3,3,4.0,4.0,1.0,6.0
-110,1,4,3,4,2.0,6.0,1.0,6.0
-112,0,6,2,1,6.0,3.0,1.0,11.0
-113,0,3,5,1,2.0,4.0,1.0,10.0
-115,0,3,2,1,2.0,5.0,1.0,3.0
-116,0,4,5,1,2.0,1.0,1.0,10.0
-117,0,1,5,1,2.0,3.0,1.0,7.0
-119,0,5,3,1,3.0,3.0,1.0,1.0
-120,0,4,3,1,3.0,4.0,3.0,6.0
-122,1,3,4,2,6.0,3.0,1.0,1.0
-125,1,7,1,1,2.0,3.0,1.0,4.0
-126,1,2,3,2,2.0,6.0,3.0,4.0
-127,1,4,1,2,2.0,5.0,1.0,6.0
-128,1,6,1,1,2.0,3.0,2.0,5.0
-130,1,2,1,1,4.0,6.0,2.0,10.0
-132,0,1,5,3,2.0,7.0,2.0,7.0
-134,0,1,1,2,2.0,5.0,3.0,2.0
-135,0,2,2,3,2.0,7.0,2.0,2.0
-137,1,1,5,3,4.0,4.0,1.0,8.0
-138,1,1,5,5,2.0,3.0,2.0,7.0
-140,1,2,5,4,2.0,5.0,2.0,7.0
-141,1,1,5,4,3.0,6.0,2.0,7.0
-142,0,7,5,3,2.0,5.0,2.0,2.0
-144,0,1,1,2,2.0,5.0,2.0,2.0
-146,0,1,3,6,2.0,7.0,1.0,2.0
-147,0,5,5,3,4.0,5.0,1.0,7.0
-148,0,1,5,3,4.0,4.0,1.0,7.0
-149,0,5,5,4,2.0,5.0,2.0,2.0
-150,0,2,3,4,2.0,5.0,2.0,2.0
-151,0,2,5,4,2.0,3.0,1.0,9.0
-152,0,3,5,3,4.0,4.0,3.0,2.0
-153,0,3,3,4,4.0,6.0,3.0,2.0
-154,0,7,5,3,2.0,4.0,1.0,7.0
-155,0,1,5,3,2.0,5.0,1.0,9.0
-156,0,4,5,4,1.0,6.0,3.0,7.0
-157,0,1,5,4,4.0,6.0,1.0,7.0
-159,1,2,1,4,2.0,6.0,2.0,2.0
-160,1,3,5,4,1.0,5.0,2.0,8.0
-161,1,2,1,2,2.0,4.0,2.0,10.0
-162,1,2,1,3,4.0,6.0,2.0,4.0
-163,1,3,6,3,2.0,3.0,3.0,2.0
-164,1,2,3,3,2.0,6.0,2.0,2.0
-165,1,3,5,4,2.0,6.0,3.0,6.0
-166,1,3,5,3,6.0,5.0,2.0,7.0
-167,1,3,1,2,2.0,6.0,2.0,2.0
-168,1,1,1,2,4.0,4.0,2.0,10.0
-169,1,5,1,4,2.0,6.0,2.0,2.0
-171,1,4,5,4,2.0,4.0,2.0,7.0
-172,1,5,5,3,2.0,3.0,1.0,7.0
-173,1,5,1,2,2.0,4.0,1.0,2.0
-174,0,2,5,4,4.0,5.0,3.0,7.0
-175,0,3,5,2,6.0,3.0,1.0,7.0
-176,0,3,5,4,4.0,6.0,3.0,7.0
-178,0,1,2,5,4.0,4.0,2.0,4.0
-179,0,1,3,4,3.0,6.0,3.0,2.0
-180,0,2,5,3,4.0,4.0,2.0,7.0
-181,0,5,1,2,1.0,5.0,5.0,2.0
-183,0,1,2,3,2.0,7.0,3.0,6.0
-184,1,4,5,5,2.0,4.0,2.0,7.0
-185,1,1,1,3,4.0,7.0,4.0,6.0
-186,1,3,1,3,4.0,7.0,3.0,2.0
-187,1,1,5,3,2.0,4.0,1.0,7.0
-188,1,1,1,1,2.0,3.0,1.0,2.0
-190,1,3,5,3,2.0,7.0,3.0,9.0
-191,1,2,5,4,2.0,4.0,2.0,7.0
-192,1,1,5,3,2.0,6.0,2.0,7.0
-193,1,2,4,3,4.0,6.0,2.0,1.0
-194,0,1,2,3,2.0,3.0,2.0,3.0
-195,0,5,1,3,2.0,2.0,1.0,2.0
-196,0,2,3,3,4.0,1.0,1.0,2.0
-197,0,3,5,3,6.0,4.0,3.0,7.0
-199,0,5,3,4,2.0,5.0,3.0,2.0
-200,0,3,5,3,2.0,7.0,2.0,9.0
-201,0,1,5,3,2.0,4.0,2.0,7.0
-202,0,2,1,2,2.0,6.0,2.0,2.0
-205,0,2,1,2,2.0,7.0,1.0,2.0
-206,0,8,5,4,1.0,5.0,1.0,9.0
-207,0,3,1,2,2.0,3.0,1.0,1.0
-208,0,11,1,3,1.0,4.0,3.0,7.0
-210,0,3,1,4,2.0,6.0,3.0,2.0
-211,0,2,5,4,2.0,4.0,1.0,9.0
-212,0,9,5,3,3.0,5.0,2.0,7.0
-213,0,2,5,3,3.0,4.0,2.0,7.0
-214,1,2,1,2,2.0,6.0,2.0,2.0
-215,1,5,5,3,4.0,4.0,1.0,7.0
-217,1,8,1,3,2.0,4.0,2.0,2.0
-218,1,1,1,3,2.0,4.0,2.0,2.0
-219,1,6,5,3,2.0,3.0,2.0,7.0
-220,1,3,5,3,6.0,5.0,2.0,6.0
-221,1,5,5,3,4.0,6.0,3.0,7.0
-223,1,1,3,4,2.0,4.0,2.0,2.0
-224,1,4,2,5,2.0,7.0,4.0,15.0
-225,1,2,5,4,3.0,7.0,2.0,7.0
-226,1,4,5,2,2.0,3.0,1.0,6.0
-227,1,3,5,3,2.0,6.0,3.0,7.0
-228,1,1,1,3,4.0,7.0,3.0,2.0
-229,1,4,1,4,2.0,6.0,3.0,7.0
-230,1,4,5,6,2.0,7.0,3.0,7.0
-231,1,3,5,4,3.0,6.0,3.0,9.0
-232,1,1,5,4,2.0,5.0,4.0,9.0
-233,1,5,5,4,4.0,3.0,2.0,7.0
-235,0,2,6,2,2.0,4.0,3.0,2.0
-237,0,1,3,5,2.0,7.0,4.0,6.0
-238,0,2,3,3,2.0,2.0,1.0,6.0
-239,0,1,1,5,2.0,6.0,3.0,7.0
-240,0,1,5,3,4.0,6.0,3.0,6.0
-241,0,3,5,4,4.0,4.0,2.0,7.0
-242,0,5,2,3,3.0,7.0,3.0,2.0
-243,1,3,3,3,2.0,6.0,2.0,2.0
-244,1,1,5,4,2.0,5.0,3.0,7.0
-245,1,1,3,5,2.0,5.0,2.0,1.0
-246,1,1,1,3,2.0,7.0,6.0,2.0
-248,1,3,5,3,6.0,4.0,1.0,7.0
-250,1,5,3,3,6.0,2.0,1.0,2.0
-251,1,1,3,5,6.0,4.0,1.0,10.0
-252,0,2,5,4,3.0,6.0,2.0,2.0
-253,0,2,2,5,4.0,6.0,6.0,2.0
-256,0,3,1,3,4.0,6.0,4.0,4.0
-258,0,7,6,3,6.0,6.0,1.0,2.0
-259,0,1,1,3,2.0,7.0,1.0,2.0
-260,0,6,1,3,4.0,7.0,3.0,2.0
-261,0,5,1,3,4.0,7.0,2.0,2.0
-263,0,6,2,3,1.0,6.0,2.0,10.0
-264,0,4,3,3,2.0,6.0,2.0,2.0
-265,0,1,4,5,2.0,5.0,2.0,2.0
-266,0,4,3,4,2.0,7.0,3.0,10.0
-268,0,10,1,3,3.0,6.0,1.0,4.0
-269,0,6,3,3,2.0,6.0,2.0,2.0
-270,0,5,1,2,4.0,5.0,1.0,2.0
-271,0,2,2,2,2.0,4.0,1.0,11.0
-273,1,1,1,4,2.0,5.0,2.0,2.0
-274,1,6,2,3,3.0,4.0,2.0,2.0
-275,1,1,1,1,2.0,4.0,3.0,7.0
-276,1,5,1,3,2.0,4.0,1.0,2.0
-277,1,5,1,3,2.0,7.0,5.0,2.0
-279,1,5,1,3,2.0,4.0,2.0,2.0
-280,1,5,1,3,2.0,6.0,2.0,2.0
-281,1,2,2,3,2.0,5.0,5.0,2.0
-282,1,7,1,2,1.0,4.0,3.0,7.0
-283,1,2,1,3,4.0,4.0,2.0,7.0
-284,1,1,5,3,2.0,5.0,2.0,6.0
-285,1,2,1,3,6.0,6.0,6.0,7.0
-288,1,4,2,3,2.0,6.0,3.0,2.0
-289,1,5,5,4,4.0,4.0,1.0,7.0
-290,1,2,1,5,2.0,5.0,2.0,2.0
-291,1,5,1,3,4.0,3.0,2.0,4.0
-292,1,4,5,4,1.0,2.0,1.0,7.0
-293,1,2,5,4,3.0,5.0,2.0,7.0
-294,0,1,6,4,4.0,6.0,2.0,2.0
-296,0,3,6,4,2.0,4.0,2.0,2.0
-297,0,4,6,1,2.0,2.0,1.0,2.0
-299,0,1,2,3,4.0,6.0,2.0,2.0
-300,0,2,2,5,2.0,6.0,2.0,2.0
-301,0,2,6,5,2.0,4.0,1.0,2.0
-303,0,1,6,5,2.0,5.0,1.0,2.0
-304,0,1,2,4,2.0,7.0,2.0,12.0
-305,0,2,6,4,4.0,4.0,1.0,2.0
-306,0,1,6,2,4.0,6.0,3.0,2.0
-307,0,3,6,3,4.0,7.0,2.0,2.0
-308,1,1,6,3,4.0,7.0,2.0,2.0
-309,1,2,6,5,2.0,3.0,2.0,2.0
-310,1,1,1,3,2.0,3.0,1.0,10.0
-311,1,1,5,4,4.0,6.0,1.0,7.0
-312,1,1,3,2,2.0,4.0,2.0,6.0
-313,1,1,5,3,2.0,4.0,1.0,6.0
-315,1,2,1,3,2.0,5.0,3.0,2.0
-316,1,6,5,3,2.0,4.0,1.0,7.0
-317,1,3,5,4,2.0,4.0,1.0,7.0
-319,1,3,6,3,2.0,7.0,2.0,2.0
-322,0,2,2,5,4.0,2.0,2.0,2.0
-323,0,3,1,3,4.0,4.0,3.0,2.0
-324,0,4,2,2,2.0,4.0,2.0,3.0
-325,0,3,2,4,3.0,6.0,2.0,3.0
-326,0,2,6,6,1.0,6.0,4.0,2.0
-328,0,1,6,4,2.0,3.0,1.0,2.0
-330,0,1,1,2,4.0,7.0,3.0,10.0
-332,1,2,2,4,4.0,7.0,4.0,2.0
-333,1,2,5,2,2.0,3.0,1.0,7.0
-335,1,1,2,3,2.0,3.0,3.0,2.0
-336,1,1,1,3,3.0,5.0,2.0,17.0
-337,1,3,1,4,2.0,5.0,3.0,5.0
-338,1,2,1,3,6.0,4.0,2.0,7.0
-341,0,3,5,2,4.0,6.0,1.0,10.0
-342,0,1,6,5,3.0,6.0,3.0,2.0
-343,0,2,1,5,2.0,2.0,1.0,4.0
-344,0,4,5,3,3.0,4.0,3.0,9.0
-345,0,4,1,3,2.0,7.0,4.0,4.0
-348,0,1,6,1,4.0,6.0,1.0,2.0
-349,0,8,2,5,2.0,4.0,2.0,7.0
-350,0,3,1,4,2.0,7.0,3.0,4.0
-351,0,5,6,5,4.0,5.0,4.0,2.0
-352,0,3,6,4,6.0,4.0,3.0,6.0
-353,0,1,6,3,4.0,2.0,1.0,2.0
-354,0,8,2,2,2.0,6.0,1.0,3.0
-355,0,1,2,3,2.0,4.0,3.0,3.0
-356,0,1,2,3,2.0,7.0,2.0,3.0
-357,0,3,6,3,4.0,4.0,2.0,2.0
-358,0,2,5,3,4.0,5.0,3.0,7.0
-359,0,3,3,3,2.0,6.0,3.0,9.0
-360,0,4,2,3,6.0,6.0,2.0,3.0
-361,1,1,4,5,2.0,6.0,6.0,1.0
-362,1,5,4,4,2.0,4.0,3.0,1.0
-363,1,2,1,2,4.0,6.0,2.0,7.0
-364,1,6,5,3,3.0,4.0,2.0,7.0
-365,1,1,5,4,2.0,2.0,1.0,10.0
-366,1,10,5,3,2.0,4.0,1.0,6.0
-367,1,4,5,3,2.0,4.0,1.0,13.0
-368,1,6,5,3,6.0,4.0,2.0,6.0
-369,1,8,2,3,2.0,5.0,3.0,3.0
-370,1,1,5,4,2.0,4.0,1.0,7.0
-371,1,4,5,3,2.0,7.0,1.0,9.0
-372,1,3,5,3,2.0,5.0,2.0,10.0
-373,1,4,5,4,3.0,5.0,2.0,7.0
-374,1,1,5,4,4.0,4.0,2.0,7.0
-375,1,3,5,3,2.0,3.0,1.0,1.0
-376,1,2,5,3,4.0,5.0,2.0,10.0
-377,1,1,5,3,4.0,5.0,1.0,7.0
-378,1,1,5,4,2.0,5.0,2.0,7.0
-379,0,2,5,6,2.0,7.0,2.0,7.0
-380,0,2,3,5,1.0,7.0,4.0,6.0
-381,0,2,3,3,2.0,4.0,1.0,6.0
-382,0,4,3,4,2.0,7.0,3.0,6.0
-383,0,4,6,3,2.0,6.0,2.0,7.0
-384,0,7,6,2,2.0,5.0,3.0,10.0
-385,0,7,6,3,2.0,5.0,3.0,2.0
-386,0,2,2,3,2.0,7.0,2.0,3.0
-387,0,8,2,3,2.0,7.0,2.0,3.0
-388,0,1,2,3,2.0,4.0,2.0,3.0
-389,0,8,4,1,2.0,3.0,1.0,1.0
-390,0,3,6,4,4.0,4.0,3.0,2.0
-391,0,1,3,4,2.0,4.0,1.0,6.0
-392,0,2,3,3,2.0,4.0,3.0,6.0
-393,0,5,3,2,2.0,7.0,1.0,6.0
-394,0,1,3,3,2.0,4.0,2.0,6.0
-395,0,2,3,5,2.0,4.0,2.0,6.0
-396,0,2,3,3,4.0,7.0,2.0,6.0
-397,1,3,4,3,2.0,5.0,2.0,1.0
-398,1,6,5,4,2.0,3.0,1.0,7.0
-399,1,1,5,4,2.0,4.0,2.0,7.0
-400,1,6,5,3,2.0,4.0,2.0,7.0
-401,1,1,5,4,2.0,4.0,1.0,7.0
-402,1,1,1,4,4.0,4.0,2.0,7.0
-403,1,1,1,2,2.0,5.0,3.0,7.0
-404,1,9,1,2,2.0,5.0,2.0,7.0
-406,1,5,5,3,4.0,6.0,2.0,7.0
-407,1,2,3,3,2.0,4.0,2.0,6.0
-408,1,5,5,3,3.0,7.0,1.0,9.0
-409,1,5,1,2,2.0,6.0,3.0,2.0
-410,1,3,5,3,2.0,5.0,1.0,7.0
-411,1,1,5,5,2.0,4.0,1.0,7.0
-412,1,4,5,3,2.0,5.0,2.0,7.0
-414,1,8,5,4,2.0,1.0,1.0,7.0
-415,1,1,5,4,2.0,4.0,2.0,7.0
-416,0,6,2,3,3.0,4.0,1.0,3.0
-417,0,1,2,4,2.0,5.0,3.0,3.0
-419,0,1,2,4,2.0,2.0,1.0,11.0
-420,0,2,2,2,2.0,4.0,2.0,11.0
-421,0,2,2,3,4.0,4.0,3.0,11.0
-422,1,4,5,3,2.0,4.0,2.0,7.0
-423,1,2,5,4,2.0,4.0,1.0,7.0
-424,1,2,1,3,4.0,6.0,3.0,2.0
-426,1,1,5,3,2.0,2.0,1.0,13.0
-428,1,2,5,3,4.0,2.0,1.0,7.0
-429,1,1,5,3,2.0,2.0,2.0,7.0
-431,0,2,6,3,4.0,7.0,3.0,7.0
-432,0,6,2,4,2.0,6.0,3.0,11.0
-433,0,2,3,4,6.0,6.0,3.0,6.0
-434,0,1,2,3,2.0,4.0,2.0,15.0
-435,0,3,4,2,1.0,7.0,2.0,1.0
-436,0,2,4,2,2.0,6.0,1.0,1.0
-437,0,3,2,2,2.0,4.0,1.0,11.0
-438,0,2,2,2,2.0,4.0,1.0,11.0
-439,0,3,6,4,2.0,3.0,2.0,2.0
-441,1,2,4,3,2.0,7.0,1.0,1.0
-442,1,4,4,3,2.0,6.0,1.0,1.0
-445,1,2,5,4,2.0,5.0,2.0,9.0
-446,1,4,5,4,3.0,4.0,3.0,7.0
-447,1,1,5,3,4.0,7.0,2.0,7.0
-448,1,5,4,2,2.0,2.0,1.0,7.0
-449,1,2,4,2,6.0,3.0,1.0,1.0
-450,1,2,5,3,2.0,6.0,2.0,9.0
-452,1,1,5,4,4.0,5.0,3.0,7.0
-453,1,1,4,3,4.0,6.0,5.0,1.0
-456,0,1,5,4,4.0,6.0,1.0,7.0
-458,0,2,5,4,4.0,4.0,1.0,7.0
-460,1,1,3,5,2.0,4.0,2.0,2.0
-462,1,1,1,5,4.0,6.0,6.0,2.0
-464,1,1,5,5,4.0,3.0,1.0,7.0
-467,0,7,5,3,2.0,2.0,1.0,7.0
-468,0,3,5,3,6.0,6.0,3.0,2.0
-469,0,5,5,3,4.0,3.0,1.0,9.0
-470,0,5,1,4,4.0,4.0,2.0,4.0
-471,0,1,1,4,4.0,5.0,3.0,4.0
-472,0,2,1,3,3.0,4.0,2.0,5.0
-473,0,1,1,5,4.0,6.0,4.0,2.0
-474,0,4,1,4,1.0,6.0,5.0,2.0
-475,0,2,5,3,3.0,6.0,2.0,9.0
-476,0,2,5,3,2.0,5.0,2.0,9.0
-478,0,2,5,3,2.0,4.0,1.0,7.0
-480,0,3,1,3,2.0,4.0,1.0,5.0
-481,1,1,6,2,2.0,3.0,2.0,2.0
-482,1,4,5,4,2.0,6.0,1.0,7.0
-484,1,2,7,4,4.0,6.0,4.0,15.0
-485,1,2,2,4,1.0,6.0,2.0,2.0
-486,1,1,1,5,3.0,6.0,2.0,4.0
-488,1,2,5,4,4.0,2.0,3.0,7.0
-489,1,8,5,4,2.0,2.0,1.0,7.0
-490,1,1,3,4,2.0,6.0,3.0,6.0
-491,1,4,5,4,3.0,4.0,1.0,7.0
-492,1,7,1,4,6.0,4.0,2.0,2.0
-493,1,1,5,1,4.0,6.0,5.0,13.0
-494,1,2,3,4,2.0,3.0,3.0,6.0
-495,1,2,3,5,6.0,2.0,1.0,6.0
-496,0,1,1,2,4.0,5.0,2.0,2.0
-499,0,2,1,3,2.0,4.0,1.0,2.0
-500,0,1,1,3,1.0,5.0,3.0,2.0
-501,0,1,1,3,2.0,4.0,3.0,2.0
-504,1,2,1,2,2.0,5.0,2.0,7.0
-505,1,1,3,3,4.0,4.0,1.0,6.0
-507,1,1,1,3,4.0,7.0,3.0,2.0
-508,1,1,1,6,4.0,5.0,1.0,10.0
-509,0,6,3,4,4.0,4.0,2.0,16.0
-510,0,7,5,3,3.0,7.0,2.0,2.0
-511,0,4,1,2,4.0,7.0,3.0,7.0
-513,0,6,3,2,2.0,6.0,4.0,6.0
-515,0,2,3,2,2.0,6.0,3.0,16.0
-516,0,6,1,3,4.0,6.0,3.0,2.0
-518,0,6,3,2,2.0,7.0,2.0,6.0
-521,0,7,2,3,2.0,3.0,1.0,9.0
-522,0,5,4,2,2.0,6.0,2.0,1.0
-523,0,2,6,3,4.0,4.0,3.0,10.0
-524,0,14,1,3,4.0,7.0,4.0,4.0
-526,0,2,2,3,3.0,5.0,3.0,11.0
-529,0,2,1,2,4.0,4.0,1.0,5.0
-530,0,2,1,2,4.0,7.0,3.0,10.0
-531,1,1,1,3,4.0,7.0,2.0,2.0
-532,1,3,1,3,4.0,2.0,2.0,5.0
-533,1,2,1,3,2.0,6.0,2.0,2.0
-534,1,6,1,3,6.0,5.0,6.0,5.0
-535,1,8,1,2,2.0,5.0,3.0,2.0
-536,1,3,1,4,2.0,5.0,2.0,7.0
-537,1,2,1,2,4.0,5.0,1.0,1.0
-538,1,4,1,5,2.0,4.0,2.0,7.0
-539,1,2,4,2,2.0,4.0,1.0,1.0
-540,1,1,1,3,2.0,7.0,4.0,2.0
-541,1,1,1,2,4.0,7.0,3.0,7.0
-542,1,3,1,2,4.0,5.0,3.0,7.0
-544,1,3,1,2,4.0,7.0,3.0,4.0
-545,1,2,1,3,2.0,7.0,2.0,4.0
-546,1,6,5,4,2.0,4.0,1.0,7.0
-547,1,3,5,4,2.0,3.0,1.0,7.0
-548,1,5,5,4,2.0,6.0,1.0,7.0
-549,1,5,5,4,2.0,7.0,1.0,7.0
-550,1,4,5,4,2.0,4.0,1.0,7.0
-551,1,2,5,3,1.0,6.0,3.0,7.0
-552,1,6,7,3,2.0,2.0,1.0,15.0
+iid,genre,nombre de matches, domaine d'études, âge, origine éthnique, fréquence de date, fréquence de sortie
+5,Femme,8,Law,- de 22,Caucasian American,Several times a month,Several times a week,1.0
+4,Femme,8,Law,22 - 23,Caucasian American,Several times a month,Several times a week,1.0
+6,Femme,8,Law,22 - 23,Asian,Several times a month,Several times a week,1.0
+7,Femme,8,Law,22 - 23,Asian,Several times a month,Several times a week,1.0
+8,Femme,2,Business,24 - 27,Caucasian American,Several times a month,Several times a week,6.0
+9,Femme,3,Business,24 - 27,Others,Several times a month,Several times a week,9.0
+10,Femme,8,Business,24 - 27,Caucasian American,Several times a year,Several times a week,9.0
+11,Homme,10,Business,24 - 27,Caucasian American,Several times a month,Several times a month,2.0
+12,Homme,8,Law,22 - 23,Caucasian American,Several times a week,Several times a week,1.0
+13,Homme,6,Law,22 - 23,Asian,Almost never,Several times a week,1.0
+14,Homme,2,Law,22 - 23,Caucasian American,Several times a month,Several times a week,1.0
+15,Homme,7,Law,24 - 27,Hispanic,Several times a month,Several times a week,1.0
+16,Homme,8,Business,24 - 27,Caucasian American,Several times a month,Several times a week,7.0
+17,Homme,9,Business,28 - 31,Caucasian American,Several times a month,Several times a month,2.0
+18,Homme,9,Business,24 - 27,Caucasian American,Several times a year,Several times a week,7.0
+19,Homme,1,Business,28 - 31,Caucasian American,Several times a week,Several times a week,7.0
+20,Homme,9,Business,24 - 27,Caucasian American,Several times a week,Several times a week,7.0
+21,Femme,16,Sciences,- de 22,Asian,Almost never,Several times a month,10.0
+22,Femme,14,Education,24 - 27,African American,Several times a year,Several times a month,5.0
+23,Femme,13,Sciences sociales,- de 22,Asian,Several times a week,Several times a week,3.0
+24,Femme,16,Sciences sociales,24 - 27,Caucasian American,Several times a year,Several times a month,9.0
+25,Femme,16,Sciences sociales,24 - 27,Caucasian American,Several times a month,Several times a month,9.0
+26,Femme,16,Sciences sociales,22 - 23,Caucasian American,Several times a month,Several times a month,9.0
+27,Femme,14,Sciences sociales,22 - 23,Hispanic,Several times a year,Several times a month,9.0
+29,Femme,14,Sciences sociales,22 - 23,Caucasian American,Several times a year,Several times a week,9.0
+30,Femme,14,Law,22 - 23,Caucasian American,Almost never,Several times a month,1.0
+31,Femme,12,Law,24 - 27,Caucasian American,Several times a month,Several times a month,1.0
+32,Femme,16,Sciences sociales,24 - 27,Asian,Several times a month,Several times a month,2.0
+33,Femme,16,Sciences sociales,28 - 31,Caucasian American,Several times a year,Several times a week,6.0
+34,Femme,14,Business,- de 22,Asian,Several times a year,Several times a month,7.0
+35,Femme,11,Sciences,24 - 27,Caucasian American,Several times a year,Several times a month,7.0
+36,Femme,14,Sciences,24 - 27,Caucasian American,Several times a month,Several times a month,4.0
+37,Femme,14,Sciences sociales,24 - 27,Caucasian American,Several times a year,Several times a month,7.0
+38,Femme,13,Law,22 - 23,African American,Several times a month,Several times a month,1.0
+39,Femme,15,Law,24 - 27,Hispanic,Several times a year,Several times a month,1.0
+41,Homme,19,Law,28 - 31,Asian,Several times a year,Several times a month,1.0
+42,Homme,19,Sciences,22 - 23,Asian,Almost never,Several times a month,5.0
+43,Homme,18,Business,24 - 27,Caucasian American,Several times a year,Several times a month,2.0
+44,Homme,15,Sciences sociales,24 - 27,Caucasian American,Several times a month,Several times a week,2.0
+45,Homme,15,Business,28 - 31,Caucasian American,Several times a year,Several times a month,7.0
+46,Homme,15,Business,24 - 27,Caucasian American,Several times a year,Several times a month,7.0
+47,Homme,18,Business,28 - 31,Caucasian American,Several times a year,Several times a week,2.0
+48,Homme,18,Autres,22 - 23,Caucasian American,Several times a month,Several times a month,6.0
+49,Homme,13,Business,24 - 27,Asian,Several times a month,Several times a month,7.0
+50,Homme,15,Law,24 - 27,African American,Several times a year,Several times a month,1.0
+51,Homme,18,Law,22 - 23,Caucasian American,Several times a month,Several times a month,1.0
+52,Homme,18,Law,- de 22,Caucasian American,Several times a month,Several times a week,1.0
+53,Homme,18,Sciences,28 - 31,Caucasian American,Several times a year,Several times a month,4.0
+54,Homme,19,Business,28 - 31,Caucasian American,Several times a month,Several times a week,7.0
+55,Homme,16,Law,22 - 23,African American,Several times a month,Several times a month,1.0
+56,Femme,8,Sciences sociales,22 - 23,Caucasian American,Several times a month,Several times a week,9.0
+57,Femme,9,Sciences sociales,22 - 23,Caucasian American,Several times a month,Several times a month,9.0
+60,Femme,9,Sciences sociales,28 - 31,Others,Several times a year,Several times a month,6.0
+61,Femme,8,Langues,28 - 31,Caucasian American,Several times a month,Several times a month,2.0
+62,Femme,7,Law,24 - 27,Hispanic,Almost never,Several times a month,1.0
+63,Femme,9,Law,24 - 27,Asian,Several times a year,Several times a week,10.0
+64,Femme,9,Sciences sociales,24 - 27,Asian,Several times a year,Several times a month,9.0
+65,Femme,10,Sciences sociales,22 - 23,Others,Several times a month,Several times a month,3.0
+66,Homme,9,Business,28 - 31,Hispanic,Several times a year,Several times a month,7.0
+67,Homme,8,Law,22 - 23,Others,Several times a month,Several times a month,1.0
+68,Homme,10,Langues,24 - 27,African American,Several times a month,Several times a month,6.0
+69,Homme,8,Business,28 - 31,Caucasian American,Several times a year,Several times a week,7.0
+70,Homme,9,Business,24 - 27,Caucasian American,Several times a month,Several times a week,7.0
+71,Homme,7,Law,- de 22,Caucasian American,Several times a year,Several times a month,14.0
+72,Homme,10,Sciences,22 - 23,Caucasian American,Several times a year,Several times a week,7.0
+73,Homme,10,Business,22 - 23,Caucasian American,Several times a month,Several times a month,7.0
+74,Homme,8,Sciences,24 - 27,Caucasian American,Almost never,Several times a month,5.0
+75,Homme,8,Law,24 - 27,Others,Several times a month,Several times a month,1.0
+76,Femme,13,Langues,32 - 36,Caucasian American,Almost never,Several times a month,2.0
+77,Femme,12,Sciences sociales,22 - 23,Caucasian American,Several times a month,Several times a month,11.0
+78,Femme,15,Sciences sociales,22 - 23,Hispanic,Almost never,Several times a month,11.0
+79,Femme,15,Sciences,24 - 27,Asian,Almost never,Several times a week,5.0
+80,Femme,15,Sciences,24 - 27,Asian,Several times a month,Several times a month,2.0
+81,Femme,15,Langues,28 - 31,Caucasian American,Several times a month,Several times a month,6.0
+82,Femme,13,Education,24 - 27,Others,Several times a month,Several times a month,2.0
+83,Femme,16,Business,32 - 36,Hispanic,Several times a year,Several times a week,7.0
+84,Femme,16,Sciences,32 - 36,Hispanic,Several times a month,Several times a week,4.0
+85,Femme,17,Sciences sociales,28 - 31,Caucasian American,Several times a year,Several times a month,9.0
+86,Femme,10,Sciences sociales,22 - 23,Caucasian American,Almost never,Several times a week,2.0
+87,Femme,16,Sciences sociales,22 - 23,Caucasian American,Several times a month,Several times a month,9.0
+88,Femme,18,Sciences sociales,22 - 23,Caucasian American,Several times a month,Several times a month,9.0
+89,Femme,16,Business,24 - 27,Caucasian American,Almost never,Several times a month,2.0
+90,Femme,17,Sciences,22 - 23,Asian,Almost never,Almost never,10.0
+91,Femme,10,Law,24 - 27,Others,Several times a month,Several times a month,1.0
+92,Femme,11,Education,28 - 31,Caucasian American,Several times a year,Several times a week,7.0
+93,Femme,14,Sciences,28 - 31,Caucasian American,Several times a month,Several times a week,2.0
+94,Homme,15,Business,28 - 31,Asian,Several times a year,Several times a month,7.0
+95,Homme,17,Business,24 - 27,Caucasian American,Several times a month,Several times a month,7.0
+96,Homme,18,Sciences,24 - 27,Hispanic,Almost never,Several times a week,2.0
+97,Homme,13,Sciences,28 - 31,Caucasian American,Several times a month,Several times a month,2.0
+98,Homme,16,Sciences sociales,+ de 36,Caucasian American,Several times a month,Several times a month,2.0
+99,Homme,10,Law,28 - 31,Caucasian American,Several times a month,Several times a month,1.0
+100,Homme,16,Business,28 - 31,Others,Several times a month,Several times a month,2.0
+101,Homme,18,Business,22 - 23,Asian,Several times a month,Several times a month,7.0
+102,Homme,17,Sciences,32 - 36,Caucasian American,Several times a month,Several times a month,2.0
+103,Homme,17,Business,24 - 27,Caucasian American,Several times a month,Several times a week,7.0
+104,Homme,13,Sciences,24 - 27,Caucasian American,Several times a month,Several times a month,2.0
+105,Homme,10,Law,24 - 27,African American,Almost never,Several times a week,1.0
+106,Homme,16,Law,22 - 23,Hispanic,Almost never,Several times a month,1.0
+107,Homme,7,Langues,- de 22,Caucasian American,Several times a month,Several times a week,2.0
+108,Homme,14,Sciences,24 - 27,Caucasian American,Several times a year,Several times a month,5.0
+109,Homme,10,Langues,24 - 27,Asian,Several times a month,Several times a week,6.0
+110,Homme,14,Langues,28 - 31,Caucasian American,Several times a year,Several times a week,6.0
+111,Homme,18,Business,24 - 27,Asian,Several times a month,Several times a week,7.0
+112,Femme,4,Sciences sociales,- de 22,Others,Several times a month,Several times a week,11.0
+113,Femme,7,Business,- de 22,Caucasian American,Several times a month,Several times a week,10.0
+115,Femme,7,Sciences sociales,- de 22,Caucasian American,Several times a month,Several times a week,3.0
+116,Femme,6,Business,- de 22,Caucasian American,Several times a week,Several times a week,10.0
+117,Femme,9,Business,- de 22,Caucasian American,Several times a month,Several times a week,7.0
+119,Femme,5,Langues,- de 22,Hispanic,Several times a month,Several times a week,1.0
+120,Femme,6,Langues,- de 22,Hispanic,Several times a month,Several times a month,6.0
+121,Femme,10,Sciences sociales,- de 22,Caucasian American,Almost never,Several times a week,2.0
+122,Homme,7,Law,22 - 23,Others,Several times a month,Several times a week,1.0
+123,Homme,10,Sciences,- de 22,Asian,Several times a month,Several times a week,4.0
+124,Homme,10,Business,22 - 23,Asian,Several times a month,Several times a week,1.0
+125,Homme,3,Sciences,- de 22,Caucasian American,Several times a month,Several times a week,4.0
+126,Homme,8,Langues,22 - 23,Caucasian American,Several times a year,Several times a month,4.0
+127,Homme,6,Sciences,22 - 23,Caucasian American,Several times a month,Several times a week,6.0
+128,Homme,4,Sciences,- de 22,Caucasian American,Several times a month,Several times a month,5.0
+130,Homme,8,Sciences,- de 22,Asian,Several times a year,Several times a month,10.0
+131,Homme,10,Sciences,- de 22,Asian,Almost never,Several times a month,10.0
+132,Femme,4,Business,24 - 27,Caucasian American,Almost never,Several times a month,7.0
+133,Femme,5,Sciences,24 - 27,Asian,Several times a year,Several times a month,2.0
+134,Femme,4,Sciences,22 - 23,Caucasian American,Several times a month,Several times a month,2.0
+135,Femme,3,Sciences sociales,24 - 27,Caucasian American,Almost never,Several times a month,2.0
+137,Homme,4,Business,24 - 27,Asian,Several times a month,Several times a week,8.0
+138,Homme,4,Business,32 - 36,Caucasian American,Several times a month,Several times a month,7.0
+139,Homme,5,Sciences,+ de 36,Asian,Several times a year,Several times a month,2.0
+140,Homme,3,Business,28 - 31,Caucasian American,Several times a month,Several times a month,7.0
+141,Homme,4,Business,28 - 31,Hispanic,Several times a year,Several times a month,7.0
+142,Femme,9,Business,24 - 27,Caucasian American,Several times a month,Several times a month,2.0
+143,Femme,16,Law,32 - 36,Caucasian American,Almost never,Several times a month,1.0
+144,Femme,15,Sciences,22 - 23,Caucasian American,Several times a month,Several times a month,2.0
+145,Femme,16,Sciences,24 - 27,Caucasian American,Almost never,Several times a week,2.0
+146,Femme,15,Langues,+ de 36,Caucasian American,Almost never,Several times a week,2.0
+147,Femme,11,Business,24 - 27,Asian,Several times a month,Several times a week,7.0
+148,Femme,15,Business,24 - 27,Asian,Several times a month,Several times a week,7.0
+149,Femme,11,Business,28 - 31,Caucasian American,Several times a month,Several times a month,2.0
+150,Femme,14,Langues,28 - 31,Caucasian American,Several times a month,Several times a month,2.0
+151,Femme,14,Business,28 - 31,Caucasian American,Several times a month,Several times a week,9.0
+152,Femme,13,Business,24 - 27,Asian,Several times a month,Several times a month,2.0
+153,Femme,13,Langues,28 - 31,Asian,Several times a year,Several times a month,2.0
+154,Femme,9,Business,24 - 27,Caucasian American,Several times a month,Several times a week,7.0
+155,Femme,15,Business,24 - 27,Caucasian American,Several times a month,Several times a week,9.0
+156,Femme,12,Business,28 - 31,African American,Several times a year,Several times a month,7.0
+157,Femme,15,Business,28 - 31,Asian,Several times a year,Several times a week,7.0
+158,Homme,16,Sciences,22 - 23,Caucasian American,Several times a year,Several times a month,2.0
+159,Homme,14,Sciences,28 - 31,Caucasian American,Several times a year,Several times a month,2.0
+160,Homme,13,Business,28 - 31,African American,Several times a month,Several times a month,8.0
+161,Homme,14,Sciences,22 - 23,Caucasian American,Several times a month,Several times a month,10.0
+162,Homme,14,Sciences,24 - 27,Asian,Several times a year,Several times a month,4.0
+163,Homme,13,Education,24 - 27,Caucasian American,Several times a month,Several times a month,2.0
+164,Homme,14,Langues,24 - 27,Caucasian American,Several times a year,Several times a month,2.0
+165,Homme,13,Business,28 - 31,Caucasian American,Several times a year,Several times a month,6.0
+166,Homme,13,Business,24 - 27,Others,Several times a month,Several times a month,7.0
+167,Homme,13,Sciences,22 - 23,Caucasian American,Several times a year,Several times a month,2.0
+168,Homme,15,Sciences,22 - 23,Asian,Several times a month,Several times a month,10.0
+169,Homme,11,Sciences,28 - 31,Caucasian American,Several times a year,Several times a month,2.0
+170,Homme,16,Sciences,28 - 31,Asian,Several times a month,Several times a month,4.0
+171,Homme,12,Business,28 - 31,Caucasian American,Several times a month,Several times a month,7.0
+172,Homme,11,Business,24 - 27,Caucasian American,Several times a month,Several times a week,7.0
+173,Homme,11,Sciences,22 - 23,Caucasian American,Several times a month,Several times a week,2.0
+174,Femme,8,Business,28 - 31,Asian,Several times a month,Several times a month,7.0
+175,Femme,7,Business,22 - 23,Others,Several times a month,Several times a week,7.0
+176,Femme,7,Business,28 - 31,Asian,Several times a year,Several times a month,7.0
+177,Femme,10,Business,22 - 23,Caucasian American,Several times a month,Several times a month,7.0
+178,Femme,9,Sciences sociales,32 - 36,Asian,Several times a month,Several times a month,4.0
+179,Femme,9,Langues,28 - 31,Hispanic,Several times a year,Several times a month,2.0
+180,Femme,8,Business,24 - 27,Asian,Several times a month,Several times a month,7.0
+181,Femme,5,Sciences,22 - 23,African American,Several times a month,Several times a month,2.0
+182,Femme,10,Sciences,22 - 23,African American,Several times a month,Several times a month,4.0
+183,Femme,9,Sciences sociales,24 - 27,Caucasian American,Almost never,Several times a month,6.0
+184,Homme,6,Business,32 - 36,Caucasian American,Several times a month,Several times a month,7.0
+185,Homme,9,Sciences,24 - 27,Asian,Almost never,Several times a month,6.0
+186,Homme,7,Sciences,24 - 27,Asian,Almost never,Several times a month,2.0
+187,Homme,9,Business,24 - 27,Caucasian American,Several times a month,Several times a week,7.0
+188,Homme,9,Sciences,- de 22,Caucasian American,Several times a month,Several times a week,2.0
+189,Homme,10,Law,24 - 27,Others,Several times a year,Several times a month,9.0
+190,Homme,7,Business,24 - 27,Caucasian American,Almost never,Several times a month,9.0
+191,Homme,8,Business,28 - 31,Caucasian American,Several times a month,Several times a month,7.0
+192,Homme,9,Business,24 - 27,Caucasian American,Several times a year,Several times a month,7.0
+193,Homme,8,Law,24 - 27,Asian,Several times a year,Several times a month,1.0
+194,Femme,19,Sciences sociales,24 - 27,Caucasian American,Several times a month,Several times a month,3.0
+195,Femme,15,Sciences,24 - 27,Caucasian American,Several times a month,Several times a week,2.0
+196,Femme,18,Langues,24 - 27,Asian,Several times a week,Several times a week,2.0
+197,Femme,17,Business,24 - 27,Others,Several times a month,Several times a month,7.0
+198,Femme,20,Business,22 - 23,Asian,Several times a month,Several times a month,7.0
+199,Femme,15,Langues,28 - 31,Caucasian American,Several times a month,Several times a month,2.0
+200,Femme,17,Business,24 - 27,Caucasian American,Almost never,Several times a month,9.0
+201,Femme,19,Business,24 - 27,Caucasian American,Several times a month,Several times a month,7.0
+202,Femme,18,Sciences,22 - 23,Caucasian American,Several times a year,Several times a month,2.0
+203,Femme,20,Sciences,22 - 23,Caucasian American,Several times a year,Several times a month,2.0
+204,Femme,20,Business,24 - 27,Caucasian American,Several times a month,Several times a week,7.0
+205,Femme,18,Sciences,22 - 23,Caucasian American,Almost never,Several times a week,2.0
+206,Femme,12,Business,28 - 31,African American,Several times a month,Several times a week,9.0
+207,Femme,17,Sciences,22 - 23,Caucasian American,Several times a month,Several times a week,1.0
+208,Femme,9,Sciences,24 - 27,African American,Several times a month,Several times a month,7.0
+209,Femme,20,Business,28 - 31,African American,Several times a year,Several times a month,7.0
+210,Femme,17,Sciences,28 - 31,Caucasian American,Several times a year,Several times a month,2.0
+211,Femme,18,Business,28 - 31,Caucasian American,Several times a month,Several times a week,9.0
+212,Femme,11,Business,24 - 27,Hispanic,Several times a month,Several times a month,7.0
+213,Femme,18,Business,24 - 27,Hispanic,Several times a month,Several times a month,7.0
+214,Homme,18,Sciences,22 - 23,Caucasian American,Several times a year,Several times a month,2.0
+215,Homme,15,Business,24 - 27,Asian,Several times a month,Several times a week,7.0
+216,Homme,20,Business,24 - 27,Caucasian American,Several times a month,Several times a month,7.0
+217,Homme,12,Sciences,24 - 27,Caucasian American,Several times a month,Several times a month,2.0
+218,Homme,19,Sciences,24 - 27,Caucasian American,Several times a month,Several times a month,2.0
+219,Homme,14,Business,24 - 27,Caucasian American,Several times a month,Several times a month,7.0
+220,Homme,17,Business,24 - 27,Others,Several times a month,Several times a month,6.0
+221,Homme,15,Business,24 - 27,Asian,Several times a year,Several times a month,7.0
+222,Homme,20,Sciences,24 - 27,Caucasian American,Several times a year,Several times a month,2.0
+223,Homme,19,Langues,28 - 31,Caucasian American,Several times a month,Several times a month,2.0
+224,Homme,16,Sciences sociales,32 - 36,Caucasian American,Almost never,Several times a month,15.0
+225,Homme,18,Business,28 - 31,Hispanic,Almost never,Several times a month,7.0
+226,Homme,16,Business,22 - 23,Caucasian American,Several times a month,Several times a week,6.0
+227,Homme,17,Business,24 - 27,Caucasian American,Several times a year,Several times a month,7.0
+228,Homme,19,Sciences,24 - 27,Asian,Almost never,Several times a month,2.0
+229,Homme,16,Sciences,28 - 31,Caucasian American,Several times a year,Several times a month,7.0
+230,Homme,16,Business,+ de 36,Caucasian American,Almost never,Several times a month,7.0
+231,Homme,17,Business,28 - 31,Hispanic,Several times a year,Several times a month,9.0
+232,Homme,19,Business,28 - 31,Caucasian American,Several times a month,Several times a month,9.0
+233,Homme,15,Business,28 - 31,Asian,Several times a month,Several times a month,7.0
+234,Femme,9,Sciences sociales,22 - 23,Others,Almost never,Several times a month,2.0
+235,Femme,7,Education,22 - 23,Caucasian American,Several times a month,Several times a month,2.0
+236,Femme,9,Sciences,24 - 27,Asian,Almost never,Several times a week,2.0
+237,Femme,8,Langues,32 - 36,Caucasian American,Almost never,Several times a month,6.0
+238,Femme,7,Langues,24 - 27,Caucasian American,Several times a month,Several times a week,6.0
+239,Femme,8,Sciences,32 - 36,Caucasian American,Several times a year,Several times a month,7.0
+240,Femme,8,Business,24 - 27,Asian,Several times a year,Several times a month,6.0
+241,Femme,6,Business,28 - 31,Asian,Several times a month,Several times a month,7.0
+242,Femme,4,Sciences sociales,24 - 27,Hispanic,Almost never,Several times a month,2.0
+243,Homme,6,Langues,24 - 27,Caucasian American,Several times a year,Several times a month,2.0
+244,Homme,8,Business,28 - 31,Caucasian American,Several times a month,Several times a month,7.0
+245,Homme,8,Langues,32 - 36,Caucasian American,Several times a month,Several times a month,1.0
+246,Homme,8,Sciences,24 - 27,Caucasian American,Almost never,Several times a year,2.0
+247,Homme,9,Sciences,24 - 27,Asian,Several times a year,Several times a month,2.0
+248,Homme,6,Business,24 - 27,Others,Several times a month,Several times a week,7.0
+249,Homme,9,Business,32 - 36,Others,Several times a month,Several times a week,7.0
+250,Homme,4,Langues,24 - 27,Others,Several times a month,Several times a week,2.0
+251,Homme,8,Langues,32 - 36,Others,Several times a month,Several times a week,10.0
+252,Femme,19,Business,28 - 31,Hispanic,Several times a year,Several times a month,2.0
+253,Femme,19,Sciences sociales,32 - 36,Asian,Several times a year,Several times a year,2.0
+254,Femme,21,Langues,22 - 23,Caucasian American,Several times a year,Several times a month,2.0
+255,Femme,21,Sciences,24 - 27,Asian,Almost never,Several times a month,4.0
+256,Femme,18,Sciences,24 - 27,Asian,Several times a year,Several times a month,4.0
+257,Femme,21,Education,24 - 27,Caucasian American,Several times a month,Several times a week,2.0
+258,Femme,14,Education,24 - 27,Others,Several times a year,Several times a week,2.0
+259,Femme,20,Sciences,24 - 27,Caucasian American,Almost never,Several times a week,2.0
+260,Femme,15,Sciences,24 - 27,Asian,Almost never,Several times a month,2.0
+261,Femme,16,Sciences,24 - 27,Asian,Almost never,Several times a month,2.0
+262,Femme,21,Sciences sociales,28 - 31,Caucasian American,Several times a year,Several times a month,10.0
+263,Femme,15,Sciences sociales,24 - 27,African American,Several times a year,Several times a month,10.0
+264,Femme,17,Langues,24 - 27,Caucasian American,Several times a year,Several times a month,2.0
+265,Femme,20,Law,32 - 36,Caucasian American,Several times a month,Several times a month,2.0
+266,Femme,17,Langues,28 - 31,Caucasian American,Almost never,Several times a month,10.0
+267,Femme,21,Sciences,24 - 27,Asian,Several times a month,Several times a month,4.0
+268,Femme,11,Sciences,24 - 27,Hispanic,Several times a year,Several times a week,4.0
+269,Femme,15,Langues,24 - 27,Caucasian American,Several times a year,Several times a month,2.0
+270,Femme,16,Sciences,22 - 23,Asian,Several times a month,Several times a week,2.0
+271,Femme,19,Sciences sociales,22 - 23,Caucasian American,Several times a month,Several times a week,11.0
+272,Femme,21,Sciences sociales,24 - 27,Caucasian American,Several times a month,Several times a week,11.0
+273,Homme,20,Sciences,28 - 31,Caucasian American,Several times a month,Several times a month,2.0
+274,Homme,15,Sciences sociales,24 - 27,Hispanic,Several times a month,Several times a month,2.0
+275,Homme,20,Sciences,- de 22,Caucasian American,Several times a month,Several times a month,7.0
+276,Homme,16,Sciences,24 - 27,Caucasian American,Several times a month,Several times a week,2.0
+277,Homme,16,Sciences,24 - 27,Caucasian American,Almost never,Several times a month,2.0
+278,Homme,21,Sciences,32 - 36,Caucasian American,Several times a month,Several times a week,2.0
+279,Homme,16,Sciences,24 - 27,Caucasian American,Several times a month,Several times a month,2.0
+280,Homme,16,Sciences,24 - 27,Caucasian American,Several times a year,Several times a month,2.0
+281,Homme,19,Sciences sociales,24 - 27,Caucasian American,Several times a month,Several times a month,2.0
+282,Homme,14,Sciences,22 - 23,African American,Several times a month,Several times a month,7.0
+283,Homme,19,Sciences,24 - 27,Asian,Several times a month,Several times a month,7.0
+284,Homme,20,Business,24 - 27,Caucasian American,Several times a month,Several times a month,6.0
+285,Homme,19,Sciences,24 - 27,Others,Several times a year,Several times a year,7.0
+286,Homme,21,Sciences,22 - 23,Caucasian American,Several times a year,Several times a month,2.0
+287,Homme,21,Business,22 - 23,Asian,Almost never,Several times a month,6.0
+288,Homme,17,Sciences sociales,24 - 27,Caucasian American,Several times a year,Several times a month,2.0
+289,Homme,16,Business,28 - 31,Asian,Several times a month,Several times a week,7.0
+290,Homme,19,Sciences,32 - 36,Caucasian American,Several times a month,Several times a month,2.0
+291,Homme,16,Sciences,24 - 27,Asian,Several times a month,Several times a month,4.0
+292,Homme,17,Business,28 - 31,African American,Several times a month,Several times a week,7.0
+293,Homme,19,Business,28 - 31,Hispanic,Several times a month,Several times a month,7.0
+294,Femme,13,Education,28 - 31,Asian,Several times a year,Several times a month,2.0
+295,Femme,14,Education,28 - 31,Caucasian American,Several times a year,Several times a week,2.0
+296,Femme,11,Education,28 - 31,Caucasian American,Several times a month,Several times a month,2.0
+297,Femme,10,Education,- de 22,Caucasian American,Several times a month,Several times a week,2.0
+298,Femme,14,Langues,22 - 23,Caucasian American,Several times a year,Several times a month,2.0
+299,Femme,13,Sciences sociales,24 - 27,Asian,Several times a year,Several times a month,2.0
+300,Femme,12,Sciences sociales,32 - 36,Caucasian American,Several times a year,Several times a month,2.0
+301,Femme,12,Education,32 - 36,Caucasian American,Several times a month,Several times a week,2.0
+302,Femme,14,Sciences sociales,- de 22,Caucasian American,Several times a month,Several times a week,12.0
+303,Femme,13,Education,32 - 36,Caucasian American,Several times a month,Several times a week,2.0
+304,Femme,13,Sciences sociales,28 - 31,Caucasian American,Almost never,Several times a month,12.0
+305,Femme,12,Education,28 - 31,Asian,Several times a month,Several times a week,2.0
+306,Femme,13,Education,22 - 23,Asian,Several times a year,Several times a month,2.0
+307,Femme,11,Education,24 - 27,Asian,Almost never,Several times a month,2.0
+308,Homme,13,Education,24 - 27,Asian,Almost never,Several times a month,2.0
+309,Homme,12,Education,32 - 36,Caucasian American,Several times a month,Several times a month,2.0
+310,Homme,13,Sciences,24 - 27,Caucasian American,Several times a month,Several times a week,10.0
+311,Homme,13,Business,28 - 31,Asian,Several times a year,Several times a week,7.0
+312,Homme,13,Langues,22 - 23,Caucasian American,Several times a month,Several times a month,6.0
+313,Homme,13,Business,24 - 27,Caucasian American,Several times a month,Several times a week,6.0
+314,Homme,14,Business,32 - 36,Others,Several times a year,Several times a month,2.0
+315,Homme,12,Sciences,24 - 27,Caucasian American,Several times a month,Several times a month,2.0
+316,Homme,8,Business,24 - 27,Caucasian American,Several times a month,Several times a week,7.0
+317,Homme,11,Business,28 - 31,Caucasian American,Several times a month,Several times a week,7.0
+318,Homme,14,Business,28 - 31,Others,Several times a year,Several times a week,7.0
+319,Homme,11,Education,24 - 27,Caucasian American,Almost never,Several times a month,2.0
+320,Homme,14,Langues,+ de 36,Caucasian American,Several times a month,Several times a month,2.0
+321,Homme,14,Business,28 - 31,Caucasian American,Several times a month,Several times a week,7.0
+322,Femme,7,Sciences sociales,32 - 36,Asian,Several times a month,Several times a month,2.0
+323,Femme,6,Sciences,24 - 27,Asian,Several times a month,Several times a month,2.0
+324,Femme,5,Sciences sociales,22 - 23,Caucasian American,Several times a month,Several times a month,3.0
+325,Femme,6,Sciences sociales,28 - 31,Hispanic,Several times a year,Several times a month,3.0
+326,Femme,7,Education,+ de 36,African American,Several times a year,Several times a month,2.0
+327,Femme,9,Business,28 - 31,Caucasian American,Several times a year,Several times a month,7.0
+328,Femme,8,Education,28 - 31,Caucasian American,Several times a month,Several times a week,2.0
+329,Femme,9,Education,28 - 31,Caucasian American,Several times a year,Several times a month,2.0
+330,Femme,8,Sciences,22 - 23,Asian,Almost never,Several times a month,10.0
+331,Femme,9,Education,32 - 36,Caucasian American,Several times a year,Several times a month,2.0
+332,Homme,8,Sciences sociales,28 - 31,Asian,Almost never,Several times a month,2.0
+333,Homme,8,Business,22 - 23,Caucasian American,Several times a month,Several times a week,7.0
+334,Homme,10,Business,28 - 31,Asian,Several times a month,Several times a month,4.0
+335,Homme,9,Sciences sociales,24 - 27,Caucasian American,Several times a month,Several times a month,2.0
+336,Homme,9,Sciences,24 - 27,Hispanic,Several times a month,Several times a month,17.0
+337,Homme,7,Sciences,28 - 31,Caucasian American,Several times a month,Several times a month,5.0
+338,Homme,8,Sciences,24 - 27,Others,Several times a month,Several times a month,7.0
+341,Femme,15,Business,22 - 23,Asian,Several times a year,Several times a week,10.0
+342,Femme,17,Education,32 - 36,Hispanic,Several times a year,Several times a month,2.0
+343,Femme,16,Sciences,32 - 36,Caucasian American,Several times a month,Several times a week,4.0
+344,Femme,14,Business,24 - 27,Hispanic,Several times a month,Several times a month,9.0
+345,Femme,14,Sciences,24 - 27,Caucasian American,Almost never,Several times a month,4.0
+347,Femme,18,Education,24 - 27,African American,Several times a year,Several times a week,13.0
+348,Femme,17,Education,- de 22,Asian,Several times a year,Several times a week,2.0
+349,Femme,10,Sciences sociales,32 - 36,Caucasian American,Several times a month,Several times a month,7.0
+350,Femme,15,Sciences,28 - 31,Caucasian American,Almost never,Several times a month,4.0
+351,Femme,13,Education,32 - 36,Asian,Several times a month,Several times a month,2.0
+352,Femme,15,Education,28 - 31,Others,Several times a month,Several times a month,6.0
+353,Femme,17,Education,24 - 27,Asian,Several times a month,Several times a week,2.0
+354,Femme,10,Sciences sociales,22 - 23,Caucasian American,Several times a year,Several times a week,3.0
+355,Femme,17,Sciences sociales,24 - 27,Caucasian American,Several times a month,Several times a month,3.0
+356,Femme,17,Sciences sociales,24 - 27,Caucasian American,Almost never,Several times a month,3.0
+357,Femme,15,Education,24 - 27,Asian,Several times a month,Several times a month,2.0
+358,Femme,16,Business,24 - 27,Asian,Several times a month,Several times a month,7.0
+359,Femme,15,Langues,24 - 27,Caucasian American,Several times a year,Several times a month,9.0
+360,Femme,14,Sciences sociales,24 - 27,Others,Several times a year,Several times a month,3.0
+361,Homme,19,Law,32 - 36,Caucasian American,Several times a year,Several times a year,1.0
+362,Homme,15,Law,28 - 31,Caucasian American,Several times a month,Several times a month,1.0
+363,Homme,18,Sciences,22 - 23,Asian,Several times a year,Several times a month,7.0
+364,Homme,14,Business,24 - 27,Hispanic,Several times a month,Several times a month,7.0
+365,Homme,19,Business,28 - 31,Caucasian American,Several times a month,Several times a week,10.0
+366,Homme,10,Business,24 - 27,Caucasian American,Several times a month,Several times a week,6.0
+367,Homme,16,Business,24 - 27,Caucasian American,Several times a month,Several times a week,13.0
+368,Homme,14,Business,24 - 27,Others,Several times a month,Several times a month,6.0
+369,Homme,12,Sciences sociales,24 - 27,Caucasian American,Several times a month,Several times a month,3.0
+370,Homme,19,Business,28 - 31,Caucasian American,Several times a month,Several times a week,7.0
+371,Homme,16,Business,24 - 27,Caucasian American,Almost never,Several times a week,9.0
+372,Homme,17,Business,24 - 27,Caucasian American,Several times a month,Several times a month,10.0
+373,Homme,16,Business,28 - 31,Hispanic,Several times a month,Several times a month,7.0
+374,Homme,19,Business,28 - 31,Asian,Several times a month,Several times a month,7.0
+375,Homme,17,Business,24 - 27,Caucasian American,Several times a month,Several times a week,1.0
+376,Homme,18,Business,24 - 27,Asian,Several times a month,Several times a month,10.0
+377,Homme,19,Business,24 - 27,Asian,Several times a month,Several times a week,7.0
+378,Homme,19,Business,28 - 31,Caucasian American,Several times a month,Several times a month,7.0
+379,Femme,17,Business,+ de 36,Caucasian American,Almost never,Several times a month,7.0
+380,Femme,17,Langues,32 - 36,African American,Almost never,Several times a month,6.0
+381,Femme,17,Langues,24 - 27,Caucasian American,Several times a month,Several times a week,6.0
+382,Femme,15,Langues,28 - 31,Caucasian American,Almost never,Several times a month,6.0
+383,Femme,15,Education,24 - 27,Caucasian American,Several times a year,Several times a month,7.0
+384,Femme,12,Education,22 - 23,Caucasian American,Several times a month,Several times a month,10.0
+385,Femme,12,Education,24 - 27,Caucasian American,Several times a month,Several times a month,2.0
+386,Femme,17,Sciences sociales,24 - 27,Caucasian American,Almost never,Several times a month,3.0
+387,Femme,11,Sciences sociales,24 - 27,Caucasian American,Almost never,Several times a month,3.0
+388,Femme,18,Sciences sociales,24 - 27,Caucasian American,Several times a month,Several times a month,3.0
+389,Femme,11,Law,- de 22,Caucasian American,Several times a month,Several times a week,1.0
+390,Femme,16,Education,28 - 31,Asian,Several times a month,Several times a month,2.0
+391,Femme,18,Langues,28 - 31,Caucasian American,Several times a month,Several times a week,6.0
+392,Femme,17,Langues,24 - 27,Caucasian American,Several times a month,Several times a month,6.0
+393,Femme,14,Langues,22 - 23,Caucasian American,Almost never,Several times a week,6.0
+394,Femme,18,Langues,24 - 27,Caucasian American,Several times a month,Several times a month,6.0
+395,Femme,17,Langues,32 - 36,Caucasian American,Several times a month,Several times a month,6.0
+396,Femme,17,Langues,24 - 27,Asian,Almost never,Several times a month,6.0
+397,Homme,15,Law,24 - 27,Caucasian American,Several times a month,Several times a month,1.0
+398,Homme,12,Business,28 - 31,Caucasian American,Several times a month,Several times a week,7.0
+399,Homme,17,Business,28 - 31,Caucasian American,Several times a month,Several times a month,7.0
+400,Homme,12,Business,24 - 27,Caucasian American,Several times a month,Several times a month,7.0
+401,Homme,17,Business,28 - 31,Caucasian American,Several times a month,Several times a week,7.0
+402,Homme,17,Sciences,28 - 31,Asian,Several times a month,Several times a month,7.0
+403,Homme,17,Sciences,22 - 23,Caucasian American,Several times a month,Several times a month,7.0
+404,Homme,9,Sciences,22 - 23,Caucasian American,Several times a month,Several times a month,7.0
+405,Homme,18,Business,28 - 31,African American,Several times a month,Several times a month,9.0
+406,Homme,13,Business,24 - 27,Asian,Several times a year,Several times a month,7.0
+407,Homme,16,Langues,24 - 27,Caucasian American,Several times a month,Several times a month,6.0
+408,Homme,13,Business,24 - 27,Hispanic,Almost never,Several times a week,9.0
+409,Homme,13,Sciences,22 - 23,Caucasian American,Several times a year,Several times a month,2.0
+410,Homme,15,Business,24 - 27,Caucasian American,Several times a month,Several times a week,7.0
+411,Homme,17,Business,32 - 36,Caucasian American,Several times a month,Several times a week,7.0
+412,Homme,14,Business,24 - 27,Caucasian American,Several times a month,Several times a month,7.0
+414,Homme,10,Business,28 - 31,Caucasian American,Several times a week,Several times a week,7.0
+415,Homme,17,Business,28 - 31,Caucasian American,Several times a month,Several times a month,7.0
+416,Femme,2,Sciences sociales,24 - 27,Hispanic,Several times a month,Several times a week,3.0
+417,Femme,7,Sciences sociales,28 - 31,Caucasian American,Several times a month,Several times a month,3.0
+418,Femme,8,Law,24 - 27,Asian,Almost never,Several times a month,1.0
+419,Femme,7,Sciences sociales,28 - 31,Caucasian American,Several times a month,Several times a week,11.0
+420,Femme,6,Sciences sociales,22 - 23,Caucasian American,Several times a month,Several times a month,11.0
+421,Femme,6,Sciences sociales,24 - 27,Asian,Several times a month,Several times a month,11.0
+422,Homme,2,Business,24 - 27,Caucasian American,Several times a month,Several times a month,7.0
+423,Homme,4,Business,28 - 31,Caucasian American,Several times a month,Several times a week,7.0
+424,Homme,4,Sciences,24 - 27,Asian,Several times a year,Several times a month,2.0
+425,Homme,6,Business,28 - 31,Caucasian American,Several times a month,Several times a month,7.0
+426,Homme,5,Business,24 - 27,Caucasian American,Several times a month,Several times a week,13.0
+427,Homme,6,Business,28 - 31,Caucasian American,Almost never,Several times a month,15.0
+428,Homme,4,Business,24 - 27,Asian,Several times a month,Several times a week,7.0
+429,Homme,5,Business,24 - 27,Caucasian American,Several times a month,Several times a month,7.0
+430,Femme,14,Education,22 - 23,Asian,Several times a year,Several times a month,2.0
+431,Femme,12,Education,24 - 27,Asian,Almost never,Several times a month,7.0
+432,Femme,8,Sciences sociales,28 - 31,Caucasian American,Several times a year,Several times a month,11.0
+433,Femme,12,Langues,28 - 31,Others,Several times a year,Several times a month,6.0
+434,Femme,13,Sciences sociales,24 - 27,Caucasian American,Several times a month,Several times a month,15.0
+435,Femme,11,Law,22 - 23,African American,Almost never,Several times a month,1.0
+436,Femme,12,Law,22 - 23,Caucasian American,Several times a year,Several times a week,1.0
+437,Femme,11,Sciences sociales,22 - 23,Caucasian American,Several times a month,Several times a week,11.0
+438,Femme,12,Sciences sociales,22 - 23,Caucasian American,Several times a month,Several times a week,11.0
+439,Femme,11,Education,28 - 31,Caucasian American,Several times a month,Several times a month,2.0
+440,Homme,10,Law,- de 22,Caucasian American,Almost never,Several times a month,1.0
+441,Homme,8,Law,24 - 27,Caucasian American,Almost never,Several times a week,1.0
+442,Homme,6,Law,24 - 27,Caucasian American,Several times a year,Several times a week,1.0
+443,Homme,10,Business,24 - 27,Hispanic,Several times a year,Several times a month,9.0
+444,Homme,10,Business,24 - 27,Caucasian American,Several times a month,Several times a month,7.0
+445,Homme,8,Business,28 - 31,Caucasian American,Several times a month,Several times a month,9.0
+446,Homme,6,Business,28 - 31,Hispanic,Several times a month,Several times a month,7.0
+447,Homme,9,Business,24 - 27,Asian,Almost never,Several times a month,7.0
+448,Homme,5,Law,22 - 23,Caucasian American,Several times a month,Several times a week,7.0
+449,Homme,8,Law,22 - 23,Others,Several times a month,Several times a week,1.0
+450,Homme,8,Business,24 - 27,Caucasian American,Several times a year,Several times a month,9.0
+451,Homme,10,Business,28 - 31,Asian,Several times a month,Several times a month,7.0
+452,Homme,9,Business,28 - 31,Asian,Several times a month,Several times a month,7.0
+453,Homme,9,Law,24 - 27,Asian,Several times a year,Several times a month,1.0
+454,Femme,6,Langues,24 - 27,Caucasian American,Almost never,Several times a month,2.0
+455,Femme,6,Sciences,24 - 27,Asian,Several times a year,Several times a month,2.0
+456,Femme,5,Business,28 - 31,Asian,Several times a year,Several times a week,7.0
+457,Femme,6,Langues,+ de 36,Asian,Almost never,Several times a month,6.0
+458,Femme,4,Business,28 - 31,Asian,Several times a month,Several times a week,7.0
+459,Femme,6,Business,24 - 27,Asian,Several times a month,Several times a month,7.0
+460,Homme,5,Langues,32 - 36,Caucasian American,Several times a month,Several times a month,2.0
+461,Homme,6,Sciences,24 - 27,Others,Almost never,Several times a month,4.0
+462,Homme,5,Sciences,32 - 36,Asian,Several times a year,Several times a year,2.0
+463,Homme,6,Sciences,22 - 23,Asian,Almost never,Several times a week,10.0
+464,Homme,5,Business,32 - 36,Asian,Several times a month,Several times a week,7.0
+465,Homme,6,Langues,22 - 23,Caucasian American,Almost never,Several times a month,6.0
+466,Femme,15,Autres,24 - 27,Caucasian American,Almost never,Several times a week,10.0
+467,Femme,8,Business,24 - 27,Caucasian American,Several times a month,Several times a week,7.0
+468,Femme,12,Business,24 - 27,Others,Several times a year,Several times a month,2.0
+469,Femme,10,Business,24 - 27,Asian,Several times a month,Several times a week,9.0
+470,Femme,10,Sciences,28 - 31,Asian,Several times a month,Several times a month,4.0
+471,Femme,14,Sciences,28 - 31,Asian,Several times a month,Several times a month,4.0
+472,Femme,13,Sciences,24 - 27,Hispanic,Several times a month,Several times a month,5.0
+473,Femme,14,Sciences,32 - 36,Asian,Several times a year,Several times a month,2.0
+474,Femme,11,Sciences,28 - 31,African American,Several times a year,Several times a month,2.0
+475,Femme,13,Business,24 - 27,Hispanic,Several times a year,Several times a month,9.0
+476,Femme,13,Business,24 - 27,Caucasian American,Several times a month,Several times a month,9.0
+477,Femme,15,Sciences,24 - 27,Hispanic,Several times a month,Several times a month,5.0
+478,Femme,13,Business,24 - 27,Caucasian American,Several times a month,Several times a week,7.0
+479,Femme,15,Business,24 - 27,Caucasian American,Several times a month,Several times a month,7.0
+480,Femme,12,Sciences,24 - 27,Caucasian American,Several times a month,Several times a week,5.0
+481,Homme,14,Education,22 - 23,Caucasian American,Several times a month,Several times a month,2.0
+482,Homme,11,Business,28 - 31,Caucasian American,Several times a year,Several times a week,7.0
+483,Homme,15,Sciences sociales,28 - 31,Caucasian American,Several times a month,Several times a week,2.0
+484,Homme,13,Autres,28 - 31,Asian,Several times a year,Several times a month,15.0
+485,Homme,13,Sciences sociales,28 - 31,African American,Several times a year,Several times a month,2.0
+486,Homme,14,Sciences,32 - 36,Hispanic,Several times a year,Several times a month,4.0
+487,Homme,15,Langues,24 - 27,Asian,Several times a month,Several times a month,2.0
+488,Homme,13,Business,28 - 31,Asian,Several times a month,Several times a month,7.0
+489,Homme,7,Business,28 - 31,Caucasian American,Several times a month,Several times a week,7.0
+490,Homme,14,Langues,28 - 31,Caucasian American,Several times a year,Several times a month,6.0
+491,Homme,11,Business,28 - 31,Hispanic,Several times a month,Several times a week,7.0
+492,Homme,8,Sciences,28 - 31,Others,Several times a month,Several times a month,2.0
+493,Homme,14,Business,- de 22,Asian,Several times a year,Several times a month,13.0
+494,Homme,13,Langues,28 - 31,Caucasian American,Several times a month,Several times a month,6.0
+495,Homme,13,Langues,32 - 36,Others,Several times a month,Several times a week,6.0
+496,Femme,6,Sciences,22 - 23,Asian,Several times a month,Several times a month,2.0
+497,Femme,7,Sciences,24 - 27,Caucasian American,Almost never,Several times a week,2.0
+498,Femme,7,Sciences,24 - 27,Caucasian American,Several times a month,Several times a week,2.0
+499,Femme,5,Sciences,24 - 27,Caucasian American,Several times a month,Several times a week,2.0
+500,Femme,6,Sciences,24 - 27,African American,Several times a month,Several times a month,2.0
+501,Femme,6,Sciences,24 - 27,Caucasian American,Several times a month,Several times a month,2.0
+502,Homme,6,Sciences,24 - 27,Asian,Several times a month,Several times a month,7.0
+503,Homme,6,Sciences,24 - 27,Caucasian American,Several times a year,Several times a month,2.0
+504,Homme,4,Sciences,22 - 23,Caucasian American,Several times a month,Several times a month,7.0
+505,Homme,5,Langues,24 - 27,Asian,Several times a month,Several times a week,6.0
+506,Homme,6,Sciences,24 - 27,Asian,Almost never,Several times a month,7.0
+507,Homme,5,Sciences,24 - 27,Asian,Almost never,Several times a month,2.0
+508,Homme,5,Sciences,+ de 36,Asian,Several times a month,Several times a week,10.0
+509,Femme,16,Langues,28 - 31,Asian,Several times a month,Several times a month,16.0
+510,Femme,15,Business,24 - 27,Hispanic,Almost never,Several times a month,2.0
+511,Femme,18,Sciences,22 - 23,Asian,Almost never,Several times a month,7.0
+513,Femme,16,Langues,22 - 23,Caucasian American,Several times a year,Several times a month,6.0
+514,Femme,22,Sciences sociales,22 - 23,Caucasian American,Several times a month,Several times a month,2.0
+515,Femme,20,Langues,22 - 23,Caucasian American,Several times a year,Several times a month,16.0
+516,Femme,16,Sciences,24 - 27,Asian,Several times a year,Several times a month,2.0
+517,Femme,22,Langues,28 - 31,Hispanic,Several times a month,Several times a month,6.0
+518,Femme,16,Langues,22 - 23,Caucasian American,Almost never,Several times a month,6.0
+519,Femme,22,Education,24 - 27,Caucasian American,Several times a month,Several times a month,13.0
+520,Femme,22,Sciences sociales,28 - 31,Others,Almost never,Several times a week,9.0
+521,Femme,15,Sciences sociales,24 - 27,Caucasian American,Several times a month,Several times a week,9.0
+522,Femme,17,Law,22 - 23,Caucasian American,Several times a year,Several times a month,1.0
+523,Femme,20,Education,24 - 27,Asian,Several times a month,Several times a month,10.0
+524,Femme,8,Sciences,24 - 27,Asian,Almost never,Several times a month,4.0
+525,Femme,22,Langues,24 - 27,Caucasian American,Several times a month,Several times a week,3.0
+526,Femme,20,Sciences sociales,24 - 27,Hispanic,Several times a month,Several times a month,11.0
+527,Femme,22,Sciences sociales,24 - 27,Others,Several times a month,Several times a month,11.0
+528,Femme,22,Sciences sociales,28 - 31,Hispanic,Several times a year,Several times a week,11.0
+529,Femme,20,Sciences,22 - 23,Asian,Several times a month,Several times a week,5.0
+530,Femme,20,Sciences,22 - 23,Asian,Almost never,Several times a month,10.0
+531,Homme,21,Sciences,24 - 27,Asian,Almost never,Several times a month,2.0
+532,Homme,19,Sciences,24 - 27,Asian,Several times a month,Several times a month,5.0
+533,Homme,20,Sciences,24 - 27,Caucasian American,Several times a year,Several times a month,2.0
+534,Homme,16,Sciences,24 - 27,Others,Several times a month,Several times a year,5.0
+535,Homme,14,Sciences,22 - 23,Caucasian American,Several times a month,Several times a month,2.0
+536,Homme,19,Sciences,28 - 31,Caucasian American,Several times a month,Several times a month,7.0
+537,Homme,20,Sciences,22 - 23,Asian,Several times a month,Several times a week,1.0
+538,Homme,18,Sciences,32 - 36,Caucasian American,Several times a month,Several times a month,7.0
+539,Homme,20,Law,22 - 23,Caucasian American,Several times a month,Several times a week,1.0
+540,Homme,21,Sciences,24 - 27,Caucasian American,Almost never,Several times a month,2.0
+541,Homme,21,Sciences,22 - 23,Asian,Almost never,Several times a month,7.0
+542,Homme,19,Sciences,22 - 23,Asian,Several times a month,Several times a month,7.0
+543,Homme,22,Sciences,24 - 27,Asian,Almost never,Several times a month,5.0
+544,Homme,19,Sciences,22 - 23,Asian,Almost never,Several times a month,4.0
+545,Homme,20,Sciences,24 - 27,Caucasian American,Almost never,Several times a month,4.0
+546,Homme,16,Business,28 - 31,Caucasian American,Several times a month,Several times a week,7.0
+547,Homme,19,Business,28 - 31,Caucasian American,Several times a month,Several times a week,7.0
+548,Homme,17,Business,28 - 31,Caucasian American,Several times a year,Several times a week,7.0
+549,Homme,17,Business,28 - 31,Caucasian American,Almost never,Several times a week,7.0
+550,Homme,18,Business,28 - 31,Caucasian American,Several times a month,Several times a week,7.0
+551,Homme,20,Business,24 - 27,African American,Several times a year,Several times a month,7.0
+552,Homme,16,Autres,24 - 27,Caucasian American,Several times a month,Several times a week,15.0
