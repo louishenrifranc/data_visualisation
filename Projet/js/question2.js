@@ -5,7 +5,7 @@ var RadarChart = {
 			w: 300,
 			h: 300,
 			factor: 1,
-			factorLegend: .85,
+			factorLegend: 1,
 			levels: 3,
 			maxValue: 37,
 			radians: 2 * Math.PI,
@@ -95,7 +95,22 @@ var RadarChart = {
 
 	axis.append("text")
 	.attr("class", "legend")
-	.text(function(d){return d})
+	.text(function(d){
+		if(d == "intelligence"){
+			return "Intelligence";
+		} else if(d == "same_interests") {
+			return "Intérêts similaires";
+		} else if(d == "sincerity"){
+			return "Sincèrité";
+		} else if(d == "attractive"){
+			return "Attractivité physique";
+		} else if(d == "fun"){
+			return "Fun";
+		} else if(d == "ambitious"){
+			return "Ambitieux";
+		}
+		return d;
+	})
 	.style("font-family", "sans-serif")
 	.style("font-size", "11px")
 	.style("fill", "#757575")
@@ -178,7 +193,7 @@ var RadarChart = {
 			tooltip
 			.attr('x', newX)
 			.attr('y', newY)
-			.text(Format(d.value))
+			.text((d.value))
 			.transition(200)
 			.style('opacity', 1);
 
@@ -295,18 +310,18 @@ var legend = svg.append("g")
 }
 
 function annotations(svg, attribute, first_or_second, message, text_offset_x, text_offset_y){
+
 	circles = d3.selectAll('circle')
 	.filter(function(d) {
 		return d.axis == attribute;
 	})[0][first_or_second];
 
-	
 	var annotations = [{
 		"cx": circles.cx.baseVal.value, 
 		"cy": circles.cy.baseVal.value, 
-		"r": 0,
+		"r": 10,
 		"text": message,
-		"textWidth": message.length,
+		"textWidth": message.length + 20,
 		"textOffset": [text_offset_x, text_offset_y]
 	}];
 
