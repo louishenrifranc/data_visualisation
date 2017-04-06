@@ -1,106 +1,157 @@
         /* navigation bar css */
+        
         .page-scroll {
-          font-size: 13px;
-          font-weight: 30px
-          font-family: 'Helvetica Neue', serif;
-          color:  #ff4a4a;
+            font-size: 13px;
+            font-weight: 30px font-family: 'Helvetica Neue', serif;
+            color: #ff4a4a;
         }
-
+        
         .page-scroll a {
-          font-size: 25px;
-          font-family: 'Helvetica Neue', serif;
-          color:  #ff4a4a;
+            font-size: 25px;
+            font-family: 'Helvetica Neue', serif;
+            color: #ff4a4a;
         }
-
         /* jumbotron css */
+        
         .jumbotron {
-        	background: url("../img/jumbotron_bg2.gif") no-repeat center center; 
-        	-webkit-background-size: 100% 100%;
-        	-moz-background-size: 100% 100%;
-        	-o-background-size: 100% 100%;
-        	background-size: 100% 100%;
+            background: url("../img/jumbotron_bg2.gif") no-repeat center center;
+            -webkit-background-size: 100% 100%;
+            -moz-background-size: 100% 100%;
+            -o-background-size: 100% 100%;
+            background-size: 100% 100%;
         }
-        .jumbotron h1 span { color:  white; background: #ff4a4a; font-size: 75px; line-height: 74px; font-weight: 700; margin: 0 0 0px; font-family: 'Helvetica Neue', serif; }
-
-        .jumbotron h2 span{ color: white;  background: #ff4a4a; font-size: 40px; line-height: 40px; font-weight: 500; margin: 0 0 0px; font-family: 'Libre Baskerville', serif; text-align: left }
-        .jumbotron p span {color: white;  background: #ff4a4a; font-size: 28px; line-height: 27px; font-weight: 300; text-align: center; font-family: 'Libre Baskerville', serif; }
-
+        
+        .jumbotron h1 span {
+            color: white;
+            background: #ff4a4a;
+            font-size: 75px;
+            line-height: 74px;
+            font-weight: 700;
+            margin: 0 0 0px;
+            font-family: 'Helvetica Neue', serif;
+        }
+        
+        .jumbotron h2 span {
+            color: white;
+            background: #ff4a4a;
+            font-size: 40px;
+            line-height: 40px;
+            font-weight: 500;
+            margin: 0 0 0px;
+            font-family: 'Libre Baskerville', serif;
+            text-align: left
+        }
+        
+        .jumbotron p span {
+            color: white;
+            background: #ff4a4a;
+            font-size: 28px;
+            line-height: 27px;
+            font-weight: 300;
+            text-align: center;
+            font-family: 'Libre Baskerville', serif;
+        }
         /* question1 css */
-        #question1 { font: 12px Arial;}
-        #question1 path { 
-        	stroke: steelblue;
-        	stroke-width: 2;
-        	fill: none;
+        
+        #question1 {
+            font: 12px Arial;
         }
-
+        
+        #question1 path {
+            stroke: steelblue;
+            stroke-width: 2;
+            fill: none;
+        }
+        
         #question1 p {
-          font-family: 'Helvetica Neue', serif; 
-          color: black;
-          font-size: 20px;
-          text-align: center;
+            font-family: 'Helvetica Neue', serif;
+            color: black;
+            font-size: 20px;
+            text-align: center;
         }
-
+        
         #question1 .axis path,
         #question1 .axis line {
-        	fill: none;
-        	stroke: grey;
-        	stroke-width: 1;
-        	shape-rendering: crispEdges;
+            fill: none;
+            stroke: grey;
+            stroke-width: 1;
+            shape-rendering: crispEdges;
         }
-
+        /* question 2 css */
+        
+        #question2 p {
+            font-family: 'Helvetica Neue', serif;
+            color: black;
+            font-size: 25px;
+            text-indent: 50px;
+        }
+        
+        #question2 h1 {
+            color: black;
+            font-size: 40px;
+            line-height: 40px;
+            font-weight: 500;
+            font-family: 'Libre Baskerville', serif;
+            text-align: left
+        }
         /* question 3 css */
+        
         #question3 p {
-          font-family: 'Helvetica Neue', serif; 
-          color: black;
-          font-size: 25px;
-          text-align: center;
+            font-family: 'Helvetica Neue', serif;
+            color: black;
+            font-size: 25px;
+            text-indent: 50px;
         }
-
+        
         #question3 h1 {
-          color: black;  font-size: 40px; line-height: 40px; font-weight: 500; font-family: 'Libre Baskerville', serif; text-align: left
+            color: black;
+            font-size: 40px;
+            line-height: 40px;
+            font-weight: 500;
+            font-family: 'Libre Baskerville', serif;
+            text-align: left
         }
-
-
         /* Hr bandwith */
+        
         hr.style16 {
-          border-top: 4px double #8c8b8b;
-          text-align: center;
+            border-top: 4px double #8c8b8b;
+            text-align: center;
         }
+        
         hr.style16:after {
-          content: '\002665';
-          display: inline-block;
-          position: relative;
-          top: -15px;
-          padding: 0 10px;
-          background: #f0f0f0;
-          color: #8c8b8b;
-          font-size: 18px;
+            content: '\002665';
+            display: inline-block;
+            position: relative;
+            top: -15px;
+            padding: 0 10px;
+            background: #f0f0f0;
+            color: #8c8b8b;
+            font-size: 18px;
         }
-
-
-
         /* For annotation */
+        
         .axis path,
         .axis line {
-          fill: none;
-          stroke: #000;
-          shape-rendering: crispEdges;
+            fill: none;
+            stroke: #000;
+            shape-rendering: crispEdges;
         }
-
+        
         .annotation circle {
-          fill: none;
-          stroke: darkslategrey;
+            fill: none;
+            stroke: darkslategrey;
         }
-
+        
         .annotation path {
-          fill: none;
-          stroke: darkslategrey;
-          shape-rendering: crispEdges;
+            fill: none;
+            stroke: darkslategrey;
+            shape-rendering: crispEdges;
         }
-
+        
         .annotation text {
-          text-shadow: -2px 0 2px #fff, 
-          0 2px 2px #fff,
-          2px 0 2px #fff, 
-          0 -2px 2px #fff;
+            text-shadow: -2px 0 2px #fff, 0 2px 2px #fff, 2px 0 2px #fff, 0 -2px 2px #fff;
+        }
+        
+        .user_mode {
+            display: none;
         }

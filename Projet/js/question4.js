@@ -88,7 +88,6 @@ var quant_p = function(v){return (parseFloat(v) == v) || (v == "")};
 
     dimensions.forEach(function(d) {
     var vals = persons.map(function(p) {return p[d];});
-    console.log(vals)
     if (vals.every(quant_p)){ 
       y[d] = d3.scale.linear()
           .domain(d3.extent(vals.map(function(p){return +p})))

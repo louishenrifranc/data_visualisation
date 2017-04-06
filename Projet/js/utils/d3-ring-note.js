@@ -1,6 +1,6 @@
-d3.ringNote = function() {
+d3.ringNote = function(controlRadius = 15) {
   var draggable = false,
-  controlRadius = 15;
+  controlRadius = controlRadius;
   
   var dragCenter = d3.behavior.drag()
   .origin(function(d) { return { x: 0, y: 0}; })
