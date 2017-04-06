@@ -282,8 +282,8 @@ function display_radar_char(id_, expectation, reality, legend, name_x, name_y, r
         d.push([])
         for (var property in rest) {
             if (rest.hasOwnProperty(property)) {
-                max_value.push(rest[property])
-                d[2].push({ "axis": property, "value": rest[property] });
+                max_value.push(parseFloat(rest[property]))
+                d[2].push({ "axis": property, "value": parseFloat(rest[property]) });
             }
         }
     }
