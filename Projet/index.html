@@ -3,24 +3,21 @@
 
 <head>
     <meta charset="utf-8">
+    <link href="css/css-slider.css" rel="stylesheet">
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/scrolling-nav.css" rel="stylesheet">
-
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="Raphael Graille Louis-Henri Franc" content="">
-
     <title>Speed Dating</title>
     <link rel="stylesheet" href="css/main.css">
-
 </head>
-
 <style>
-  rect.bordered {
+rect.bordered {
     stroke: #E6E6E6;
-    stroke-width:2px;   
+    stroke-width: 2px;
 }
 
 text.mono {
@@ -36,96 +33,183 @@ text.women-label {
 text.men-label {
     fill: #0000FF;
 }
+
 .background path {
-  fill: none;
-  stroke: #FFFFFF;
-  shape-rendering: crispEdges;
+    fill: none;
+    stroke: #FFFFFF;
+    shape-rendering: crispEdges;
 }
 
 path.foreground_man {
-  fill: none;
-  stroke: steelblue;
-  stroke-width:4px;
-  opacity: 0.1;
+    fill: none;
+    stroke: steelblue;
+    stroke-width: 4px;
+    opacity: 0.1;
 }
 
-path.foreground_woman{
-  fill: none;
-  stroke: red;
-  stroke-width:4px;
-  opacity: 0.1
+path.foreground_woman {
+    fill: none;
+    stroke: red;
+    stroke-width: 4px;
+    opacity: 0.1
 }
 
 .brush .extent {
-  fill-opacity: .3;
-  stroke: #fff;
-  shape-rendering: crispEdges;
+    fill-opacity: .3;
+    stroke: #fff;
+    shape-rendering: crispEdges;
 }
 
 .axis line,
 .axis path {
-  fill: none;
-  stroke: #000;
-  shape-rendering: crispEdges;
+    fill: none;
+    stroke: #000;
+    shape-rendering: crispEdges;
 }
 
 .axis text {
-  text-shadow: 0 1px 0 #fff, 1px 0 0 #fff, 0 -1px 0 #fff, -1px 0 0 #fff;
-  cursor: move;
+    text-shadow: 0 1px 0 #fff, 1px 0 0 #fff, 0 -1px 0 #fff, -1px 0 0 #fff;
+    cursor: move;
 }
-
 </style>
-
+<div id="myModal" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title">Testez vous</h4>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="form-group">
+                        <label for="exampleSelect1">Genre</label>
+                        <select class="form-control" id="exampleSelect1">
+                            <option>Homme</option>
+                            <option>Femme</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleSelect1">Âge</label>
+                        <select class="form-control" id="age">
+                            <option>- de 22</option>
+                            <option>22 - 23</option>
+                            <option>24 - 27</option>
+                            <option>28 - 31</option>
+                            <option>+ de 36</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleSelect1">Quel est le domaine de vos études</label>
+                        <select class="form-control" id="studies">
+                            <option>Langues</option>
+                            <option>Autres</option>
+                            <option>Sciences sociales</option>
+                            <option>Education</option>
+                            <option>Sciences</option>
+                            <option>Business</option>
+                            <option>Droit</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleSelect1">Allez vous souvent à des rendez vous</label>
+                        <select class="form-control" id="nb-date">
+                            <option>Quasiment jamais</option>
+                            <option>Au moins une fois dans par année</option>
+                            <option>Au moins une fois dans pa mois</option>
+                            <option>Au moins une fois par semaine</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleSelect1">Sortez vous souvent</label>
+                        <select class="form-control" id="nb-sortie">
+                            <option>Quasiment jamais</option>
+                            <option>Au moins une fois dans par année</option>
+                            <option>Au moins une fois dans pa mois</option>
+                            <option>Au moins une fois par semaine</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleSelect1">Origine éthnique</label>
+                        <select class="form-control" id="origine">
+                            <option>African American</option>
+                            <option>Caucasian American</option>
+                            <option>Hispanic</option>
+                            <option>Asian</option>
+                            <option>Others</option>
+                        </select>
+                    </div>
+                    <div class="form-horizontal container">
+                        <div class="row">
+                            <label>Répartissez 100 points sur les attributs qui vous intéressent chez l'autre sexe</label>
+                            <div class="form-group col-xs-6 ">
+                                <table id=rangebox>
+                                    <tbody>
+                                        <h5 class="HideOnLoad ">E</h5>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div class="form-group col-xs-6 col-xs-pull-6 ">
+                                <div id=pie></div>
+                            </div>
+                        </div>
+                    </div>
+                    <button type="submit " class="btn btn-primary ">Submit</button>
+                </form>
+            </div>
+            <div class="modal-footer ">
+                <button type="button " class="btn btn-default " data-dismiss="modal ">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
 <!-- The #page-top ID is part of the scrolling feature - the data-spy and data-target are part of the built-in Bootstrap scrollspy function -->
 
-<body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
-
+<body id="page-top " data-spy="scroll " data-target=".navbar-fixed-top ">
     <!-- Navigation -->
-    <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
-        <div class="container">
-            <div class="navbar-header page-scroll">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
+    <nav class="navbar navbar-default navbar-fixed-top " role="navigation ">
+        <div class="container ">
+            <div class="navbar-header page-scroll ">
+                <button type="button " class="navbar-toggle " data-toggle="collapse " data-target=".navbar-ex1-collapse ">
+                    <span class="sr-only ">Toggle navigation</span>
+                    <span class="icon-bar "></span>
+                    <span class="icon-bar "></span>
+                    <span class="icon-bar "></span>
                 </button>
-                <a class="navbar-brand page-scroll" href="#page-top">INF8808 Project</a>
+                <a class="navbar-brand page-scroll " href="#page-top ">INF8808 Project</a>
             </div>
-
             <!-- Collect the nav links, forms, and other content for toggling -->
-            <div class="collapse navbar-collapse navbar-ex1-collapse">
-                <ul class="nav navbar-nav">
+            <div class="collapse navbar-collapse navbar-ex1-collapse ">
+                <ul class="nav navbar-nav ">
                     <!-- Hidden li included to remove active class from about link when scrolled up past about section -->
-                    <li class="hidden">
-                        <a class="page-scroll" href="#page-top"></a>
+                    <li class="hidden ">
+                        <a class="page-scroll " href="#page-top "></a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="#question1">Est ce que les personnes similaires se matchent entre elles?</a>
+                        <a class="page-scroll " href="#question1 ">Similarités entre les personnes?</a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="#question2">Attentes vs Réalités</a>
+                        <a class="page-scroll " href="#question2 ">Attentes vs Réalités</a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="#question3">Connaissons nous l'autre</a>
+                        <a class="page-scroll " href="#question3 ">Connaissons nous l'autre?</a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="#question4">Profil du Serial Matcheur</a>
+                        <a class="page-scroll " href="#question4 ">Profil du "Serial Matcheur "</a>
                     </li>
-
+                    <button type="button " class="btn btn-danger btn-lg active " data-toggle="modal " data-target="#myModal ">Testez vous?</button>
                 </ul>
             </div>
             <!-- /.navbar-collapse -->
         </div>
         <!-- /.container -->
     </nav>
-
     <!-- Intro Section -->
-    <section id="intro" class="intro-section jumbotron ">
+    <section id="intro " class="intro-section jumbotron ">
         <h1><span>Attractivité. </span></h1>
         <h2><span>\a.tʁak.ti.vi.te\. <mark>Capacité</mark> que possède un objet ou une personne à <mark>séduire</mark></span></h2>
-        <div class="col-xs-6" style=" margin-top: 250px; color:white;">
-            <p> 
+        <div class="col-xs-6 " style=" margin-top: 250px; color:white; ">
+            <p>
                 <span>
                     <a href='https://www.kaggle.com/annavictoria/speed-dating-experiment' class='remove-box'>
                         Kaggle
@@ -134,173 +218,162 @@ path.foreground_woman{
                 </span>
             </p>
         </div>
-        <div class="col-xs-6" style=" margin-top: 250px; color:white;">
-            <p> 
+        <div class="col-xs-6 " style=" margin-top: 250px; color:white; ">
+            <p>
                 <span>
                     blablabla...
                 </span>
             </p>
         </div>
-
     </section>
-
     <!-- About Section -->
-    <section id="question1" class="question1-section">
-        <div class="container">
+    <section id="question1 " class="question1-section ">
+        <div class="container ">
             <div class='row'>
-               <!-- <blockquote class=" col-xs-8 oval-thought-border"> /!-->
-               <p>Mettez vous à la place de l'autre sexe, et devinez ses attentes? Dans cette situation, les étudiants ont du trouver les attributs qui intéressaient le sexe opposé. A ce petit jeu les <mark>femmes</mark> se sont mieux débrouillés. Celles-ci sont nottament très lucides, sur leur pouvoir attractif, et pensent que c'est ce que les hommes regardent en priorité</p>
-               <!-- </blockquote> /!-->
-           </div>
-           <br/>
-           <div class="row">
-            <div class="col-xs-6" id="linechart"></div>
-            <div class="col-xs-6" id="linechartTxt">
-                <p>Blabla</p>
+                <!-- <blockquote class=" col-xs-8 oval-thought-border "> /!-->
+                <p>Mettez vous à la place de l'autre sexe, et devinez ses attentes? Dans cette situation, les étudiants ont du trouver les attributs qui intéressaient le sexe opposé. A ce petit jeu les
+                    <mark>femmes</mark> se sont mieux débrouillés. Celles-ci sont nottament très lucides, sur leur pouvoir attractif, et pensent que c'est ce que les hommes regardent en priorité</p>
+                <!-- </blockquote> /!-->
             </div>
-
-        </div>
-        <div class="row">
-            <div class="col-xs-6" id="heatmap1"></div>
-            <div class="col-xs-6" id="linechartTxt">
-                <p>Blabla</p>
+            <br/>
+            <div class="row ">
+                <div class="col-xs-6 " id="linechart "></div>
+                <div class="col-xs-6 " id="linechartTxt ">
+                    <p>Blabla</p>
+                </div>
             </div>
-        </div>
-        <div class="row">
-            <div class="col-xs-6" id="linechartTxt">
-                <p>Blabla</p>
+            <div class="row ">
+                <div class="col-xs-6 " id="heatmap1 "></div>
+                <div class="col-xs-6 " id="linechartTxt ">
+                    <p>Blabla</p>
+                </div>
             </div>
-            <div class="col-xs-6" id="heatmap2"></div>
-        </div>
-        <div class="row">
-            <div class="col-xs-6" id="heatmap3"></div>
-            <div class="col-xs-6" id="linechartTxt">
-                <p>Blabla</p>
+            <div class="row ">
+                <div class="col-xs-6 " id="linechartTxt ">
+                    <p>Blabla</p>
+                </div>
+                <div class="col-xs-6 " id="heatmap2 "></div>
             </div>
-        </div>
-    </div>
-</section>
-
-<!-- Services Section -->
-<hr class="style16"/>
-<section id="question2" class="question2-section">
-    <div class="container">
-        <div class="row">
-            <h1>Attentes vs Réalités</h1>
-        </div>
-        <br/>
-        <div class="row">
-            <div class="col-xs-4 col-xs-pull-2" id="q2_radar_chart1"></div>
-            <div class="col-xs-4 col-xs-push-2" id="q2_radar_chart2"></div>
-        </div>
-    </div>
-</section>
-
-<hr class="style16"/>
-<section id="question3" class="question3-section">
-    <div class="container">
-        <div class="row">
-            <h1>L'autre sexe, cet inconnu?</h1>
-        </div>
-        <div class='row'>
-           <!-- <blockquote class=" col-xs-8 oval-thought-border"> /!-->
-           <p>Mettez vous à la place de l'autre sexe, et devinez ses attentes? Dans cette situation, les étudiants ont du trouver les attributs qui intéressaient le sexe opposé. A ce petit jeu les <mark>femmes</mark> se sont mieux débrouillés. Celles-ci sont nottament très lucides, sur leur pouvoir attractif, et pensent que c'est ce que les hommes regardent en priorité</p>
-           <!-- </blockquote> /!-->
-       </div>
-       <br/>
-       <div class="row">
-        <div class="col-xs-4 col-xs-pull-2" id="q3_radar_chart1"></div>
-        <div class="col-xs-4 col-xs-push-2" id="q3_radar_chart2"></div>
-    </div>
-</div>
-</section>
-
-<hr class="style16"/>
-<section id="question4" class="question4-section">
-    <div class="container">
-        <div class="row">
-            <div class="col-xs-12" id="parallelCoordinate">
-                <h1>Question 4</h1>
+            <div class="row ">
+                <div class="col-xs-6 " id="heatmap3 "></div>
+                <div class="col-xs-6 " id="linechartTxt ">
+                    <p>Blabla</p>
+                </div>
             </div>
         </div>
-    </div>
-</section>
-<script type="text/javascript" src="js/utils/d3.v3.js"></script>
-<script type="text/javascript" src="js/utils/d3-tip.js"></script>
-<script type="text/javascript" src="js/utils/topojson.v1.js"></script>
-<script type="text/javascript" src="js/utils/queue.v1.js"></script>
-<script type="text/javascript" src="js/d3-ring-note.js"></script>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+    </section>
+    <!-- Services Section -->
+    <hr class="style16 " />
+    <section id="question2 " class="question2-section ">
+        <div class="container ">
+            <div class="row ">
+                <h1>Attentes vs Réalités</h1>
+            </div>
+            <br/>
+            <div class="row ">
+                <div class="col-xs-4 col-xs-pull-2 " id="q2_radar_chart1 "></div>
+                <div class="col-xs-4 col-xs-push-2 " id="q2_radar_chart2 "></div>
+            </div>
+        </div>
+    </section>
+    <hr class="style16 " />
+    <section id="question3 " class="question3-section ">
+        <div class="container ">
+            <div class="row ">
+                <h1>L'autre sexe, cet inconnu?</h1>
+            </div>
+            <div class='row'>
+                <!-- <blockquote class=" col-xs-8 oval-thought-border "> /!-->
+                <p>Mettez vous à la place de l'autre sexe, et devinez ses attentes? Dans cette situation, les étudiants ont du trouver les attributs qui intéressaient le sexe opposé. A ce petit jeu les
+                    <mark>femmes</mark> se sont mieux débrouillés. Celles-ci sont nottament très lucides, sur leur pouvoir attractif, et pensent que c'est ce que les hommes regardent en priorité</p>
+                <!-- </blockquote> /!-->
+            </div>
+            <br/>
+            <div class="row ">
+                <div class="col-xs-4 col-xs-pull-2 " id="q3_radar_chart1 "></div>
+                <div class="col-xs-4 col-xs-push-2 " id="q3_radar_chart2 "></div>
+            </div>
+        </div>
+    </section>
+    <hr class="style16 " />
+    <section id="question4 " class="question4-section ">
+        <div class="container ">
+            <div class="row ">
+                <div class="col-xs-12 " id="parallelCoordinate ">
+                    <h1>Question 4</h1>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script type="text/javascript " src="js/utils/d3.v3.js "></script>
+    <script type="text/javascript " src="js/utils/d3-tip.js "></script>
+    <script type="text/javascript " src="js/utils/topojson.v1.js "></script>
+    <script type="text/javascript " src="js/utils/queue.v1.js "></script>
+    <script type="text/javascript " src="js/d3-ring-note.js "></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js "></script>
+    <script src="js/utils/jquery.js "></script>
+    <script src="js/utils/bootstrap.min.js "></script>
+    <script src="js/utils/jquery.easing.min.js "></script>
+    <script src="js/utils/scrolling-nav.js "></script>
+    <script src="js/utils/colorbrewer.min.js "></script>
+    <script src="js/question1.js "></script>
+    <script src="js/question2.js "></script>
+    <script src="js/question4.js "></script>
+    <script src="js/slider-choice.js "></script>
+    <script type="text/javascript ">
+    // Question 1 loading
+    lineChart("#linechart ", "data/corr_vs_matches.csv ");
+    heatmapChart("#heatmap1 ", "data/corr_race_race_matches.csv ", ["African American ", "Caucasian American ", "Hispanic ", "Asian ", "Other "]);
+    heatmapChart("#heatmap2 ", "data/corr_age_age_matches.csv ", ["- de 22 ", "22-23 ", "24-27 ", "28-31 ", "32-36 ", "+ de 36 "]);
+    heatmapChart("#heatmap3 ", "data/corr_field_cd_field_cd_matches.csv ", ["Science ", "Science sociales ", "Littérature ", "Art ", "Commerce ", "Education ", "Autre "]);
 
-<script src="js/utils/jquery.js"></script>
-<script src="js/utils/bootstrap.min.js"></script>
-<script src="js/utils/jquery.easing.min.js"></script>
-<script src="js/utils/scrolling-nav.js"></script>
-<script src="js/utils/colorbrewer.min.js"></script>
-
-<script src="js/question1.js"></script>
-<script src="js/question2.js"></script>
-<script src="js/question4.js"></script>
-
-
-<script type="text/javascript">
-        // Question 1 loading
-        lineChart("#linechart","data/corr_vs_matches.csv");
-        heatmapChart("#heatmap1", "data/corr_race_race_matches.csv", ["African American", "Caucasian American", "Hispanic", "Asian", "Other"]);
-        heatmapChart("#heatmap2", "data/corr_age_age_matches.csv", ["- de 22", "22-23", "24-27", "28-31", "32-36", "+ de 36"]);
-        heatmapChart("#heatmap3", "data/corr_field_cd_field_cd_matches.csv", ["Science", "Science sociales", "Littérature", "Art", "Commerce","Education","Autre"]);
-        
-        var ringNote = d3.ringNote()
+    var ringNote = d3.ringNote()
         .draggable(false);
 
 
-        var q1 = queue();
-        q1.defer(d3.json,"data/male_experience.json")
-        q1.defer(d3.json,"data/male_expectation.json")
-        q1.await(function(error,data1,data2){
-            if(error) throw error;
-            svg1 = display_radar_char("#q2_radar_chart2", data1, data2,"Désir des Hommes Versus Choix", "Critères de Désir des Hommes", "Critères de Séléction des  Hommes");
-            annotations(svg1,"attractive", 1,"A l'inverse les hommes portent plus d'attention à l'apparence qu'ils ne le pensent",50,0)
+    var q1 = queue();
+    q1.defer(d3.json, "data/male_experience.json ")
+    q1.defer(d3.json, "data/male_expectation.json ")
+    q1.await(function(error, data1, data2) {
+        if (error) throw error;
+        svg1 = display_radar_char("#q2_radar_chart2 ", data1, data2, "Désir des Hommes Versus Choix ", "Critères de Désir des Hommes ", "Critères de Séléction des Hommes ");
+        annotations(svg1, "attractive ", 1, "A l 'inverse les hommes portent plus d'attention à l 'apparence qu'ils ne le pensent ", 50, 0)
 
-        })
+    })
 
-        // Question 2 loading
-        var q = queue();
-        q.defer(d3.json,"data/female_experience.json")
-        q.defer(d3.json,"data/female_expectation.json")
-        q.await(function(error,data1,data2){
-            if(error) throw error;
-            svg = display_radar_char("#q2_radar_chart1", data1, data2, "Désir des Femmes Versus Choix", "Critères de Désir des femmes", "Critères de Séléction des  Femmes");
-            annotations(svg,"attractive",0,"Les femmes ont une forte tendance à être désireuse d\'hommes attractifs",80,-20)
-        })
+    // Question 2 loading
+    var q = queue();
+    q.defer(d3.json, "data/female_experience.json ")
+    q.defer(d3.json, "data/female_expectation.json ")
+    q.await(function(error, data1, data2) {
+        if (error) throw error;
+        svg = display_radar_char("#q2_radar_chart1 ", data1, data2, "Désir des Femmes Versus Choix ", "Critères de Désir des femmes ", "Critères de Séléction des Femmes ");
+        annotations(svg, "attractive ", 0, "Les femmes ont une forte tendance à être désireuse d\ 'hommes attractifs", 80, -20)
+    })
 
-        var q3 = queue();
-        q3.defer(d3.json,"data/female_own_opninon.json")
-        q3.defer(d3.json,"data/male_expectation.json")
-        q3.await(function(error,data1,data2){
-            if(error) throw error;
-            svg = display_radar_char("#q3_radar_chart2", data1, data2, "Femmes, qu'est ce qui intéresse les Hommes", "Réponse des Femmes", "Réalité");
-            annotations(svg,"fun",0,"Les femmes sont globalement plus lucides que les hommes",-40,-120)
+    var q3 = queue();
+    q3.defer(d3.json, "data/female_own_opninon.json")
+    q3.defer(d3.json, "data/male_expectation.json")
+    q3.await(function(error, data1, data2) {
+        if (error) throw error;
+        svg = display_radar_char("#q3_radar_chart2", data1, data2, "Femmes, qu'est ce qui intéresse les Hommes ", "Réponse des Femmes ", "Réalité ");
+        annotations(svg, "fun ", 0, "Les femmes sont globalement plus lucides que les hommes ", -40, -120)
 
-        })
+    })
 
-        // Question 3 loading 
-        var q2 = queue();
-        q2.defer(d3.json,"data/male_own_opninon.json")
-        q2.defer(d3.json,"data/female_expectation.json")
-        q2.await(function(error,data1,data2){
-            if(error) throw error;
-            svg1 = display_radar_char("#q3_radar_chart1", data1, data2, "Hommes, qu'est ce qui intéresse les Femmes", "Réponse des Hommes", "Réalité");
-            annotations(svg1,"intelligence", 1, "Il est intéressant de voir que les hommes sous-estiment l'intérêt des femmes pour leur intelligence et leur sincerité.",200,90);
+    // Question 3 loading 
+    var q2 = queue();
+    q2.defer(d3.json, "data/male_own_opninon.json ")
+    q2.defer(d3.json, "data/female_expectation.json ")
+    q2.await(function(error, data1, data2) {
+            if (error) throw error;
+            svg1 = display_radar_char("#q3_radar_chart1 ", data1, data2, "Hommes, qu 'est ce qui intéresse les Femmes", "Réponse des Hommes", "Réalité");
+            annotations(svg1, "intelligence", 1, "Il est intéressant de voir que les hommes sous-estiment l'intérêt des femmes pour leur intelligence et leur sincerité. ", 200, 90);
         })
         // Question 4 loading
-        parallelCoord("#parallelCoordinate","data/best_matcher.csv")
-
+    parallelCoord("#parallelCoordinate ", "data/best_matcher.csv ")
     </script>
     <!-- Scrolling Nav JavaScript -->
-
-
-
 </body>
 
 </html>
