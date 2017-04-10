@@ -200,61 +200,107 @@ path.foreground_woman {
             </div>
             </ul>
         </div>
-        <!-- /.navbar-collapse -->
         </div>
-        <!-- /.container -->
     </nav>
+    <!-- orchidoclaste -->
     <section id="intro" class="intro-section jumbotron ">
         <h1><span>Attractivité. </span></h1>
         <h2><span>\a.tʁak.ti.vi.te\. <mark>Capacité</mark> que possède un objet ou une personne à <mark>séduire</mark></span></h2>
-        <div class="col-xs-6" style=" margin-top: 250px; color:white;">
-            <p>
-                <span>
-                    <a href='https://www.kaggle.com/annavictoria/speed-dating-experiment' class='remove-box'>
-                        Kaggle
+        <div class="row-fluid">
+            <div class="col-xs-6" style=" margin-top: 200px; color:white;">
+                <div class="bubble" style="height:450px;">
+                    <h3><span>Introduction</span></h3>
+                    <p>
+                        <span>
+                    L'incovénient de l'Amour au Premier Regard est qu'il est toujours introuvable quand on le cherche, et jamais réciproque quand on le veut. Afin de comprendre mieux comment l'Amour fonctionne, et qui sont les Casanovas des temps modernes, nous avons exploré pour vous un jeu de donnée open-source collecté par   
+                    <a href='http://faculty.chicagobooth.edu/emir.kamenica/documents/genderDifferences.pdf' class='remove-box'>
+                        Fishman et al.
                     </a>. 
-                    blablabla...
                 </span>
-            </p>
-        </div>
-        <div class="col-xs-6" style=" margin-top: 250px; color:white;">
-            <p>
-                <span>
-                    blablabla...
-                </span>
-            </p>
+                    </p>
+                    <h3><span>Mise en context</span></h3>
+                    <p>
+                        <span>
+                    Entre 2002 et 2004, des dizaines d'étudiants de l'université de business de Columbia se sont rendues à des speed datings organisées dans l'université; et de ces rencontres ont été extraits des informations. La règle du jeu était d'accepter de répondre à des questions afin de pouvoir participer, puis contacter la personne recontrée. Voici un 
+                    <a href='data.html' class='remove-box'>
+                        détail
+                    </a> 
+                    plus précis des questions posées que nous avons utilisé.
+                    </span>
+                    </p>
+                </div>
+            </div>
+            <div class="col-xs-6" style=" margin-top: 200px; color:white;">
+                <div class="bubble" style="width: 800px;height:450px;">
+                    <h3><span>Proposition de visualisations</span></h3>
+                    <p>
+                        <span class="blink_me">
+                    <mark>Soyez joueur, prenez le temps de remplir le questionnaire dans la partie Testez Vous!</mark>
+                    </span>
+                    </p>
+                    <p><span>
+                        Pour le choix des visualisations, nous avons travailler sur trois visualisations différentes.
+                        <br/>
+                        <br/> Une série de
+                        <mark>heatmap</mark> représentant le ratio de match/non matches intra et extra catégories.
+                        <br/>Une série de
+                        <mark>heatmap</mark> représentant le ratio de match/non matches intra et extra catégories.
+                        <br/>Deux
+                        <mark>radar charts</mark> pour chaque sexe montrant les attributs les plus attirants l'autre sexe avant les rencontres, avec une mise en parallèle avec les choix fait pour les matches eûes.
+                        <br/>Une nouvelle paire de
+                        <mark>radar charts</mark> où est comparé les prédictions des attentes de l'autre sexe versus la réalité.
+                        <br/>La dernière visualisation sont des <mark>coordonnées parallèles</mark>. On représente chaque individu par un trait, la visualisation est un outil grâce à un outil de brush, mais elle permet nottament de trouver les profils type des personnes matchant le plus.
+                        </span>
+                    </p>
+                </div>
+            </div>
         </div>
     </section>
     <section id="question1" class="question1-section">
         <div class="container">
+            <div class="row">
+                <h1>Les Similarités entre Personnes</h1>
+            </div>
             <div class='row'>
-                <p>Mettez vous à la place de l'autre sexe, et devinez ses attentes? Dans cette situation, les étudiants ont du trouver les attributs qui intéressaient le sexe opposé. A ce petit jeu les
-                    <mark>femmes</mark> se sont mieux débrouillés. Celles-ci sont nottament très lucides, sur leur pouvoir attractif, et pensent que c'est ce que les hommes regardent en priorité</p>
+                <p>Qui se ressemble s'assemble, et les contraires s'attirent... Le pétillant esprit critique qui sommeille en vous est fatigué d'entendre ces niaiseries, ces banalités. Mais quel est donc la force de ce lien qui lie les Hommes d'une même origine ethnique, les amoureux de musique, de théâtre, ou même de Sciences. Ont-ils plus de chance de se plaire?
+                    <br />
+                </p>
             </div>
             <br/>
             <div class="row">
-                <div class="col-xs-6" id="linechart"></div>
+                <!-- First chart -->
                 <div class="col-xs-6" id="linechartTxt">
-                    <p>Blabla</p>
+                    <p>La mesure de correlation des données entre les individus est une valeur affinée de la proximité intellectuelle/sociale de deux êtres. </p>
+                    <p>Outre la tendance linéaire de la courbe, si, et comme lorsque deux aimants de même signe, l'étreinte est trop forte, les désignés amants se repoussent.</p>
+                </div>
+                <figure>
+                    <div class="col-xs-6" id="linechart">
+                        <p>Correlation entre individus en fonction du ratio de matches.</p>
+                    </div>
+                </figure>
+            </div>
+            <!-- Second chart -->
+            <hr/>
+            <div class="btn-group btn-group-justified" role="group" aria-label="...">
+                <div class="btn-group " role="group">
+                    <button type="button" class="btn btn-default" id="button-age">Entre les âges</button>
+                </div>
+                <div class="btn-group" role="group">
+                    <button type="button" class="btn btn-default" id="button-origine">Entre les origines ethniques</button>
+                </div>
+                <div class="btn-group" role="group">
+                    <button type="button" class="btn btn-default" id="button-etudes">Entre les domaines d'études</button>
                 </div>
             </div>
             <div class="row">
-                <div class="col-xs-6" id="heatmap1"></div>
-                <div class="col-xs-6" id="linechartTxt">
-                    <p>Blabla</p>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-xs-6" id="linechartTxt">
-                    <p>Blabla</p>
-                </div>
-                <div class="col-xs-6" id="heatmap2"></div>
-            </div>
-            <div class="row">
-                <div class="col-xs-6" id="heatmap3"></div>
-                <div class="col-xs-6" id="linechartTxt">
-                    <p>Blabla</p>
-                </div>
+                <figure>
+                    <div class="col-xs-12" id="heatmap">
+                    </div>
+                    <blockquote class="quote">
+                        <p class="mb-0" id="text_heatmap"></p>
+                        <footer class="blockquote-footer hidden" id="footer"></footer>
+                    </blockquote>
+                </figure>
             </div>
         </div>
     </section>
@@ -311,7 +357,7 @@ path.foreground_woman {
         </div>
     </section>
     <footer class="footer">
-    <p>Construit par l'acolyte Raphaël Graille et son compère Louis Henri Franc</p>
+        <p>Construit par l'acolyte Raphaël Graille et son compère Louis Henri Franc</p>
     </footer>
     <script type="text/javascript" src="js/utils/d3.v3.js"></script>
     <script type="text/javascript" src="js/utils/d3-tip.js"></script>

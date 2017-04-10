@@ -307,8 +307,6 @@ function display_radar_char(id_, expectation, reality, legend, name_x, name_y, r
         levels: 8,
         ExtraWidthX: 300
     }
-    console.log(max_value)
-    console.log(mycfg)
     axis = RadarChart.draw(id_, d, mycfg);
     var svg = d3.select(id_)
         .selectAll('svg')

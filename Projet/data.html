@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Analyse des données</title>
+    <link rel="shortcut icon" href="/img/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="/img/favicon.ico" type="image/x-icon">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Signika:300" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+    <div class="header">
+        <div class="next-banner">
+            <div class="container no-padding">
+                <div class="col-md-12">
+                    <div class="col-sm-6 text-left">
+                        <a href="index.html"><span class="glyphicon glyphicon-menu-left"></span> Retour sur les visualisations</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="jumbotron" id="hero-sun">
+            <div class="container">
+                <h1>Analyse des données</h1>
+                <p>TODO</p>
+                <h2>Introduction sur les données</h2>
+                <h2>Question 1</h2>
+                <p>Pour la question 1, nous avons utilisé plusieurs données
+                    <div class="panel panel-default">
+                        <table class="table">
+                            <tr>
+                                <th>Nom de l'attribut</th>
+                                <th>Valeur</th>
+                                <th>Description</th>
+                            </tr>
+                            <tr>
+                                <tr>
+                                    <td>
+                                        iid
+                                    </td>
+                                    <td>Entier</td>
+                                    <td>Identifiant unique d'un individu</td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        pid
+                                    </td>
+                                    <td>Entier</td>
+                                    <td>Identifiant unique de l'individu rencontré. Une ligne dans l'ensemble de donnée est identifié uniquement par un
+                                        <mark>iid</mark> et un
+                                        <mark>match</mark>
+                                    </td>
+                                </tr>
+                                <td>
+                                    int_corr
+                                </td>
+                                <td>[-1, 1]</td>
+                                <td>Mesure de corrélation calculée entre deux individus sur leur centre d'intérêt. Si la valeur est à -1, les protagonistes, leur intérêts divergent. Si
+                                    <mark>int_corr</mark> = 1, c'est l'inverse, leur centre d'intérêts sont proches</td>
+                            </tr>
+                            <tr>
+                                <td>match</td>
+                                <td>Booleen</td>
+                                <td>Si la rencontre a abouti à un match</td>
+                            </tr>
+                            <tr>
+                                <td>age et age_o</td>
+                                <td>Entier</td>
+                                <td>Age de l'individu et de la personne rencontre. Groupé en pre-process.</td>
+                            </tr>
+                            <tr>
+                                <td>gender et gender_o</td>
+                                <td>Boolean</td>
+                                <td>Sexe de la personne et de la personne recontrée</td>
+                            </tr>
+                            <tr>
+                                <td>field_cd</td>
+                                <td>Valeur ordinal</td>
+                                <td>Explique les regroupements TODO</td>
+                            </tr>
+                            <tr>
+                                <td>race</td>
+                                <td>Valeur ordinale</td>
+                                <td>Origine ethnique suivant le regroupement TODO</td>
+                            </tr>
+                        </table>
+                    </div>
+                    <h2>Question 2</h2>
+                    <p> Pour la question 2, nous avons principalement utilisé les items de type attr*, sinc*, intel*, fun*, amb*, shar*. A noter que suivant les vagues de speed dating, les questions n'étaient pas posés de la même manière. Sur les 21 vagues de S-D, la question était de répartir 100 points pour les 6 attributs définies. Pour les vagues 6 à 9, il fallait noter les attributs individuellement entre 1 et 10. Nous n'avons pas considéré les données des vagues 6 à 9. Les premiers attributs sont demandées avant le speed dating, les derniers trois semaines après le speed dating; de plus nous ne selectionnons que ceux où il y a eu un match.</p>
+                    <div class="panel panel-default">
+                        <table class="table">
+                            <tr>
+                                <th>Nom de l'attribut</th>
+                                <th>Valeur</th>
+                                <th>Description</th>
+                            </tr>
+                            <tr>
+                                <tr>
+                                    <td>
+                                        attr1_1, sinc1_1, intel1_1, fun1_1, amb1_1, shar1_1
+                                    </td>
+                                    <td>sum to 100</td>
+                                    <td>Vous avez 100 points à distribuer aux attributs suivants (Attractivité, Sincérité, Intelligence, Fun, Ambitieux, Même centre d'intérêt. Donner plus de points aux attributs qui ont plus d'importance pour vous pour un futur date</td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        attr1_3, sinc1_3, intel1_3, fun1_3, amb1_3, shar1_3
+                                    </td>
+                                    <td>sum to 100</td>
+                                    <td>Vous avez 100 points à distribuer aux attributs suivants (Attractivité, Sincérité, Intelligence, Fun, Ambitieux, Même centre d'intérêt. Donner plus de points aux attributs qui ont eu le plus d'importance pour vos dates. </td>
+                                </tr>
+                        </table>
+                    </div>
+                    <h2>Question 3</h2>
+                    <p>Même principe de formulation des questions que dans la Question 2. Mais ici on compare les valeurs des hommes (reciproquement femmes) mises à la question, que pensez vous que l'autre regarde chez vous, versus ce que les femmes (réciproquement les hommes) pensaient vraiment. Le premier item de la question 1 est réutilisé.</p>
+                    <div class="panel panel-default">
+                        <table class="table">
+                            <tr>
+                                <th>Nom de l'attribut</th>
+                                <th>Valeur</th>
+                                <th>Description</th>
+                            </tr>
+                            <tr>
+                                <tr>
+                                    <td>
+                                        attr1_1, sinc1_1, intel1_1, fun1_1, amb1_1, shar1_1
+                                    </td>
+                                    <td>sum to 100</td>
+                                    <td>Vous avez 100 points à distribuer aux attributs suivants (Attractivité, Sincérité, Intelligence, Fun, Ambitieux, Même centre d'intérêt. Donner plus de points aux attributs qui ont plus d'importance pour vous pour un futur date.</td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        attr4_1, sinc4_1, intel4_1, fun4_1, amb4_1, shar4_1
+                                    </td>
+                                    <td>sum to 100</td>
+                                    <td>Vous avez 100 points à distribuer aux attributs suivants (Attractivité, Sincérité, Intelligence, Fun, Ambitieux, Même centre d'intérêt. Donner plus de points aux attributs qui ont pour vous le plus d'importance chez l'autre sexe.</td>
+                                </tr>
+                        </table>
+                    </div>
+                    <h2>Question 4</h2>
+                    <p></p>
+                    <div class="panel panel-default">
+                        <table class="table">
+                            <tr>
+                                <th>Nom de l'attribut</th>
+                                <th>Valeur</th>
+                                <th>Description</th>
+                            </tr>
+                            <tr>
+                                <tr>
+                                    <tr>
+                                        <td>
+                                            iid
+                                        </td>
+                                        <td>Entier</td>
+                                        <td>Identifiant unique d'un individu</td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            pid
+                                        </td>
+                                        <td>Entier</td>
+                                        <td>Identifiant unique de l'individu rencontré.</td>
+                                    </tr>
+                                    <tr>
+                                        <td>match</td>
+                                        <td>Booleen</td>
+                                        <td>Si la rencontre a abouti à un match</td>
+                                    </tr>
+                                    <tr>
+                                        <td>age</td>
+                                        <td>Entier</td>
+                                        <td>Age de l'individu et de la personne rencontre. Groupé en pre-process.</td>
+                                    </tr>
+                                    <tr>
+                                        <td>gender</td>
+                                        <td>Boolean</td>
+                                        <td>Sexe de la personne et de la personne recontrée</td>
+                                    </tr>
+                                    <tr>
+                                        <td>field_cd</td>
+                                        <td>Valeur ordinal</td>
+                                        <td>Explique les regroupements TODO</td>
+                                    </tr>
+                                    <tr>
+                                        <td>race</td>
+                                        <td>Valeur ordinale</td>
+                                        <td>Origine ethnique suivant le regroupement TODO</td>
+                                    </tr>
+                                    <tr>
+                                        <td>go_out</td>
+                                        <td>Valeur ordinale</td>
+                                        <td>Combien de fois sortez vous, regroupé en {Quasiment jamais, Une fois par An, Une fois par Mois, Une fois par Semaine} TODO: Re runner le script en remplacant once a week... par du francais</td>
+                                    </tr>
+                                    <tr>
+                                        <td>date</td>
+                                        <td>Valeur ordinale</td>
+                                        <td>Combien de fois sortez vous, regroupé en {Quasiment jamais, Une fois par An, Une fois par Mois, Une fois par Semaine}</td>
+                                    </tr>
+                        </table>
+                    </div>
+                    <h1>Croquis de visualisation et d'interactions</h1>
+                    <p>Fait toi plaiz grand fou TODO</p>
+            </div>
+        </div>
+    </div>
+    [get_gender(row.gender), 1, get_field(group_fields(row.field_cd)), get_ages(group_ages(row.age)), get_races(group_races(row.race)), get_date(row.date), get_date(row.go_out), # no error :) row.career_c]
