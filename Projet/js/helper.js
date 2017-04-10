@@ -36,6 +36,7 @@ function find_max_diff_attribute(values1, values2, max = true) {
 function load_d3_visualisation() {
     lineChart("#linechart", "data/corr_vs_matches.csv");
     heatmapChart("#heatmap", "data/corr_age_age_matches.csv", ["- de 22", "22-23", "24-27", "28-31", "32-36", "+ de 36"]);
+    $("#button-age").click()
 
     // Question 2 loading
     var ringNote = d3.ringNote()

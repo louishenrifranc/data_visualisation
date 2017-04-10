@@ -13,6 +13,7 @@ function transition(name) {
         attribute = ["African American", "Caucasian American", "Hispanic", "Asian", "Other"]
         csvFile = "data/corr_race_race_matches.csv"
         message = "."
+
     } else if (name == "button-etudes") {
         csvFile = "data/corr_field_cd_field_cd_matches.csv"
         attribute = ["Science", "Science sociales", "Littérature", "Art", "Commerce", "Education", "Autre"]
@@ -44,10 +45,22 @@ function transition(name) {
             var menLabels = svg.selectAll(".men-label").transition()
                 .duration(1000)
                 .text(function(d, i) {
-                    console.log(attribute[i])
                     return attribute[i];
                 });
-
+            if (name == "button-origine") {
+                svg.selectAll(".attr")
+                    .filter(function(d) {
+                        return d.men == 6;
+                    })
+                    .style("fill", "#FFFFFF")
+                    .classed("bordered", false)
+            } else {
+                svg.selectAll(".attr")
+                    .filter(function(d) {
+                        return d.men == 6;
+                    })
+                    .classed("bordered", true)
+            }
             var cards = svg.selectAll(".attr")
                 .data(data, function(d) {
                     return d.women + ':' + d.men;
@@ -56,9 +69,7 @@ function transition(name) {
                 .style("fill", function(d) {
                     return colorScale(d.value);
                 });
-
             legend = svg.select("legend");
-
         });
 
 };
@@ -145,6 +156,7 @@ function heatmapChart(id, csvFile, attribute) {
                     return (d.men - 1) * gridSize;
                 })
                 .attr("y", function(d) {
+
                     return (d.women - 1) * gridSize;
                 })
                 .attr("rx", 4)
@@ -163,20 +175,6 @@ function heatmapChart(id, csvFile, attribute) {
                 return d.value;
             });
 
-            cards.append("g")
-                .attr("class", "y axis")
-                .append("text")
-                .attr("transform", "rotate(-90)")
-                .attr("y", 6)
-                .attr("dy", ".71em")
-                .style("text-anchor", "end")
-                .text("Ratio Match/Non-Match");
-
-            cards.append("g")
-                .append("text")
-                .attr("transform", "translate(350," + height + ")")
-                .style("text-anchor", "end")
-                .text("Correlation entre les individus");
             cards.exit().remove();
 
             var legend = svg.selectAll(".legend")
