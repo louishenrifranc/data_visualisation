@@ -14,6 +14,13 @@ function get_attributes_for_id(i) {
     }
 }
 
+function blinker() {
+    $('.blink_me').fadeOut(500);
+    $('.blink_me').fadeIn(500);
+}
+
+setInterval(blinker, 2000);
+
 function find_max_diff_attribute(values1, values2, max = true) {
     max_diff = 0;
     if (!max) max_diff = 101
