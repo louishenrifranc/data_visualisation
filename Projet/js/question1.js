@@ -12,12 +12,13 @@ function transition(name) {
     } else if (name == "button-origine") {
         attribute = ["African American", "Caucasian American", "Hispanic", "Asian", "Other"]
         csvFile = "data/corr_race_race_matches.csv"
-        message = "."
+        message = "Il semblerait que les américains d'origine africaine ont tendance à coppuler entre eux."
 
     } else if (name == "button-etudes") {
         csvFile = "data/corr_field_cd_field_cd_matches.csv"
         attribute = ["Science", "Science sociales", "Littérature", "Art", "Commerce", "Education", "Autre"]
-        message = ""
+
+        message = "La solitude est un art, disait Vilhelm Ekelund... et l'Art se marie avec la Littérature."
     }
     d3.select("#text_heatmap").text(message)
     var buckets = 20,
