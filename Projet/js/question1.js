@@ -7,13 +7,18 @@ function transition(name) {
     if (name == "button-age") {
         attribute = ["- de 22", "22-23", "24-27", "28-31", "32-36", "+ de 36"]
         csvFile = "data/corr_age_age_matches.csv"
+        message = "Amour, tu es tout beauté, et aussi délicate que la rosée. Sur un pétale de rose est ta juvénile fraîcheur. Les jeunes femmes ont \
+         un fort potentiel de séduction chez les hommes, mais ce sont les hommmes mûrs qu'elles préfèrent."
     } else if (name == "button-origine") {
         attribute = ["African American", "Caucasian American", "Hispanic", "Asian", "Other"]
         csvFile = "data/corr_race_race_matches.csv"
+        message = "."
     } else if (name == "button-etudes") {
         csvFile = "data/corr_field_cd_field_cd_matches.csv"
         attribute = ["Science", "Science sociales", "Littérature", "Art", "Commerce", "Education", "Autre"]
+        message = ""
     }
+    d3.select("#text_heatmap").text(message)
     var buckets = 20,
         colors = colorbrewer.YlOrBr[4]
     d3.csv(csvFile,
@@ -61,14 +66,12 @@ function transition(name) {
 function heatmapChart(id, csvFile, attribute) {
 
     var margin = { top: 100, right: 150, bottom: 0, left: 125 },
-        width = 1000 - margin.left - margin.right,
-        height = 420 - margin.top - margin.bottom,
+        width = 1200 - margin.left - margin.right,
+        height = 520 - margin.top - margin.bottom,
         gridSize = Math.floor(width / 15),
         legendElementWidth = gridSize / 2,
         buckets = 20,
-        // colors = ["#ffffd9","#c7e9b4","#41b6c4", "225ea8"] // alternatively colorbrewer.YlGnBu[9]
         colors = colorbrewer.YlOrBr[4]
-        //attribute = ["African American", "Caucasian American", "Hispanic", "Asian", "Other"],
 
     var svg = d3.select(id).append("svg")
         .attr("width", width + margin.left + margin.right)
@@ -198,6 +201,23 @@ function heatmapChart(id, csvFile, attribute) {
                 .style("fill", function(d, i) {
                     return colors[i];
                 });
+            // Female symbol
+            legend.append("text")
+                .attr("class", "mono")
+                .html("&#9792;")
+                .style("font-size", "50px")
+                .style("fill", "blue")
+                .attr("x", attribute.length * gridSize + 25)
+                .attr("y", (legendElementWidth + 5) * 5)
+
+            // Male symbol
+            legend.append("text")
+                .attr("class", "mono")
+                .html("&#x2642;")
+                .style("font-size", "50px")
+                .style("fill", "red")
+                .attr("x", attribute.length * gridSize + 25)
+                .attr("y", (legendElementWidth + 5) * 6);
 
             legend.append("text")
                 .attr("class", "mono")
@@ -217,38 +237,42 @@ function heatmapChart(id, csvFile, attribute) {
                             break;
                     }
                 })
-                //.attr("x", function(d, i) { return legendElementWidth * i; })
-                //.attr("y", attribute.length * gridSize + 25 + gridSize);
                 .attr("x", attribute.length * gridSize + 40 + legendElementWidth)
                 .attr("y", function(d, i) {
                     return (legendElementWidth + 5) * i + 12;
                 })
+            legend.append("text")
+                .attr("class", "mono")
+                .text("Individu feminin")
+                .attr("x", attribute.length * gridSize + 40 + legendElementWidth)
+                .attr("y", (legendElementWidth + 5) * 4 + 14)
 
+            legend.append("text")
+                .attr("class", "mono")
+                .text("Individu masculin")
+                .attr("x", attribute.length * gridSize + 40 + legendElementWidth)
+                .attr("y", (legendElementWidth + 5) * 5 + 14)
+
+            // Male symbol 
+            legend.append("text")
+                .attr("class", "mono")
+                .html("&#9792;")
+                .style("font-size", "30px")
+                .style("fill", "blue")
+                .attr("x", -10)
+                .attr("y", -14);
+
+            legend.append("text")
+                .attr("class", "mono")
+                .html("&#x2642;")
+                .style("font-size", "30px")
+                .style("fill", "red")
+                .attr("x", -40)
+                .attr("y", 0);
             legend.exit().remove();
 
         });
 };
-
-function transitionPays(countries) {
-    scatterGraph.selectAll("circle")
-        .data(countries)
-        .transition()
-        .duration(2000)
-        .ease("bounce")
-        .attr("cx", function(d) {
-            return x(d.values.LifeExpectancy)
-        })
-        .attr("cy", function(d) {
-            return y(d.values.Income)
-        })
-        .attr("r", function(d) {
-            return r(d.values.Population)
-        })
-        .attr("fill", function(d) {
-            return color(d.values.Region)
-        })
-
-}
 
 
 function lineChart(id, csvFile) {
