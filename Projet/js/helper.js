@@ -14,13 +14,6 @@ function get_attributes_for_id(i) {
     }
 }
 
-function blinker() {
-    $('.blink_me').fadeOut(500);
-    $('.blink_me').fadeIn(500);
-}
-
-setInterval(blinker, 2000);
-
 function find_max_diff_attribute(values1, values2, max = true) {
     max_diff = 0;
     if (!max) max_diff = 101
@@ -42,9 +35,7 @@ function find_max_diff_attribute(values1, values2, max = true) {
 
 function load_d3_visualisation() {
     lineChart("#linechart", "data/corr_vs_matches.csv");
-    heatmapChart("#heatmap1", "data/corr_race_race_matches.csv", ["African American", "Caucasian American", "Hispanic", "Asian", "Other"]);
-    heatmapChart("#heatmap2", "data/corr_age_age_matches.csv", ["- de 22", "22-23", "24-27", "28-31", "32-36", "+ de 36"]);
-    heatmapChart("#heatmap3", "data/corr_field_cd_field_cd_matches.csv", ["Science", "Science sociales", "Littérature", "Art", "Commerce", "Education", "Autre"]);
+    heatmapChart("#heatmap", "data/corr_age_age_matches.csv", ["- de 22", "22-23", "24-27", "28-31", "32-36", "+ de 36"]);
 
     // Question 2 loading
     var ringNote = d3.ringNote()

@@ -280,30 +280,24 @@ path.foreground_woman {
                 </figure>
             </div>
             <!-- Second chart -->
-            <div class="slider">
-                <label> 2000 </label>
-                <input id="slider" type="range" min="2000" max="2014" value="2000" step="14" autocomplete="off" />
-                <label> 2014 </label>
+            <hr/>
+            <div class="btn-group btn-group-justified" role="group" aria-label="...">
+                <div class="btn-group" role="group">
+                    <button type="button" class="btn btn-default" id="button-age">Entre les âges</button>
+                </div>
+                <div class="btn-group" role="group">
+                    <button type="button" class="btn btn-default" id="button-origine">Entre les origines ethniques</button>
+                </div>
+                <div class="btn-group" role="group">
+                    <button type="button" class="btn btn-default" id="button-etudes">Entre les domaines d'études</button>
+                </div>
             </div>
             <div class="row">
                 <figure>
-                    <div class="col-xs-6" id="heatmap1">
-                        <p>Matrice de chaleur Correlation entre individus en fonction du ratio de matches.</p>
+                    <div class="col-xs-12" id="heatmap">
                     </div>
+                    <p>Matrice de chaleur Correlation entre individus en fonction du ratio de matches.</p>
                 </figure>
-                <div class="col-xs-6" id="linechartTxt"> </div>
-            </div>
-            <div class="row">
-                <div class="col-xs-6" id="linechartTxt">
-                    <p>Blabla</p>
-                </div>
-                <div class="col-xs-6" id="heatmap2"></div>
-            </div>
-            <div class="row">
-                <div class="col-xs-6" id="heatmap3"></div>
-                <div class="col-xs-6" id="linechartTxt">
-                    <p>Blabla</p>
-                </div>
             </div>
         </div>
     </section>
