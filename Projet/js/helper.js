@@ -116,6 +116,14 @@ function submitOrder() {
         }
     });
 
+    profile = Object()
+    profile.gender = document.getElementById('gender').value
+    profile.age = document.getElementById('age').value
+    profile.studies = document.getElementById('studies').value
+    profile.nbDate = document.getElementById('nb-date').value
+    profile.nbSortie = document.getElementById('nb-sortie').value
+    profile.origine = document.getElementById('origine').value
+
     gender = document.getElementById('gender').value
 
     if (gender == "Femme") {
@@ -158,6 +166,54 @@ function submitOrder() {
 
         })
     }
+
+    d3.csv("data/best_matcher.csv", function(error, persons) {
+
+        current_best_score = 0
+        nb_best_score = 0.0
+        mean_best_match = 0.0
+
+        persons.forEach(function(person){
+            
+            current_score = 0
+            if(person[ "genre" ]==profile.gender){
+                current_score += 16
+            }
+            if(person[ "domaine d'études" ]==profile.studies){
+                current_score += 4
+            }
+            if(person[ "âge" ]==profile.age){
+                current_score += 3
+            }
+            if(person[ "origine éthnique" ]==profile.origine){
+                current_score += 4
+            }
+            if(person[ "fréquence de date" ]==profile.nbDate){
+                current_score += 2
+            }
+            if(person[ "fréquence de sortie" ]==profile.nbSortie){
+                current_score += 2
+            }
+            
+            if (current_score > current_best_score){
+                current_best_score = current_score;
+                nb_best_score = 0.0;
+                mean_best_match = 0.0
+            }
+
+            if(current_score == current_best_score){
+                nb_best_score += 1.0;
+                mean_best_match += parseInt(person["nombre de matches"])
+
+            }
+
+
+        })
+
+        mean_best_match = mean_best_match / nb_best_score
+        console.log(mean_best_match)
+
+    });
 
 
 }
