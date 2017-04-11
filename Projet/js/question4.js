@@ -1,4 +1,4 @@
-function parallelCoord(id, csvFile) {
+function parallelCoord(id, csvFile, user_profile=[]) {
 
   var margin = {top: 30, right: 10, bottom: 10, left: 10},
       width = 1500 - margin.left - margin.right,
@@ -81,6 +81,11 @@ var quant_p = function(v){return (parseFloat(v) == v) || (v == "")};
           : persons.map(function(d) { return d[dimension.name]; }).sort());
     });*/
 
+    console.log(persons)
+    if(user_profile.length !=0){
+      persons.push(user_profile[0])
+    }
+
     dimensions = d3.keys(persons[0]).slice(1);
     x.domain(dimensions);
 
@@ -114,9 +119,20 @@ var quant_p = function(v){return (parseFloat(v) == v) || (v == "")};
       .enter().append("path")
         .attr("d", path)
         .attr("class",function(d){
+          res_class = ""
           if(d["genre"] == "Femme"){
-            return "foreground_woman"
-          } else return "foreground_man"
+            res_class = "foreground_woman"
+          } else {
+            res_class = "foreground_man"
+          }
+          
+          if(d["iid"]=="user"){
+            res_class = "foreground_user"
+          } else if(d["iid"]=="0"){
+            res_class = "foreground_fake"
+          }
+          return res_class
+
         });
 
     // Add a group element for each dimension.

@@ -16,14 +16,14 @@ function transition(name) {
 
     } else if (name == "button-etudes") {
         csvFile = "data/corr_field_cd_field_cd_matches.csv"
-        attribute = ["Science", "Science sociales", "Littérature", "Art", "Commerce", "Education", "Autre"]
-
+        //attribute = ["Science", "Science sociales", "Littérature", "Art", "Commerce", "Education", "Autre"]
+        attribute = ["Science", "Science sociales", "Littérature", "Art", "Droit", "Commerce", "Education"]
         message = "La solitude est un art, disait Vilhelm Ekelund... et l'Art se marie avec la Littérature."
     }
     d3.select("#text_heatmap").text(message)
     var buckets = 20,
         colors = colorbrewer.YlOrBr[4]
-    d3.csv(csvFile,
+    /*d3.csv(csvFile,
         function(d) {
             return {
                 women: +d.attr1,
@@ -61,6 +61,9 @@ function transition(name) {
                         return d.men == 6;
                     })
                     .classed("bordered", true)
+                    .style("fill", function(d){
+                        return colorScale(d.value)
+                    })
             }
             var cards = svg.selectAll(".attr")
                 .data(data, function(d) {
@@ -71,7 +74,9 @@ function transition(name) {
                     return colorScale(d.value);
                 });
             legend = svg.select("legend");
-        });
+        });*/
+        d3.select("#heatmap svg").remove()
+        heatmapChart("#heatmap", csvFile,attribute)
 
 };
 
@@ -79,7 +84,7 @@ function heatmapChart(id, csvFile, attribute) {
 
     var margin = { top: 100, right: 150, bottom: 0, left: 125 },
         width = 1200 - margin.left - margin.right,
-        height = 520 - margin.top - margin.bottom,
+        height = 550 - margin.top - margin.bottom,
         gridSize = Math.floor(width / 15),
         legendElementWidth = gridSize / 2,
         buckets = 20,
@@ -157,7 +162,7 @@ function heatmapChart(id, csvFile, attribute) {
                     return (d.men - 1) * gridSize;
                 })
                 .attr("y", function(d) {
-
+                    console.log(d.women)
                     return (d.women - 1) * gridSize;
                 })
                 .attr("rx", 4)
@@ -167,7 +172,7 @@ function heatmapChart(id, csvFile, attribute) {
                 .attr("height", gridSize)
                 .style("fill", colors[0]);
 
-            cards.transition().duration(10000)
+            cards.transition().duration(1000)
                 .style("fill", function(d) {
                     return colorScale(d.value);
                 });
@@ -190,7 +195,7 @@ function heatmapChart(id, csvFile, attribute) {
             legend.append("rect")
                 //.attr("x", function(d, i) { return legendElementWidth * i; })
                 //.attr("y", attribute.length * gridSize +25)
-                .attr("x", attribute.length * gridSize + 25)
+                .attr("x", attribute.length * gridSize + 55)
                 .attr("y", function(d, i) {
                     return (legendElementWidth + 5) * i;
                 })
@@ -206,7 +211,7 @@ function heatmapChart(id, csvFile, attribute) {
                 .html("&#9792;")
                 .style("font-size", "50px")
                 .style("fill", "blue")
-                .attr("x", attribute.length * gridSize + 25)
+                .attr("x", attribute.length * gridSize + 55)
                 .attr("y", (legendElementWidth + 5) * 5)
 
             // Male symbol
@@ -215,8 +220,8 @@ function heatmapChart(id, csvFile, attribute) {
                 .html("&#x2642;")
                 .style("font-size", "50px")
                 .style("fill", "red")
-                .attr("x", attribute.length * gridSize + 25)
-                .attr("y", (legendElementWidth + 5) * 6);
+                .attr("x", attribute.length * gridSize + 55)
+                .attr("y", (legendElementWidth + 9) * 6);
 
             legend.append("text")
                 .attr("class", "mono")
@@ -236,38 +241,38 @@ function heatmapChart(id, csvFile, attribute) {
                             break;
                     }
                 })
-                .attr("x", attribute.length * gridSize + 40 + legendElementWidth)
+                .attr("x", attribute.length * gridSize + 70 + legendElementWidth)
                 .attr("y", function(d, i) {
                     return (legendElementWidth + 5) * i + 12;
                 })
             legend.append("text")
                 .attr("class", "mono")
                 .text("Individu feminin")
-                .attr("x", attribute.length * gridSize + 40 + legendElementWidth)
+                .attr("x", attribute.length * gridSize + 70 + legendElementWidth)
                 .attr("y", (legendElementWidth + 5) * 4 + 14)
 
             legend.append("text")
                 .attr("class", "mono")
                 .text("Individu masculin")
-                .attr("x", attribute.length * gridSize + 40 + legendElementWidth)
-                .attr("y", (legendElementWidth + 5) * 5 + 14)
+                .attr("x", attribute.length * gridSize + 70 + legendElementWidth)
+                .attr("y", (legendElementWidth + 9) * 5 + 14)
 
             // Male symbol 
             legend.append("text")
                 .attr("class", "mono")
                 .html("&#9792;")
-                .style("font-size", "30px")
+                .style("font-size", "25px")
                 .style("fill", "blue")
-                .attr("x", -10)
+                .attr("x", -25)
                 .attr("y", -14);
 
             legend.append("text")
                 .attr("class", "mono")
                 .html("&#x2642;")
-                .style("font-size", "30px")
+                .style("font-size", "25px")
                 .style("fill", "red")
                 .attr("x", -40)
-                .attr("y", 0);
+                .attr("y", 20);
             legend.exit().remove();
 
         });

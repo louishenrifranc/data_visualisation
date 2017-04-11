@@ -1,4 +1,8 @@
 iid,genre,nombre de matches,domaine d'études,âge,origine éthnique,fréquence de date,fréquence de sortie
+0,Femme,8,Law,- de 22,Caucasian American,Almost never,Almost never,1.0
+0,Femme,8,Law,- de 22,Caucasian American,Several times a year,Several times a year,1.0
+0,Femme,8,Law,- de 22,Caucasian American,Several times a month,Several times a month,1.0
+0,Femme,8,Law,- de 22,Caucasian American,Several times a week,Several times a week,1.0
 5,Femme,8,Law,- de 22,Caucasian American,Several times a month,Several times a week,1.0
 4,Femme,8,Law,22 - 23,Caucasian American,Several times a month,Several times a week,1.0
 6,Femme,8,Law,22 - 23,Asian,Several times a month,Several times a week,1.0

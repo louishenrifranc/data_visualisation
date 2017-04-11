@@ -35,7 +35,7 @@ function find_max_diff_attribute(values1, values2, max = true) {
 
 function load_d3_visualisation() {
     lineChart("#linechart", "data/corr_vs_matches.csv");
-    heatmapChart("#heatmap", "data/corr_age_age_matches.csv", ["- de 22", "22-23", "24-27", "28-31", "32-36", "+ de 36"]);
+    //heatmapChart("#heatmap", "data/corr_age_age_matches.csv", ["- de 22", "22-23", "24-27", "28-31", "32-36", "+ de 36"]);
     $("#button-age").click()
 
     // Question 2 loading
@@ -116,12 +116,13 @@ function submitOrder() {
     });
 
     profile = Object()
-    profile.gender = document.getElementById('gender').value
-    profile.age = document.getElementById('age').value
-    profile.studies = document.getElementById('studies').value
-    profile.nbDate = document.getElementById('nb-date').value
-    profile.nbSortie = document.getElementById('nb-sortie').value
-    profile.origine = document.getElementById('origine').value
+    profile["iid"] = "user"
+    profile[ "genre" ] = document.getElementById('gender').value
+    profile[ "âge" ] = document.getElementById('age').value
+    profile[ "domaine d'études" ] = document.getElementById('studies').value
+    profile[ "fréquence de date" ] = document.getElementById('nb-date').value
+    profile[ "fréquence de sortie" ] = document.getElementById('nb-sortie').value
+    profile[ "origine éthnique" ] = document.getElementById('origine').value
 
     gender = document.getElementById('gender').value
 
@@ -175,22 +176,22 @@ function submitOrder() {
         persons.forEach(function(person){
             
             current_score = 0
-            if(person[ "genre" ]==profile.gender){
+            if(person[ "genre" ]==profile[ "genre" ]){
                 current_score += 16
             }
-            if(person[ "domaine d'études" ]==profile.studies){
+            if(person[ "domaine d'études" ]==profile[ "domaine d'études" ]){
                 current_score += 4
             }
-            if(person[ "âge" ]==profile.age){
+            if(person[ "âge" ]==profile[ "âge" ]){
                 current_score += 3
             }
-            if(person[ "origine éthnique" ]==profile.origine){
+            if(person[ "origine éthnique" ]==profile[ "origine éthnique" ]){
                 current_score += 4
             }
-            if(person[ "fréquence de date" ]==profile.nbDate){
+            if(person[ "fréquence de date" ]==profile[ "fréquence de date" ]){
                 current_score += 2
             }
-            if(person[ "fréquence de sortie" ]==profile.nbSortie){
+            if(person[ "fréquence de sortie" ]==profile[ "fréquence de sortie" ]){
                 current_score += 2
             }
             
@@ -206,11 +207,16 @@ function submitOrder() {
 
             }
 
-
         })
 
         mean_best_match = mean_best_match / nb_best_score
         console.log(mean_best_match)
+        profile["nombre de matches"] = mean_best_match
+
+        d3.select("#parallelCoordinate svg").remove();
+        parallelCoord("#parallelCoordinate", "data/best_matcher.csv",[profile])
+        d3.select("#question4-perso-text").text(
+                "Les personnes avec votre profil ont réalisé en moyenne "+mean_best_match+" matches !")
 
     });
 

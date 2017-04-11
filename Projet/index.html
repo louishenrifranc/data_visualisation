@@ -54,6 +54,17 @@ path.foreground_woman {
     opacity: 0.1
 }
 
+path.foreground_fake {
+    display: none;
+}
+
+path.foreground_user {
+    fill: none;
+    stroke: green;
+    stroke-width: 4px;
+    opacity: 1
+}
+
 .brush .extent {
     fill-opacity: .3;
     stroke: #fff;
@@ -197,18 +208,21 @@ path.foreground_woman {
                     </li>
                     <button type="button" class="btn btn-sucess btn-lg active" data-toggle="modal" id="testez-vous" data-target="#myModal">Testez vous?</button>
                     <a href="#" class="arrow up">clique</a>
-            </div>
-            </ul>
-        </div>
-        </div>
+          
+            	</ul>
+           </div>
+	</div>
     </nav>
-    <!-- orchidoclaste -->
+
+    <!-- orchidoclaste ( container-fluid prend toute la largeur de l'ecran) -->
+    <div class="container-fluid">
+
     <section id="intro" class="intro-section jumbotron ">
         <h1><span>Attractivité. </span></h1>
         <h2><span>\a.tʁak.ti.vi.te\. <mark>Capacité</mark> que possède un objet ou une personne à <mark>séduire</mark></span></h2>
-        <div class="row-fluid">
-            <div class="col-xs-6" style=" margin-top: 200px; color:white;">
-                <div class="bubble" style="height:450px;">
+        <div class="row">
+            <div class="col-sm-6" style=" margin-top: 200px; color:white;">
+                <div class="bubble">
                     <h3><span>Introduction</span></h3>
                     <p>
                         <span>
@@ -230,8 +244,8 @@ path.foreground_woman {
                     </p>
                 </div>
             </div>
-            <div class="col-xs-6" style=" margin-top: 200px; color:white;">
-                <div class="bubble" style="width: 800px;height:450px;">
+            <div class="col-sm-6" style=" margin-top: 200px; color:white;">
+                <div class="bubble">
                     <h3><span>Proposition de visualisations</span></h3>
                     <p>
                         <span class="blink_me">
@@ -256,130 +270,161 @@ path.foreground_woman {
             </div>
         </div>
     </section>
-    <section id="question1" class="question1-section">
-        <div class="container">
-            <div class="row">
-                <h1>Les Similarités entre Personnes</h1>
-            </div>
-            <div class='row'>
-                <p>Qui se ressemble s'assemble, et les contraires s'attirent... Le pétillant esprit critique qui sommeille en vous est fatigué d'entendre ces niaiseries, ces banalités. Mais quel est donc la force de ce lien qui lie les Hommes d'une même origine ethnique, les amoureux de musique, de théâtre, ou même de Sciences. Ont-ils plus de chance de se plaire?
-                    <br />
-                </p>
-            </div>
-            <br/>
-            <div class="row">
-                <!-- First chart -->
-                <div class="col-xs-6" id="linechartTxt">
-                    <p>La mesure de correlation des données entre les individus est une valeur affinée de la proximité intellectuelle/sociale de deux êtres. </p>
-                    <p>Outre la tendance linéaire de la courbe, si, et comme lorsque deux aimants de même signe, l'étreinte est trop forte, les désignés amants se repoussent.</p>
-                </div>
-                <figure>
-                    <div class="col-xs-6" id="linechart">
-                        <p>Correlation entre individus en fonction du ratio de matches.</p>
-                    </div>
-                </figure>
-            </div>
-            <!-- Second chart -->
-            <hr/>
-            <div class="btn-group btn-group-justified" role="group" aria-label="...">
-                <div class="btn-group " role="group">
-                    <button type="button" class="btn btn-default" id="button-age">Entre les âges</button>
-                </div>
-                <div class="btn-group" role="group">
-                    <button type="button" class="btn btn-default" id="button-origine">Entre les origines ethniques</button>
-                </div>
-                <div class="btn-group" role="group">
-                    <button type="button" class="btn btn-default" id="button-etudes">Entre les domaines d'études</button>
-                </div>
-            </div>
-            <div class="row">
-                <figure>
-                    <div class="col-xs-12" id="heatmap">
-                    </div>
-                    <blockquote class="quote">
-                        <p class="mb-0" id="text_heatmap"></p>
-                        <footer class="blockquote-footer hidden" id="footer"></footer>
-                    </blockquote>
-                </figure>
-            </div>
-        </div>
-    </section>
-    <hr class="style16" />
-    <section id="question2" class="question2-section">
-        <div class="container">
-            <div class="row">
-                <h1>Attentes vs Réalités</h1>
-            </div>
-            <div class='row'>
+    </div>
+    <!-- fin container-fluid -->
+
+   <div class="container"> <!-- le container va centrer le reste au milieu de l'ecran, donc espace a gauche et a droite -->
+	<!------ QUESTION 1 ---------->
+	<section id="question1" class="question1-section">
+
+	    <div class="row">
+		<h1>Les Similarités entre Personnes</h1>
+		<p>Qui se ressemble s'assemble, et les contraires s'attirent... Le pétillant esprit critique qui sommeille en vous est fatigué d'entendre ces niaiseries, ces banalités. Mais quel est donc la force de ce lien qui lie les Hommes d'une même origine ethnique, les amoureux de musique, de théâtre, ou même de Sciences. Ont-ils plus de chance de se plaire?
+		    <br />
+		</p>
+	    </div>
+
+	    <br/>
+	    <div class="row figure_1_row">
+		<!-- First chart -->
+		<div class="col-md-6" id="linechartTxt">
+		    <p>La mesure de correlation des données entre les individus est une valeur affinée de la proximité intellectuelle/sociale de deux êtres. </p>
+		    <p>Outre la tendance linéaire de la courbe, si, et comme lorsque deux aimants de même signe, l'étreinte est trop forte, les désignés amants se repoussent.</p>
+		</div>
+		<figure>
+		    <div class="col-md-6" id="linechart">
+		        <p>Correlation entre individus en fonction du ratio de matches.</p>
+		    </div>
+		</figure>
+	    </div>
+	    <!-- Second chart -->
+	    <div class="row">
+		    <hr/>
+		    <div class="btn-group btn-group-justified" role="group" aria-label="...">
+			<div class="btn-group " role="group">
+			    <button type="button" class="btn btn-default" id="button-age">Entre les âges</button>
+			</div>
+			<div class="btn-group" role="group">
+			    <button type="button" class="btn btn-default" id="button-origine">Entre les origines ethniques</button>
+			</div>
+			<div class="btn-group" role="group">
+			    <button type="button" class="btn btn-default" id="button-etudes">Entre les domaines d'études</button>
+			</div>
+		    </div>
+	    </div>
+
+	    <div class="row">
+		<figure>
+		    <div class="col-xs-12" id="heatmap">
+		    </div>
+		    <blockquote class="quote">
+		        <p class="mb-0" id="text_heatmap"></p>
+		        <footer class="blockquote-footer hidden" id="footer"></footer>
+		    </blockquote>
+		</figure>
+	    </div>
+
+
+	</section>
+	<!------ FIN QUESTION 1 ---->
+
+	<hr class="style16" />
+
+	<!------ QUESTION 2 -------->
+	<section id="question2" class="question2-section">
+	    <div class="row">
+		<h1>Attentes vs Réalités</h1>
+	    </div>
+	    <div class='row'>
+		<!-- <blockquote class=" col-xs-8 oval-thought-border"> /!-->
+		<p>Vous êtes enfin prêt à rencontrer l'âme soeur, vous n'avez essuyé aucun échec, aucun refus (et puis nous savons que cela n'arrivera pas). Comme les autres candidats, on vous à demander de donner 100 points aux attributs qui vous intéressent le plus chez l'autre sexe. Vous remplissez le questionnaire sans broncher</p>
+		<p class="bg-success user_mode" id="question2-perso-text"></p>
+		<p>A la suite des différentes rencontres, on décide de vous reposer la même question (oh oui on est fatiguant), voici ce que vos paires ont répondu en moyenne. Etonnant!</p>
+		<!-- </blockquote> /!-->
+	    </div>
+	    <br/>
+	    <div class="row">
+		<div class="col-xs-4 col-xs-pull-2" id="q2_radar_chart1"></div>
+		<div class="col-xs-4 col-xs-push-2" id="q2_radar_chart2"></div>
+	    </div>
+	</section>
+	<!------ FIN QUESTION 2 -------->
+	<hr class="style16" />
+	<!------ QUESTION 3 -------->
+	<section id="question3" class="question3-section">
+
+		<div class="row">
+			<h1>L'autre sexe, cet inconnu?</h1>
+		</div>
+		<div class='row'>
+			<!-- <blockquote class=" col-xs-8 oval-thought-border"> /!-->
+			<p>
+			<mark>Mettez vous à la place de l'autre sexe, et devinez ses attentes?</mark> Dans cette situation, les étudiants ont du trouver les attributs qui intéressaient le sexe opposé. A ce petit jeu les
+			<mark>femmes</mark> se sont mieux débrouillés. Celles-ci sont nottament très lucides, sur leur pouvoir attractif, et pensent que c'est ce que les hommes regardent en priorité</p>
+			<!-- </blockquote> /!-->
+		</div>
+
+	    	<br/>
+		<div class="row">
+			<div class="col-xs-4 col-xs-pull-2" id="q3_radar_chart1"></div>
+			<div class="col-xs-4 col-xs-push-2" id="q3_radar_chart2"></div>
+		</div>
+
+	</section>
+        <!------ FIN QUESTION 3 ---------->
+	<hr class="style16" />
+   </div> <!-- fin du container ---->
+   <div class="container-fluid" > <!-- container-fluid pour ce graph car le graph est assez grand -->
+	<!------- QUESTION 4 -------------->
+	<section id="question4" class="question4-section">
+	    <div class="row-fluid">
+		<div class="col-xs-12" id="parallelCoordinate">
+		    <h1>Question 4</h1>
+		</div>
+        <br/>
+        
+        <div class='row'>
                 <!-- <blockquote class=" col-xs-8 oval-thought-border"> /!-->
                 <p>Vous êtes enfin prêt à rencontrer l'âme soeur, vous n'avez essuyé aucun échec, aucun refus (et puis nous savons que cela n'arrivera pas). Comme les autres candidats, on vous à demander de donner 100 points aux attributs qui vous intéressent le plus chez l'autre sexe. Vous remplissez le questionnaire sans broncher</p>
-                <p class="bg-success user_mode" id="question2-perso-text"></p>
-                <p>A la suite des différentes rencontres, on décide de vous reposer la même question (oh oui on est fatiguant), voici ce que vos paires ont répondu en moyenne. Etonnant!</p>
+                <p class="bg-success user_mode" id="question4-perso-text"></p>
                 <!-- </blockquote> /!-->
-            </div>
-            <br/>
-            <div class="row">
-                <div class="col-xs-4 col-xs-pull-2" id="q2_radar_chart1"></div>
-                <div class="col-xs-4 col-xs-push-2" id="q2_radar_chart2"></div>
-            </div>
-            <div class="row">
-            </div>
         </div>
-    </section>
-    <hr class="style16" />
-    <section id="question3" class="question3-section">
-        <div class="container">
-            <div class="row">
-                <h1>L'autre sexe, cet inconnu?</h1>
-            </div>
-            <div class='row'>
-                <!-- <blockquote class=" col-xs-8 oval-thought-border"> /!-->
-                <p>
-                    <mark>Mettez vous à la place de l'autre sexe, et devinez ses attentes?</mark> Dans cette situation, les étudiants ont du trouver les attributs qui intéressaient le sexe opposé. A ce petit jeu les
-                    <mark>femmes</mark> se sont mieux débrouillés. Celles-ci sont nottament très lucides, sur leur pouvoir attractif, et pensent que c'est ce que les hommes regardent en priorité</p>
-                <!-- </blockquote> /!-->
-            </div>
-            <br/>
-            <div class="row">
-                <div class="col-xs-4 col-xs-pull-2" id="q3_radar_chart1"></div>
-                <div class="col-xs-4 col-xs-push-2" id="q3_radar_chart2"></div>
-            </div>
-        </div>
-    </section>
-    <hr class="style16" />
-    <section id="question4" class="question4-section">
-        <div class="container">
-            <div class="row">
-                <div class="col-xs-12" id="parallelCoordinate">
-                    <h1>Question 4</h1>
-                </div>
-            </div>
-        </div>
-    </section>
-    <footer class="footer">
-        <p>Construit par l'acolyte Raphaël Graille et son compère Louis Henri Franc</p>
-    </footer>
-    <script type="text/javascript" src="js/utils/d3.v3.js"></script>
-    <script type="text/javascript" src="js/utils/d3-tip.js"></script>
-    <script type="text/javascript" src="js/utils/topojson.v1.js"></script>
-    <script type="text/javascript" src="js/utils/queue.v1.js"></script>
-    <script type="text/javascript" src="js/utils/d3-ring-note.js"></script>
-    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
-    <script type="text/javascript" src="js/utils/jquery.js"></script>
-    <script type="text/javascript" src="js/utils/bootstrap.min.js"></script>
-    <script type="text/javascript" src="js/utils/jquery.easing.min.js"></script>
-    <script type="text/javascript" src="js/utils/scrolling-nav.js"></script>
-    <script type="text/javascript" src="js/utils/colorbrewer.min.js"></script>
-    <script type="text/javascript" src="js/helper.js"></script>
-    <script type="text/javascript" src="js/utils/slider-choice.js"></script>
-    <script src="js/question1.js"></script>
-    <script src="js/question2.js"></script>
-    <script src="js/question4.js"></script>
-    <script type="text/javascript">
-    var ringNote = d3.ringNote()
-        .draggable(false);
+	    </div>
+	</section>
 
-    load_d3_visualisation()
+   </div>  <!-- fin container-fluid -->
+
+        <!-------- FIN QUESTION 4 ---------->
+
+	<footer class="footer">
+		<div class="row"> 
+			<p>Construit par l'acolyte Raphaël Graille et son compère Louis Henri Franc</p>
+		</div>	
+	</footer>
+
+
+   
+ 
+   <script type="text/javascript" src="js/utils/d3.v3.js"></script>
+   <script type="text/javascript" src="js/utils/d3-tip.js"></script>
+   <script type="text/javascript" src="js/utils/topojson.v1.js"></script>
+   <script type="text/javascript" src="js/utils/queue.v1.js"></script>
+   <script type="text/javascript" src="js/utils/d3-ring-note.js"></script>
+   <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+   <script type="text/javascript" src="js/utils/jquery.js"></script>
+   <script type="text/javascript" src="js/utils/bootstrap.min.js"></script>
+   <script type="text/javascript" src="js/utils/jquery.easing.min.js"></script>
+   <script type="text/javascript" src="js/utils/scrolling-nav.js"></script>
+   <script type="text/javascript" src="js/utils/colorbrewer.min.js"></script>
+   <script type="text/javascript" src="js/helper.js"></script>
+   <script type="text/javascript" src="js/utils/slider-choice.js"></script>
+   <script src="js/question1.js"></script>
+   <script src="js/question2.js"></script>
+   <script src="js/question4.js"></script>
+   <script type="text/javascript">
+	var ringNote = d3.ringNote()
+	.draggable(false);
+	load_d3_visualisation()
     </script>
 </body>
 

@@ -15,10 +15,10 @@
         
         .jumbotron {
             background: url("../img/jumbotron_bg2.gif") no-repeat center center;
-            -webkit-background-size: 100% 100%;
-            -moz-background-size: 100% 100%;
-            -o-background-size: 100% 100%;
-            background-size: 100% 100%;
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            -o-background-size: cover;
+            background-size: cover;
         }
         
         .jumbotron h1 span {
@@ -52,14 +52,11 @@
         }
         
         .bubble {
-            width: 700px;
-            height: 200px;
             padding: 2px;
             background: #ff4a4a;
             -webkit-border-radius: 10px;
             -moz-border-radius: 10px;
             border-radius: 10px;
-            margin-left: 70px;
         }
         
         .bubble:after {
@@ -72,7 +69,7 @@
             width: 0;
             z-index: 1;
             bottom: -15px;
-            left: 145px;
+	    left: 50%;
         }
         /* question1 css */
         
@@ -106,6 +103,12 @@
             stroke-width: 1;
             shape-rendering: crispEdges;
         }
+
+	#question1 .figure_1_row{
+	   text-align: justify;	
+           font-size: 1rem;
+   	   text-indent: 0;
+	}
         /* question 2 css */
         
         #question2 p {
@@ -140,6 +143,12 @@
             font-family: 'Libre Baskerville', serif;
             text-align: left
         }
+
+	/* question 4 css */
+        #question4{
+	    text-align: center;	
+	}
+
         /* Hr bandwith */
         
         hr.style16 {
