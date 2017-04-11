@@ -69,10 +69,9 @@
             width: 0;
             z-index: 1;
             bottom: -15px;
-	    left: 50%;
+            left: 50%;
         }
         /* question1 css */
-        
         
         #question1 path {
             stroke: steelblue;
@@ -103,13 +102,23 @@
             stroke-width: 1;
             shape-rendering: crispEdges;
         }
-
-	#question1 .figure_1_row{
-	   text-align: justify;	
-           font-size: 1rem;
-   	   text-indent: 0;
-	}
+        
+        #question1 .figure_1_row {
+            text-align: justify;
+            font-size: 1rem;
+            text-indent: 0;
+        }
         /* question 2 css */
+        
+        .blink_me {
+            animation: blinker 1s linear infinite;
+        }
+        
+        @keyframes blinker {
+            50% {
+                opacity: 0;
+            }
+        }
         
         #question2 p {
             font-family: 'Helvetica Neue', serif;
@@ -143,16 +152,16 @@
             font-family: 'Libre Baskerville', serif;
             text-align: left
         }
-
-	/* question 4 css */
-        #question4 p{
+        /* question 4 css */
+        
+        #question4 p {
             text-align: center;
             font-family: 'Helvetica Neue', serif;
             color: black;
             font-size: 25px;
             text-indent: 50px;
         }
-
+        
         #question4 h1 {
             color: black;
             font-size: 40px;
@@ -161,7 +170,6 @@
             font-family: 'Libre Baskerville', serif;
             text-align: center
         }
-
         /* Hr bandwith */
         
         hr.style16 {
