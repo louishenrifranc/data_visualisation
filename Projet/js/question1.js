@@ -7,13 +7,13 @@ function transition(name) {
     if (name == "button-age") {
         attribute = ["- de 22", "22-23", "24-27", "28-31", "32-36", "+ de 36"]
         csvFile = "data/corr_age_age_matches.csv"
-        message = "Les personnes d'âge similaires semblent apprécier de batifoler ensemble. Mais ce n'est pas le cocktail \
-         d'amour le plus puissant. Celui semble plutôt être constitué de jeunes pousses masculine et de femmes plus mûres."
+        message = "Les personnes d'âges similaires semblent apprécier de batifoler ensemble. Mais ce n'est pas le cocktail \
+         d'amour le plus puissant. Celui ci semble plutôt être constitué de jeunes pousses masculines et de femmes plus mûres."
     } else if (name == "button-origine") {
         attribute = ["African American", "Caucasian American", "Hispanic", "Asian", "Other"]
         csvFile = "data/corr_race_race_matches.csv"
         message = "En matière d'origine, la tednance est plus floue, et le métissage est au rendez-vous. En outre, la matrice est ici\
-        plus symétrique ce qui suggère qu'hommes et femmes se comporte ont des comportements similaires sur ce point"
+        plus symétrique ce qui suggère qu'hommes et femmes ont des comportements similaires sur ce point"
 
     } else if (name == "button-etudes") {
         csvFile = "data/corr_field_cd_field_cd_matches.csv"
@@ -144,12 +144,13 @@ function heatmapChart(id, csvFile, attribute) {
             legend.enter().append("g")
                 .attr("class", "legend");
 
+
             legend.append("rect")
                 //.attr("x", function(d, i) { return legendElementWidth * i; })
                 //.attr("y", attribute.length * gridSize +25)
                 .attr("x", attribute.length * gridSize + 55)
                 .attr("y", function(d, i) {
-                    return (legendElementWidth + 5) * i;
+                    return (legendElementWidth + 5) * (i+1);
                 })
                 .attr("width", legendElementWidth)
                 .attr("height", legendElementWidth)
@@ -157,23 +158,39 @@ function heatmapChart(id, csvFile, attribute) {
                 .style("fill", function(d, i) {
                     return colors[i];
                 });
-            // Female symbol
+
+
+            legend.append("rect")
+                .attr("x", attribute.length * gridSize + 55)
+                .attr("y", legendElementWidth - 32)
+                .attr("width", legendElementWidth)
+                .attr("height", legendElementWidth)
+                .attr("class", "attr bordered")
+                .style("fill", "#FFFFFF");
+
             legend.append("text")
                 .attr("class", "mono")
-                .html("&#9792;")
-                .style("font-size", "50px")
-                .style("fill", "blue")
-                .attr("x", attribute.length * gridSize + 55)
-                .attr("y", (legendElementWidth + 5) * 5)
+                .text("Pas de donées")
+                .attr("x", attribute.length * gridSize + 70 + legendElementWidth)
+                .attr("y", 18)
 
-            // Male symbol
+            // Female symbol
             legend.append("text")
                 .attr("class", "mono")
                 .html("&#x2642;")
                 .style("font-size", "50px")
+                .style("fill", "blue")
+                .attr("x", attribute.length * gridSize + 55)
+                .attr("y", (legendElementWidth + 5) * 6)
+
+            // Male symbol
+            legend.append("text")
+                .attr("class", "mono")
+                .html("&#9792;")
+                .style("font-size", "50px")
                 .style("fill", "red")
                 .attr("x", attribute.length * gridSize + 55)
-                .attr("y", (legendElementWidth + 9) * 6);
+                .attr("y", (legendElementWidth + 9) * 7);
 
             legend.append("text")
                 .attr("class", "mono")
@@ -195,24 +212,24 @@ function heatmapChart(id, csvFile, attribute) {
                 })
                 .attr("x", attribute.length * gridSize + 70 + legendElementWidth)
                 .attr("y", function(d, i) {
-                    return (legendElementWidth + 5) * i + 12;
+                    return (legendElementWidth + 5) * (i+1) + 18;
                 })
-            legend.append("text")
-                .attr("class", "mono")
-                .text("Individu feminin")
-                .attr("x", attribute.length * gridSize + 70 + legendElementWidth)
-                .attr("y", (legendElementWidth + 5) * 4 + 14)
-
             legend.append("text")
                 .attr("class", "mono")
                 .text("Individu masculin")
                 .attr("x", attribute.length * gridSize + 70 + legendElementWidth)
-                .attr("y", (legendElementWidth + 9) * 5 + 14)
+                .attr("y", (legendElementWidth + 5) * 5 + 20)
+
+            legend.append("text")
+                .attr("class", "mono")
+                .text("Individu feminin")
+                .attr("x", attribute.length * gridSize + 70 + legendElementWidth)
+                .attr("y", (legendElementWidth + 9) * 6 + 20)
 
             // Male symbol 
             legend.append("text")
                 .attr("class", "mono")
-                .html("&#9792;")
+                .html("&#x2642;")
                 .style("font-size", "25px")
                 .style("fill", "blue")
                 .attr("x", -25)
@@ -220,7 +237,7 @@ function heatmapChart(id, csvFile, attribute) {
 
             legend.append("text")
                 .attr("class", "mono")
-                .html("&#x2642;")
+                .html("&#9792;")
                 .style("font-size", "25px")
                 .style("fill", "red")
                 .attr("x", -40)

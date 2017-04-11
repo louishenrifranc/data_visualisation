@@ -215,7 +215,7 @@ function submitOrder() {
         d3.select("#parallelCoordinate svg").remove();
         parallelCoord("#parallelCoordinate", "data/best_matcher.csv",[profile])
         d3.select("#question4-perso-text").text(
-                "Les personnes avec votre profil ont réalisé en moyenne "+mean_best_match+" matches !")
+                "Les personnes avec votre profil ont réalisé en moyenne "+ Math.round(10*mean_best_match)/10 +" matches !")
 
     });
 
