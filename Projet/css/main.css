@@ -145,9 +145,22 @@
         }
 
 	/* question 4 css */
-        #question4{
-	    text-align: center;	
-	}
+        #question4 p{
+            text-align: center;
+            font-family: 'Helvetica Neue', serif;
+            color: black;
+            font-size: 25px;
+            text-indent: 50px;
+        }
+
+        #question4 h1 {
+            color: black;
+            font-size: 40px;
+            line-height: 40px;
+            font-weight: 500;
+            font-family: 'Libre Baskerville', serif;
+            text-align: center
+        }
 
         /* Hr bandwith */
         

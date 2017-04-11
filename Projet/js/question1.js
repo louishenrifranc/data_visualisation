@@ -7,74 +7,26 @@ function transition(name) {
     if (name == "button-age") {
         attribute = ["- de 22", "22-23", "24-27", "28-31", "32-36", "+ de 36"]
         csvFile = "data/corr_age_age_matches.csv"
-        message = "Amour, tu es tout beauté, et aussi délicate que la rosée. Sur un pétale de rose est ta juvénile fraîcheur. Les jeunes femmes ont \
-         un fort potentiel de séduction chez les hommes, mais ce sont les hommmes mûrs qu'elles préfèrent."
+        message = "Les personnes d'âge similaires semblent apprécier de batifoler ensemble. Mais ce n'est pas le cocktail \
+         d'amour le plus puissant. Celui semble plutôt être constitué de jeunes pousses masculine et de femmes plus mûres."
     } else if (name == "button-origine") {
         attribute = ["African American", "Caucasian American", "Hispanic", "Asian", "Other"]
         csvFile = "data/corr_race_race_matches.csv"
-        message = "Il semblerait que les américains d'origine africaine ont tendance à coppuler entre eux."
+        message = "En matière d'origine, la tednance est plus floue, et le métissage est au rendez-vous. En outre, la matrice est ici\
+        plus symétrique ce qui suggère qu'hommes et femmes se comporte ont des comportements similaires sur ce point"
 
     } else if (name == "button-etudes") {
         csvFile = "data/corr_field_cd_field_cd_matches.csv"
         //attribute = ["Science", "Science sociales", "Littérature", "Art", "Commerce", "Education", "Autre"]
         attribute = ["Science", "Science sociales", "Littérature", "Art", "Droit", "Commerce", "Education"]
-        message = "La solitude est un art, disait Vilhelm Ekelund... et l'Art se marie avec la Littérature."
+        message = "En ce qui concerne les études, on retrouve une tendance à apprécier nos semblales. Mais une fois de plus\
+        Il ne faut pas s'arrêter à ce constat ou l'on risquerait de passer à côté, entre autre, de l'improbable union entre\
+        le droit et l'art. Notons également que les science sociales et le buisness ne font pas bon ménage, si cela surprend quelqu'un ..."
     }
     d3.select("#text_heatmap").text(message)
     var buckets = 20,
         colors = colorbrewer.YlOrBr[4]
-    /*d3.csv(csvFile,
-        function(d) {
-            return {
-                women: +d.attr1,
-                men: +d.attr2,
-                value: +d.value
-            };
-        },
-        function(error, data) {
-            var colorScale = d3.scale.quantile()
-                .domain([0, buckets - 1, d3.max(data, function(d) {
-                    return d.value;
-                })])
-                .range(colors);
-            var svg = d3.select("#heatmap").select("svg")
-            var womenLabels = svg.selectAll(".women-label").transition()
-                .duration(1000)
-                .text(function(d, i) {
-                    return attribute[i];
-                });
-            var menLabels = svg.selectAll(".men-label").transition()
-                .duration(1000)
-                .text(function(d, i) {
-                    return attribute[i];
-                });
-            if (name == "button-origine") {
-                svg.selectAll(".attr")
-                    .filter(function(d) {
-                        return d.men == 6;
-                    })
-                    .style("fill", "#FFFFFF")
-                    .classed("bordered", false)
-            } else {
-                svg.selectAll(".attr")
-                    .filter(function(d) {
-                        return d.men == 6;
-                    })
-                    .classed("bordered", true)
-                    .style("fill", function(d){
-                        return colorScale(d.value)
-                    })
-            }
-            var cards = svg.selectAll(".attr")
-                .data(data, function(d) {
-                    return d.women + ':' + d.men;
-                });
-            cards.transition().duration(1000)
-                .style("fill", function(d) {
-                    return colorScale(d.value);
-                });
-            legend = svg.select("legend");
-        });*/
+
         d3.select("#heatmap svg").remove()
         heatmapChart("#heatmap", csvFile,attribute)
 
