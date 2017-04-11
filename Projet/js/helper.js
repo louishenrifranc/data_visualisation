@@ -47,7 +47,7 @@ function load_d3_visualisation() {
     q.await(function(error, data1, data2) {
         if (error) throw error;
         var svg1 = display_radar_char("#q2_radar_chart1", data1, data2, "Désir des Femmes Versus Choix", "Critères de Désir des femmes", "Critères de Séléction des  Femmes");
-        annotations(svg1, "attractive", 0, "Les femmes ont une forte tendance à être désireuse d\'hommes attractifs", 80, -20)
+        annotations(svg1, "attractive", 0, "Les femmes ont une forte tendance à être désireuse d\'hommes attractifs", 80, -30)
     })
 
     var q1 = queue();
@@ -57,7 +57,7 @@ function load_d3_visualisation() {
         if (error) throw error;
         data = data1;
         var svg0 = display_radar_char("#q2_radar_chart2", data1, data2, "Désir des Hommes Versus Choix", "Critères de Désir des Hommes", "Critères de Séléction des  Hommes");
-        annotations(svg0, "attractive", 1, "A l'inverse les hommes portent plus d'attention à l'apparence qu'ils ne le pensent", 50, 0)
+        annotations(svg0, "attractive", 1, "A l'inverse les hommes portent plus d'attention à l'apparence qu'ils ne le pensent", 50, -60)
 
     })
 
@@ -69,7 +69,7 @@ function load_d3_visualisation() {
     q2.await(function(error, data1, data2) {
         if (error) throw error;
         var svg3 = display_radar_char("#q3_radar_chart1", data1, data2, "Hommes, qu'est ce qui intéresse les Femmes", "Réponse des Hommes", "Réalité");
-        annotations(svg3, "intelligence", 1, "Il est intéressant de voir que les hommes sous-estiment l'intérêt des femmes pour leur intelligence et leur sincerité.", 200, 90);
+        annotations(svg3, "intelligence", 1, "Il est intéressant de voir que les hommes sous-estiment l'intérêt des femmes pour leur intelligence et leur sincerité.", 100, 90);
     })
 
     var q3 = queue();
@@ -78,8 +78,7 @@ function load_d3_visualisation() {
     q3.await(function(error, data1, data2) {
         if (error) throw error;
         var svg2 = display_radar_char("#q3_radar_chart2", data1, data2, "Femmes, qu'est ce qui intéresse les Hommes", "Réponse des Femmes", "Réalité");
-        annotations(svg2, "fun", 0, "Les femmes sont globalement plus lucides que les hommes", -40, -120)
-
+        annotations(svg2, "fun", 0, "Les femmes sont globalement plus lucides que les hommes", -40, -150)
     })
 
     // Question 4 loading
